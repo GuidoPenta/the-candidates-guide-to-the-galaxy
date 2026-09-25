@@ -79,7 +79,7 @@ Then just talk to it:
   reverse interview, negotiation, job roles, and Italian tech communities.
 - Screener rubric adapted from [cv-review](https://github.com/matteobaccan/cv-review) by
   [Matteo Baccan](https://github.com/matteobaccan), used with permission.
-- Communities: La Locanda del Tech, Full Remote, [Dataskew](https://dataskew.io/), coffeechat and the
+- Communities: La Locanda del Tech, Full Remote, [Dataskew](https://dataskew.io/) and the
   maintainers of the awesome lists referenced in `galactic-communities`.
 
 ## Contributing
@@ -90,4 +90,5 @@ Keep references faithful to their source guides, and keep the pack dependency-fr
 
 ## License
 
-[MIT](LICENSE)
+[CC BY-NC-SA 4.0](LICENSE): you may use, adapt and share it with attribution, **for non-commercial purposes only**,
+under the same license. Included guides and projects keep their own licenses: see [NOTICE.md](NOTICE.md).

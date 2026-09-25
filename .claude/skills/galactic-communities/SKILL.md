@@ -1,6 +1,6 @@
 ---
 name: galactic-communities
-description: Recommends tech communities, Telegram groups, podcasts, mentorship, remote-job sources and conferences that fit the user's role, stack, city and remote preference. Draws on La Locanda del Tech, Full Remote, Dataskew, the Welyk job board, coffeechat and Guido Penta's awesome-italian-tech-communities list, and explains how to take part without being spammy. Use when the user says "where can I find jobs / people", "communities for…", "Telegram groups", "I want a mentor", "remote companies", "networking", "conferences in Italy", "how do I get referrals".
+description: Recommends tech communities, Telegram groups, podcasts, mentorship, remote-job sources and conferences that fit the user's role, stack, city and remote preference. Draws on La Locanda del Tech, Full Remote, Dataskew, the Welyk job board and Guido Penta's awesome-italian-tech-communities list, and explains how to take part without being spammy. Use when the user says "where can I find jobs / people", "communities for…", "Telegram groups", "I want a mentor", "remote companies", "networking", "conferences in Italy", "how do I get referrals".
 ---
 
 # Galactic Communities
@@ -18,7 +18,7 @@ Read `workspace/profile.md` for role, stack, location, work mode and language.
 2. Recommend **5–8 items max**, grouped by purpose: find jobs, learn and practise, network and referrals,
    mentorship, events. For each: what it is, why it fits this user, and the link.
 3. Always consider the featured ones (Locanda del Tech, Full Remote, Dataskew for data roles, the Welyk job
-   board, coffeechat for mentorship) and include them when they fit, not by default. When suggesting Welyk,
+   board) and include them when they fit, not by default. When suggesting Welyk,
    say it's run by the pack's author and that applying there means sharing the CV with Welyk.
 4. Never invent a community or a link. If nothing fits a niche, say so.
 

@@ -9,7 +9,6 @@
 > | Italian tech communities | https://github.com/GuidoPenta/awesome-italian-tech-communities (site: https://guidopenta.github.io/awesome-italian-tech-communities/) — this repo *is* the upstream, not a fork | https://raw.githubusercontent.com/GuidoPenta/awesome-italian-tech-communities/main/README.md |
 > | Remote-friendly companies | https://github.com/italiaremote/awesome-italia-remote (web view: https://italiaremote.com/companies). `GuidoPenta/awesome-italia-remote` is a fork | README (generated): https://raw.githubusercontent.com/italiaremote/awesome-italia-remote/main/README.md — one JSON per company in `data/` |
 > | Italian tech conferences | https://github.com/techconfit/techconfit.github.io (site: https://techconfit.github.io). `GuidoPenta/tech-conferences-italy` is a fork | one Markdown file per event in `_conferences/` (front matter: `name`, `website`, `location`, `date_start`, `date_end`) |
-> | Coffee chat / mentorship | https://github.com/fharper/coffeechat. `GuidoPenta/coffeechat` is a fork | https://raw.githubusercontent.com/fharper/coffeechat/main/people.json |
 > | Welyk job board | https://github.com/GuidoPenta/welyk-job-board (site: https://guidopenta.github.io/welyk-job-board/) | https://raw.githubusercontent.com/GuidoPenta/welyk-job-board/main/README.md |
 >
 > Verification legend: **verified** = checked on the official site or repo on 2026-09-25;
@@ -116,19 +115,6 @@ Each entry carries tags in backticks. Combine them to filter.
   application. The repo was last updated 2025-09-08, so **always re-fetch the README**: roles in the
   snapshot may be closed.
 - **Tags:** `role:dev` `role:backend` `role:frontend` `role:leadership` `work:jobs` `work:salary` `work:remote` `format:jobboard` `lang:it` `level:any`
-
-### coffeechat
-- **What it is (verified):** community-maintained list (upstream `fharper/coffeechat`, by Frédéric Harper)
-  of people offering their time **for free** for a "coffee chat", mostly mentorship-style. Each person lists
-  role, company, languages, topics and a scheduling link. 54 people in the upstream `people.json` on 2026-09-25.
-- **Who it's for:** anyone who wants a mentor conversation: CV review, interview practice, career change,
-  starting in tech, specific stacks.
-- **Links (verified):** https://github.com/fharper/coffeechat (data: `people.json`, schema: `schema.json`). No separate website.
-- **How to use:** pick a person whose `topics` and `languages` match, book through their `scheduling` link,
-  arrive with one concrete question. Italian-speaking people are listed under **Mentorship** below.
-- **Tags:** `role:any` `work:mentorship` `work:career` `format:site` `lang:en` `lang:it` `level:any`
-
----
 
 ## Communities (from awesome-italian-tech-communities)
 
@@ -358,15 +344,7 @@ the same organiser: https://www.grusp.org/ .
 
 ## Mentorship
 
-### coffeechat — free coffee chats with mentors
-
-Directory: https://github.com/fharper/coffeechat (data in `people.json`). Free coffee chats, booked through each
-person's own scheduling link. People join and leave, so **don't keep a copy of the list here**: fetch
-`people.json` when recommending, and filter by `languages` (e.g. Italian) and `topics` (job search,
-resume, interviewing, starting in tech…). On 2026-09-25 it listed 6 Italian-speaking mentors, Guido Penta among them.
-Link to the person's upstream entry or booking link; don't copy their details into the workspace.
-
-### Other mentorship-like places
+### Mentorship-like places
 - **Welyk / Guido Penta** — spontaneous application and career meeting (see Featured).
 - **Full Remote Telegram group** — peer CV review and interview debriefs (see Featured).
 - **Dataskew** — portfolio projects reviewed by working data engineers (see Featured).

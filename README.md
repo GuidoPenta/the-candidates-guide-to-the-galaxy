@@ -85,8 +85,8 @@ nella lingua in cui gli scrivi.
   reverse interview, negoziazione, ruoli tech e community tech italiane.
 - Rubrica di valutazione adattata da [cv-review](https://github.com/matteobaccan/cv-review) di
   [Matteo Baccan](https://github.com/matteobaccan), usata con il suo permesso.
-- Community: La Locanda del Tech, [Full Remote](https://www.fullremote.it/), [Dataskew](https://dataskew.io/),
-  coffeechat e chi mantiene le liste citate in `galactic-communities`.
+- Community: La Locanda del Tech, [Full Remote](https://www.fullremote.it/), [Dataskew](https://dataskew.io/)
+  e chi mantiene le liste citate in `galactic-communities`.
 
 ## Contribuire
 
@@ -96,4 +96,5 @@ Le istruzioni delle skill restano in inglese, fedeli alle guide da cui derivano,
 
 ## Licenza
 
-[MIT](LICENSE)
+[CC BY-NC-SA 4.0](LICENSE): puoi usarlo, modificarlo e condividerlo citando l'autore, **non a scopo commerciale**,
+e con la stessa licenza. Le guide e i progetti inclusi mantengono le loro licenze: vedi [NOTICE.md](NOTICE.md).
