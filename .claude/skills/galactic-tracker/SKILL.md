@@ -55,8 +55,8 @@ always failing at the same stage, and point them out gently with a concrete sugg
 
 ### Export
 - **CSV**: `workspace/exports/applications-YYYY-MM-DD.csv`, one row per application, frontmatter fields as columns.
-- **TrackZilla**: it has no bulk import, so the path is to prepare the values for its "Add job" form, one
-  application at a time, with the pre-fill link where it helps. Follow `references/trackzilla-format.md`
-  for the status and work-mode mapping and its caveats (auto-ghosting after 14 days, the free-plan cap).
-  Before doing it, tell the user that TrackZilla is a hosted app, so this moves data out of the local
-  workspace. Send only what they choose, and never contacts or the private log.
+- **TrackZilla**: write a CSV that TrackZilla's **Import CSV** button accepts
+  (`workspace/exports/trackzilla-YYYY-MM-DD.csv`), following `references/trackzilla-format.md` for the
+  exact format and the status/work-mode mapping. The user uploads it in the app. First tell them what goes in
+  and that TrackZilla is a hosted app, so the data will be stored on its servers. Contacts and the private log
+  never go in. A TrackZilla export can also be read back to update the local files.

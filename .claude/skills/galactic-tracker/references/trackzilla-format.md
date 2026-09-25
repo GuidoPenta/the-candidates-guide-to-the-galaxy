@@ -1,7 +1,8 @@
 # TrackZilla data format and how to move applications into it
 
-> Checked on 2026-09-25 against the source code.
-> - **Upstream (canonical):** https://github.com/SalvatoreCampagnese/TrackZilla — last commit 2025-10-21.
+> Checked on 2026-09-25 against the source code, updated after [PR #18](https://github.com/SalvatoreCampagnese/TrackZilla/pull/18)
+> (CSV import/export, merged 2026-09-25 into `production`).
+> - **Upstream (canonical):** https://github.com/SalvatoreCampagnese/TrackZilla (default branch `production`).
 > - **Guido's fork:** https://github.com/GuidoPenta/TrackZilla — last commit 2025-06-06. The `src/` and
 >   `supabase/` folders are identical to upstream; only README, `index.html`, `package.json` and a few
 >   assets differ.
@@ -9,26 +10,21 @@
 > - Stack: Vite + React + TypeScript + shadcn-ui, Supabase (Postgres + auth), Stripe for the Pro plan.
 >   Open source, "made by Salvatore & Guido", born in the fullremote.it Telegram chat.
 >
-> If web access is available, re-check `src/types/job.ts` and `src/integrations/supabase/types.ts`
-> upstream before relying on this file: the app may have gained import/export since.
+> If web access is available, re-check `src/lib/applicationsCsv.ts` and `src/types/job.ts` upstream before
+> relying on this file: formats and values may have changed.
 
 ---
 
 ## TL;DR
 
-- **TrackZilla has NO bulk import and NO export in its code.** There is no CSV, JSON or spreadsheet
-  import or export anywhere in `src/`. The pricing page advertises "Basic export functionality" for the
-  free plan, but no export code exists in the repo (as of the upstream commit above).
-- The only "import" is **`/import?description=<text>`**: it takes one job description as a URL parameter
-  and opens the *Add job* form with that text pre-filled (used by the TrackZilla Chrome extension).
-  One application at a time, and the user still confirms and saves it.
-- Paths from our local format, best first:
-  1. **Guided manual entry** (hosted app): Claude prepares, per application, the exact values for each
-     form field, and optionally a pre-fill link. The user pastes and saves.
-  2. **CSV matching the database table** (only if the user self-hosts TrackZilla on their own Supabase
-     project): import through the Supabase table editor or SQL. Not possible on trackzilla.cv, where users
-     have no database access.
-- Status enum (9 values, stored as text): `in-corso`, `ghosting`, `primo-colloquio`, `secondo-colloquio`,
+- **TrackZilla has CSV import and export** (since PR #18). In the **Applications** tab there are two buttons:
+  **Export CSV** downloads all applications, and **Import CSV** opens a dialog that previews each row
+  (errors and warnings) before saving. Export and import use the same format.
+- **Our path:** Claude writes `workspace/exports/trackzilla-YYYY-MM-DD.csv` in exactly that format (section D).
+  The user imports it with **Import CSV** in the app. The file never leaves the computer until the user uploads it.
+- If the user doesn't see the Import CSV button yet (the live site not updated), fall back to guided manual
+  entry (section A) or the pre-fill link (section B).
+- Status values (9, stored as text): `in-corso`, `ghosting`, `primo-colloquio`, `secondo-colloquio`,
   `colloquio-tecnico`, `colloquio-finale`, `offerta-ricevuta`, `rifiutato`, `ritirato`.
 
 ---
@@ -79,10 +75,9 @@ the `AlertsManager` component is not mounted anywhere.
 The Kanban settings let the user choose which of these statuses appear as columns and their colours; they
 cannot add new status values.
 
-**Automatic ghosting:** `useGhostingUpdater` periodically moves every application with status `in-corso`
-and `application_date` older than N days to `ghosting`. N is a per-browser setting (`localStorage`
-`ghostingDays`, default **14**). Consequence for imports: an old application imported as `in-corso` will
-flip to `ghosting` soon after.
+**Automatic ghosting:** `useGhostingUpdater` would move `in-corso` applications older than N days (default 14)
+to `ghosting`, but as of PR #18 nothing mounts it, so it doesn't run. If it gets enabled, old applications
+imported as `in-corso` would flip to `ghosting`.
 
 ### Work mode enum
 
@@ -109,7 +104,7 @@ reviews. Prices may have changed on the live site.
 
 ---
 
-## How a user gets data into TrackZilla today
+## How a user gets data into TrackZilla
 
 ### A. Add job form (manual, hosted app)
 
@@ -140,18 +135,37 @@ Status and date can be edited afterwards from the list or the Kanban board.
 - Keep it to the job-ad text only, without the Source/Location/Next header lines: no personal data in the URL. Very long ads may exceed browser URL limits,
   so trim to the essentials (title, company, location, salary, work mode, a short summary).
 
-### C. CSV into the table (self-hosted TrackZilla only)
+### C. Import CSV (the default path)
 
-If the user runs their own copy of TrackZilla on their own Supabase project, a CSV with these exact
-headers can be imported with the Supabase table editor ("Import data from CSV") into `job_applications`:
+Applications tab → **Import CSV** → choose the file → check the preview → confirm. Behaviour (from PR #18):
+
+- Columns, in any order, case-insensitive; unknown columns are ignored:
+  `company_name,role_description,job_description,application_date,salary,work_mode,status,tags`
+- Delimiter auto-detected (`,` `;` or tab). UTF-8, with or without BOM. RFC 4180 quoting.
+- Required: `company_name`, `role_description`. `application_date` must be `YYYY-MM-DD` (empty → today, with a warning).
+- Unknown `status` → `in-corso`, unknown `work_mode` → `ND`, both with a warning. Empty `salary` → `ND`.
+- `tags` joined with `;` (`{a,b}` also accepted).
+- Duplicates are skipped: same company + role + date (case-insensitive) as an existing application or an
+  earlier row. Soft-deleted applications don't count, so a deleted one can come back.
+- Free plan: rows are imported only up to 50 applications in total; the dialog says how many were left out.
+
+### D. The file Claude writes
+
+`workspace/exports/trackzilla-YYYY-MM-DD.csv`: UTF-8 **with BOM**, comma-separated, every field in double
+quotes (inner quotes doubled), CRLF line endings, header row first:
 
 ```csv
-user_id,company_name,role_description,job_description,application_date,salary,work_mode,status,tags,deleted
-<their-auth-uuid>,Acme,Senior Backend Engineer,"Source: https://... | Location: Milano | Next: tech interview 2026-10-02",2026-09-10,50k-60k,ibrido,colloquio-tecnico,"{backend,go,referral}",false
+"company_name","role_description","job_description","application_date","salary","work_mode","status","tags"
+"Acme","Senior Backend Engineer","Location: Milan (hybrid)
+Next: technical interview on 2026-10-02
+---
+<job ad text or short summary>","2026-09-10","55-70k","ibrido","colloquio-tecnico","backend;go;referral"
 ```
 
-`tags` uses the Postgres array literal `{a,b,c}`. `user_id` must be the user's own auth id
-(Supabase dashboard > Authentication > Users). This does not work on trackzilla.cv.
+- One row per application, mapped with the tables below. Skip `saved` ones unless the user asks.
+- Contacts and the log are **never** in the file. Strip query strings (tracking or candidate tokens) from any URL.
+- Before writing it, tell the user what goes in (which applications, which fields) and that uploading it
+  stores that data on TrackZilla's servers.
 
 ---
 
@@ -168,7 +182,7 @@ user_id,company_name,role_description,job_description,application_date,salary,wo
 | `work_mode` | `work_mode` | `remote`→`remoto`, `hybrid`→`ibrido`, `onsite`→`in-presenza`, missing→`ND` |
 | `tags` | `tags` | as is, plus derived tags below |
 | `status` | `status` | see table below |
-| `source_url` | *(none)* | first line of `job_description`: `Source: <url>` |
+| `source_url` | *(none)* | first line of `job_description`: `Source: <url>` (query string stripped) |
 | `location` | *(none)* | line in `job_description` (`Location: Milano`) and tag `loc-milano` |
 | `next_step`, `next_step_date` | *(none)* | line in `job_description` (`Next: ... on YYYY-MM-DD`); will go stale, local file stays the source of truth |
 | `contacts` | *(none)* | **never exported**: third-party personal data stays local |
@@ -189,7 +203,7 @@ Next: technical interview on 2026-10-02
 
 | Ours | TrackZilla | Notes |
 |---|---|---|
-| `saved` | *(do not import)* | no "wishlist" status. If the user insists: `in-corso` + tag `saved` + today's date, but it will be counted as applied and auto-ghosted after the threshold |
+| `saved` | *(do not import)* | no "wishlist" status. If the user insists: `in-corso` + tag `saved` + today's date, but it will be counted as applied |
 | `applied` | `in-corso` | if `applied_on` is older than the user's ghosting threshold (default 14 days) it will flip to `ghosting` on its own |
 | `screening` | `primo-colloquio` | recruiter/HR screen is TrackZilla's first interview |
 | `interviewing` | `secondo-colloquio`, `colloquio-tecnico` or `colloquio-finale` | pick from the log: latest round was technical → `colloquio-tecnico`; final/on-site/founder → `colloquio-finale`; otherwise count rounds (2nd → `secondo-colloquio`); unknown → `colloquio-tecnico` |
@@ -213,13 +227,14 @@ Reverse mapping (TrackZilla → ours, e.g. when the user reads values off the ap
 
 ## What Claude should do when the user says "put this in TrackZilla"
 
-1. Say plainly that TrackZilla has no bulk import: it will be one application at a time in the app.
-2. Mind the free plan limit (50 applications): import active applications first, skip `saved`.
-3. For each application, output a ready-to-paste block with every form field (Company, Role, Salary,
-   Work Mode, Application date, Status, Tags, Job description) using the mapping above, and optionally
-   the `/import?description=` link with the URL-encoded job-ad text only (no header lines).
-   TrackZilla is a hosted app (Supabase): whatever is entered there is stored on its servers under its terms.
-4. Remind the user that the local `application.md` stays the source of truth (contacts, next steps, log),
-   and that TrackZilla will auto-mark old `in-corso` entries as `ghosting`.
-5. Only if the user self-hosts TrackZilla: generate the CSV from section C.
-6. Never log in, fill forms or save on the user's behalf.
+1. Say what will be exported (applications, fields; never contacts or the log) and that uploading the file
+   stores it on TrackZilla's servers. Proceed only once the user agrees.
+2. Mind the free plan limit (50 applications): active applications first, skip `saved`.
+3. Write `workspace/exports/trackzilla-YYYY-MM-DD.csv` as in section D.
+4. Tell the user: open TrackZilla → **Applications** → **Import CSV** → pick the file → check the preview → confirm.
+   Rows already there are skipped as duplicates, so re-importing a newer export is safe.
+5. If they don't see the button, fall back to sections A/B, one application at a time.
+6. The local `application.md` stays the source of truth. Never log in, fill forms or upload on the user's behalf.
+
+The reverse also works: a CSV the user exports from TrackZilla (**Export CSV**) can be read to create or
+update local `application.md` files, using the reverse status mapping above. Ask before overwriting anything.
