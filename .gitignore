@@ -1,0 +1,14 @@
+# Your personal data lives in workspace/ and must never be committed.
+# Only the README and the empty skeleton are tracked.
+workspace/*
+!workspace/README.md
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Local Claude Code settings (per-user)
+.claude/settings.local.json
