@@ -45,8 +45,16 @@ Then:
 ### Dashboard — regenerate `workspace/dashboard.html`
 Each time you regenerate `tracker.md`, also regenerate the browser dashboard following `references/dashboard.md`.
 It's a self-contained page built from `assets/dashboard.html`, with no server. It shows the pipeline by stage,
-upcoming dates, the funnel, and a detail panel per application (briefing, fit, questions, log). The first time,
-tell the user they can open `workspace/dashboard.html` with a double click and keep it bookmarked.
+upcoming dates, the funnel, and a detail panel per application (briefing, fit, questions, log).
+
+After regenerating it, give the full path to `workspace/dashboard.html` and ask "Do you want me to open it?".
+When the user says yes, or asks "open my dashboard", open it in their default browser with the command for their
+system:
+- Windows (PowerShell): `Start-Process "<full path>\workspace\dashboard.html"`
+- macOS: `open "<full path>/workspace/dashboard.html"`
+- Linux: `xdg-open "<full path>/workspace/dashboard.html"`
+If it's already open, remind them to refresh the page (F5). If the file doesn't exist yet, regenerate it first.
+The first time, suggest bookmarking it in the browser.
 
 ### Rejections
 When a rejection is logged, acknowledge it briefly and humanly. If the user wants, capture what they

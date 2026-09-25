@@ -1,6 +1,6 @@
 ---
 name: galactic-job-search
-description: Job search coach and entry point: sets up the private workspace and profile, says where the user stands and what to do next, routes to the other galactic-* skills. Use to start a job search or when unsure which skill fits.
+description: Job search coach and entry point: welcome guide and help, private workspace and profile, where the user stands and what to do next, routing to the other galactic-* skills. Use to start a job search, for help, or when unsure which skill fits.
 ---
 
 # Galactic Job Search — the hub
@@ -33,7 +33,7 @@ Check whether `workspace/profile.md` exists.
 
 If it doesn't:
 1. Create the folder skeleton from `references/workspace.md`. Create only the folders, no placeholder content.
-2. Explain in 3 lines what you'll do together and that everything stays local.
+2. Show the welcome guide from `references/welcome.md`.
 3. Ask for the CV: tell the user to drop the file into `workspace/cv/original/`, or paste it.
    You can read PDF, images, Markdown and text directly. For DOCX, ask them to export it to PDF or paste the text.
 4. Build `profile.md` through a short conversation of 2–3 questions per turn, not a form: target roles,
@@ -41,6 +41,11 @@ If it doesn't:
    (optional and sensitive: say it helps negotiation later and accept a refusal; never ask for the current salary). Pre-fill what you can read from
    the CV and ask the user to confirm.
 5. Propose the first moves (usually a CV review, then LinkedIn, then applications).
+
+## Help
+
+When the user asks for help or what you can do ("aiuto", "cosa sai fare?", "come funziona?", or
+`/galactic-job-search` with nothing else), show the welcome guide from `references/welcome.md` and stop there.
 
 ## "Where am I?" — status
 
@@ -59,7 +64,8 @@ If it doesn't:
 | know what to ask the interviewers | `galactic-reverse-interview` |
 | handle salary questions, evaluate or negotiate an offer | `galactic-negotiation` |
 | find communities, groups, mentors, remote-job sources, events | `galactic-communities` |
-| log an application, update a status, see the pipeline, export to TrackZilla | `galactic-tracker` |
+| log an application, update a status, see the pipeline, open or update the dashboard, export to TrackZilla | `galactic-tracker` |
+| get help, see what this can do | this skill, section "Help" |
 
 The skills hand off to each other. A typical loop for one application:
 `galactic-application` → (`galactic-cv` tailoring) → `galactic-tracker` (applied) → `galactic-interview-prep`

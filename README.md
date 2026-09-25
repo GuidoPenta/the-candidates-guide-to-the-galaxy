@@ -68,13 +68,14 @@ solo quando è pertinente, e candidarsi lì significa condividere il CV con Wely
 3. Apri la cartella in Claude Code. Le skill si caricano da sole.
 4. Scrivi **"Iniziamo la mia ricerca di lavoro"**. Claude prepara il tuo spazio di lavoro e ti chiede il CV.
 
-Poi basta parlargli, per esempio:
+In qualsiasi momento scrivi **"aiuto"** per rivedere cosa sa fare e dove trovi file e dashboard. Poi basta parlargli, per esempio:
 - *"Rivedi il mio CV"*
 - *"Ecco un annuncio che mi interessa: [incolla]"*
 - *"Giovedì ho il colloquio tecnico da Acme, aiutami a prepararmi"*
 - *"Cosa chiedo all'engineering manager?"*
 - *"Mi hanno offerto 45k di RAL, è buona?"*
 - *"A che punto sono con le candidature?"*
+- *"Aprimi la dashboard"*
 
 Le istruzioni interne delle skill sono in inglese, così c'è una sola versione da mantenere, ma Claude ti risponde
 nella lingua in cui gli scrivi.

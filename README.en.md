@@ -65,13 +65,14 @@ only when it fits, and applying there means sharing your CV with Welyk.
 3. Open the folder in Claude Code. The skills in `.claude/skills/` load automatically.
 4. Say **"Let's start my job search"** (in any language). Claude will set up your workspace and ask for your CV.
 
-Then just talk to it:
+Type **"help"** anytime to see what it can do and where your files and dashboard are. Then just talk to it:
 - *"Review my CV"*
 - *"Here's a job I'm interested in: [paste]"*
 - *"I have a technical interview at Acme on Thursday, help me prepare"*
 - *"What should I ask the engineering manager?"*
 - *"They offered me 55k, is that good?"*
 - *"Where am I with my applications?"*
+- *"Open my dashboard"*
 
 ## Credits
 
