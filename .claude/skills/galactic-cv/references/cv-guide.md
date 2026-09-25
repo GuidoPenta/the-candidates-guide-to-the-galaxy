@@ -78,7 +78,10 @@ Missing email/phone is, in Guido's words, "INSANE" — this section is FUNDAMENT
 - [ ] Links are **clickable** (no copy-paste needed).
 - [ ] **Placed at the top**, immediately under the photo / header — never at the bottom of the CV
       (Italian version: "contacts must be immediately visible and usable").
-- [ ] All useful contacts, as in the example (mobile, location, email, GitHub, LinkedIn).
+- [ ] All useful contacts, as in the example: mobile, email, LinkedIn, GitHub (and portfolio if any).
+- [ ] **Never suggest adding the city of residence/domicile or a home address.** The guide doesn't ask for it
+      (the sample CV's "Planet: Tatooine" is a joke, not a rule). If the user already has it, leave it; don't
+      flag its absence.
 
 ## 4. About Me  ([§4](https://github.com/GuidoPenta/galactic-CV-guide-for-developers/blob/main/docs/english.md#4-about-me))
 

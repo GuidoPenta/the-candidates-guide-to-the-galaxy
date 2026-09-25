@@ -56,7 +56,7 @@ Every Block A row carries a state and a **verbatim quote** from the CV.
 | Case | Rule |
 |------|------|
 | Required language level "fluent" | Native / C1 / C2 / fluent / professional → `Verified`; good / B2 / intermediate → `Unverifiable`; school / basic / A1–B1 → `Absent`; not stated → `Unverifiable`. Certification (IELTS, TOEFL, Cambridge) ≥ C1 → `Verified` |
-| Location / work mode in the posting | Gate item only if the posting marks it as required ("residence required", "on-site mandatory"). Otherwise, if the CV states no address/availability, it goes to "to clarify" |
+| Location / work mode in the posting | Gate item only if the posting marks it as required ("residence required", "on-site mandatory"). Otherwise it is not a requirement. If the CV says nothing about availability (remote, relocation), it goes to "to clarify", to be asked, never "add your city/address to the CV" |
 | Dates with years only | Plain year difference (2016–2019 = 3); "present" = current year. Write "±1 year per experience" next to the total |
 | Lead / manager role | Counts as technical experience only if the entry names the technologies used; management-only text counts for A4, not A1/A2 |
 | Required skill present only as a certification | `Inferred` for A2; `Verified` for A5 |

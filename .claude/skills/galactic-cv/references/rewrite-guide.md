@@ -135,7 +135,7 @@ Writing rules for the file:
 ---
 title: "<Name Surname>"
 subtitle: "<Professional title>"
-author: "<City> · <phone> · <email> · <LinkedIn URL> · <GitHub URL>"
+author: "<phone> · <email> · <LinkedIn URL> · <GitHub URL>"
 lang: en
 ---
 

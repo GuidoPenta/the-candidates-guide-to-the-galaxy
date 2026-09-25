@@ -17,6 +17,8 @@ Workspace layout: `.claude/skills/galactic-job-search/references/workspace.md`.
   directly. For DOCX, ask for a PDF export or pasted text. With a PDF or an image you can also judge layout and
   typography (Block C). An image CV is fine to review; the only point worth noting is that links in an image
   aren't clickable.
+- **No residence on the CV**: never suggest adding the city of residence/domicile or a home address; the guide
+  doesn't ask for it. Location matters only as availability (remote, relocation), and it goes in `profile.md`, not on the CV.
 - **ATS claims**: say only what `references/cv-guide.md` says (recruiters read every CV, the ATS is a filtering
   tool, stars and progress bars may not be recognised, keywords matter). Don't add myths about what ATSs can't
   read, such as images, PDFs or columns, or promise an "ATS-proof" CV.
