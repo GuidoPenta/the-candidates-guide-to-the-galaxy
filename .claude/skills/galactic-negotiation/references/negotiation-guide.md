@@ -13,7 +13,10 @@
 > this file follows the Italian and marks it **[IT]**. Statistics are quoted as the guide cites
 > them; they are the guide's claims, not re-verified here. The author discloses that much of the
 > guide was written with AI assistance (ChatGPT) as a joint effort, not copy-paste.
-> Sections marked **(skill-pack note)** are additions of this pack, not Guido's rules.
+>
+> **Source labels.** **[Guido]** = from Guido's guide (the section is linked in each heading; untagged
+> content in a linked section is [Guido]). **[IT]** = [Guido], found only in the Italian original.
+> **[pack]** = this skill pack's own heuristic or general practice, not Guido's rule.
 
 ---
 
@@ -23,7 +26,9 @@
   anxiety or impostor syndrome: everyone has their own path, knowledge, network. Treat it as a hint
   for improvement, not proof you'll never make it.
 - **Not everyone has to be a rockstar.** A "regular" dev with a normal 9-to-6 job at a "regular"
-  company is fine. You don't need the hottest startup or the biggest paycheck.
+  company is fine. You don't need the hottest startup or the biggest paycheck. **[IT]** The
+  counterweight: being a "normal" employee is fine, but don't let red-flag companies that don't help you
+  grow, don't treat you with dignity or underpay you take advantage of you ("Operaio sì, ma non stronzo/a!").
 - **Talking about money is normal.** Nobody works for free. It is not about being a mercenary: it's
   awareness, value, getting what's fair.
 
@@ -66,7 +71,7 @@ Combine objective and subjective into a **balanced numeric range** you want to b
 **The company:** size, industry, growth stage and culture affect its ability and willingness to
 offer certain packages.
 
-**BATNA / walk-away point (skill-pack note):** the guide doesn't use the term, but repeatedly
+**BATNA / walk-away point [pack]:** the guide doesn't use the term, but repeatedly
 implies it: avoid ultimatums "unless you're really ready to walk away", and declining a too-low
 offer "is an act of lucidity, not arrogance". Define your minimum acceptable range and your
 alternative (current job, other processes) before talking numbers.
@@ -125,8 +130,8 @@ away. **[IT]** "Read it cold. Remember it's an offer, not a prize."
 **What is negotiable? "ALMOST EVERYTHING":**
 - RAL, obviously.
 - Bonus/variable: ask for them to be revised, guaranteed, or converted into fixed pay.
-- **Contract level (*livello contrattuale*, under the CCNL):** affects holidays, **TFR** (severance),
-  maternity/paternity leave and future protections.
+- **Contract level (*livello contrattuale*):** affects holidays, **TFR** (*trattamento di fine
+  rapporto*, end-of-employment allowance), maternity/paternity leave and future protections.
 - Remote policy: full remote today? tomorrow? forever?
 - Hours: flexibility, compressed hours, 4-day week — sometimes you can ask.
 - Training: annual budget, dedicated time, conferences.
@@ -147,7 +152,7 @@ equal pay; 40% of those who negotiated the initial offer improved it. Levels.fyi
 good negotiation can bring +10% equity and +15–20% bonus. **[IT] Italy:** "a reasoned counter-offer
 can often unlock 5–10K more (if well argued)."
 
-**Offer comparison checklist (skill-pack note, built from the list above):** for each offer record
+**Offer comparison checklist [pack], built from the list above:** for each offer record
 RAL, fixed vs variable split and how variable is decided, CCNL and level, employee vs P.IVA,
 benefits with a € value, remote days, hours, training budget, equipment, title, onboarding.
 
@@ -289,7 +294,7 @@ means losing purchasing power.
 A recurring rule across the guide:
 - recap every phone/video negotiation in a short written message;
 - get promises (review dates, "missing X", future raises) in writing;
-- **(skill-pack note)** before resigning from a current job, get the final offer in writing
+- **[pack]** before resigning from a current job, get the final offer in writing
   (RAL, level/CCNL, variable, benefits, remote policy, start date). The guide doesn't spell this
   step out, but it follows directly from its "always get it in writing" principle.
 
@@ -300,7 +305,7 @@ The guide covers this only indirectly:
 - real competitive external offers are a legitimate trigger for a raise conversation, but "not
   blackmail" and only if you actually want to stay;
 - compare offers on total package, not RAL alone (Offer A vs B example).
-**(skill-pack note)** No specific script for playing offers against each other exists in the
+**[pack]** No specific script for playing offers against each other exists in the
 guide; the skill should not invent one in Guido's name. Apply the same rules: be honest and
 specific, no bluffing (offers must be real), no ultimatums you won't honor.
 

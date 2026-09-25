@@ -15,13 +15,20 @@
 > **unverified** = appears only in a secondary list and was not opened. Invite links
 > (`t.me/+...`, `discord.gg/...`) can expire: if one fails, look for a fresh link on the
 > community's own site or socials, never on random aggregators.
+>
+> **Source labels.** **[Guido]** = from Guido's lists (awesome-italian-tech-communities, welyk-job-board).
+> **[pack]** = this skill pack's own note or general practice. **[Dataskew]** = from Dataskew's own site.
+> Third-party lists (Awesome Italia Remote, techconfit) are cited by name.
+>
+> **Dataskew: don't fetch dataskew.io automatically.** Its terms forbid automated access (scrapers, scripted
+> requests). Link it and describe it from this file; the user visits it.
 
 ---
 
 ## How Claude should use this file
 
 1. Read the user's profile (role, stack, seniority, city, remote preference, language) from the workspace.
-2. Filter the entries below by tags. Recommend **3-6 entries at most**, each with *why it fits this user*
+2. Filter the entries below by tags. Recommend **5–8 entries at most**, each with *why it fits this user*
    and *one concrete first action* (e.g. "introduce yourself in the #presentazioni topic with stack + city + what you're looking for").
 3. Always consider the **Featured** section first: those are the most job-search-relevant places for an Italian tech audience.
 4. Most communities are **Italian-speaking**. Tell non-Italian speakers when a place is Italian-only.
@@ -89,7 +96,8 @@ Each entry carries tags in backticks. Combine them to filter.
 ### Dataskew (dataskew.io)
 - **What it is (verified):** learning platform and community for **aspiring data engineers**,
   self-described as "the home of the Italian data community". Roadmaps (e.g. Modern Data Stack,
-  Startup Stack), hands-on projects, fundamentals courses (Python, SQL), topics such as Kafka, Spark,
+  Startup Stack), hands-on projects, fundamentals (SQL, Python, Data Modeling, Data Quality & Testing,
+  Data Warehousing, NoSQL, Docker), topics such as Kafka, Spark,
   dbt, Airflow and cloud platforms. Public project portfolios reviewed by working engineers, talent
   profiles, and a curated **jobs board** for data and AI roles in Italy and EU-remote, plus a jobs
   market report.
@@ -98,14 +106,15 @@ Each entry carries tags in backticks. Combine them to filter.
   - Site: https://dataskew.io/ (verified) · Roadmaps: https://dataskew.io/roadmaps/ · Jobs market report: https://dataskew.io/jobs/market-report/
   - Telegram (linked from the site, verified): https://t.me/dataskew_it
   - Telegram invite in the awesome list ("Dataskew.io - Data Engineering Learning community"): https://t.me/+sJZ1e0UAw1U4NWRk (unverified; may be the same group via an older invite)
-- **How to join:** free account at https://dataskew.io/sign-up/ ; paid tiers, if any, were not stated on the homepage (unverified). Founders are not named on the homepage (unverified).
+- **How to join:** free account at https://dataskew.io/sign-up/ . Free to use (terms). Created by Adriano Sanges (/about).
 - **Tags:** `role:data` `role:ai` `stack:python` `work:learning` `work:jobs` `work:remote` `format:site` `format:jobboard` `format:telegram` `lang:it` `level:junior` `level:mid`
 
 ### Welyk job board
 - **What it is (verified):** the list of positions that **Guido Penta** (tech recruiter, welyk.tech,
-  formerly forloop.tech) is currently managing for client companies. Each role shows RAL range,
-  contract / work mode and company. Also lists closed searches with their salary, useful as
-  **salary benchmarks** for the Italian market (e.g. frontend 35-50k, senior backend 50k, data 45-50k).
+  formerly forloop.tech, per the repo description "welyk.tech (former forloop.tech)") is currently
+  managing for client companies. Each role shows RAL range, contract / work mode and company. Also lists
+  closed searches with their salary (data points from Welyk's searches, not a market survey; e.g. frontend
+  35-50k, senior backend 50k, data 45-50k).
 - **Who it's for:** developers and tech profiles in Italy, often full-remote roles.
 - **Links (verified):**
   - Board: https://github.com/GuidoPenta/welyk-job-board · https://guidopenta.github.io/welyk-job-board/
@@ -290,7 +299,7 @@ All entries below are Italian-language unless stated. Links are as listed upstre
   - Categories: *Software and Cloud*, *Marketing and Writing*, *HR*, *Design and UX*, *Cybersecurity*.
 - Each row: Name, Career Page, **Company Type** (Product, Consulting, B2B), **Hiring Policy**, **Stack**.
 - Hiring policy is decisive for Italian candidates:
-  - **Direct** — hires with an Italian legal entity (employee contract, CCNL).
+  - **Direct** — "Company is hiring directly with a legal entity in Italy".
   - **Contract** — hires contractors; a **Partita IVA** (VAT number) is required.
   - **Intermediary** — hires through a payroll intermediary / EOR in Italy.
 - Machine-readable source: one JSON per company in `data/` with fields
@@ -335,8 +344,8 @@ Recurring series (city of the latest edition in the list):
 | RomHack | 2025 | Roma | https://romhack.io/ | `role:security` `city:roma` |
 | Also in the list (older editions) | angularday, reactjsday, vueday, reactnativeday, nodejsday, webday, rubyday, qtday, Swift Heroes, Flutter Heroes, Voxxed Days Milano, HackInBo, CyberTech Europe, Incontro DevOps Italia, WordCamp Italia, Linux Day, Delphi Day / ITDevCon, BlazorConf, Azure Day, CloudConf, Coderful, Come to Code, Merge-IT, accessibility days, agile days | various | see upstream `_conferences/` | |
 
-**Job-search angle:** conferences are the best place for warm intros. Check the sponsor list
-(sponsors are usually hiring), attend the community / job-board area, and prepare a 20-second intro.
+**Job-search angle (general practice):** conferences are the best place for warm intros. Check the sponsor
+list (sponsors are usually hiring), attend the community / job-board area, and prepare a 20-second intro.
 Many GrUSP events (jsday, phpday, cssday, uxday, dxday, containerday, devsecopsday, laravelday, sfday) share
 the same organiser: https://www.grusp.org/ .
 
@@ -345,7 +354,7 @@ the same organiser: https://www.grusp.org/ .
 ## Mentorship
 
 ### Mentorship-like places
-- **Welyk / Guido Penta** — spontaneous application and career meeting (see Featured).
+- **Welyk / Guido Penta** — spontaneous application (see Featured).
 - **Full Remote Telegram group** — peer CV review and interview debriefs (see Featured).
 - **Dataskew** — portfolio projects reviewed by working data engineers (see Featured).
 - **CTO Mastermind** — for aspiring tech leads and CTOs (see Leadership).

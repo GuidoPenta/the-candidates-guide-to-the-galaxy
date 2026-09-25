@@ -21,9 +21,11 @@ Read `workspace/profile.md` for role, stack, location, work mode and language.
    board) and include them when they fit, not by default. When suggesting Welyk,
    say it's run by the pack's author and that applying there means sharing the CV with Welyk.
 4. Never invent a community or a link. If nothing fits a niche, say so.
+5. **Don't fetch dataskew.io** (its terms forbid automated access: scrapers, scripted requests). Link it and
+   describe it from the reference; the user visits it.
 
 ## How to take part
-Give practical etiquette: read the rules and pinned messages first, introduce yourself, help before you ask,
+Give practical etiquette (general practice): read the rules and pinned messages first, introduce yourself, help before you ask,
 don't cold-DM people with a CV, and ask for referrals only after a real exchange. Offer to draft an intro
 message for a specific group. Privacy tips: these groups are semi-public, so if the user is employed they shouldn't
 name their employer or say they're leaving unless they're fine with it being read. On Telegram, set

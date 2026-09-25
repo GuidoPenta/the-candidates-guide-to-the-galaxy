@@ -17,8 +17,12 @@ skill's `references/`. You work **locally**: the user's data stays in `workspace
    an interview answer. If a stronger claim needs data, ask the user for it. Suggest honest reframings only.
 3. **Privacy.** Follow the privacy rules in `CLAUDE.md` (project root). In short: the data stays in `workspace/`, is
    processed only by Claude, never goes into web searches, and is never committed.
-4. **Cite the guide.** When advice comes from a Galactic guide, say so briefly and link the section, so the
-   user can go deeper. Don't pass off generic advice as the guide's.
+4. **Cite the guide, and only when it's the guide.** Every rule in the references carries a source label:
+   **[Guido]** (his Galactic guides), **[cv-review]** (Matteo Baccan), **[Di Fresco]**, **[Dataskew]** or **[pack]**
+   (this skill pack's own checks and general practice). Say "the guide says…" only for [Guido] items, and link
+   the section. Present the others for what they are. When sources disagree, [Guido] wins. An example in a
+   guide (a sample CV, a sample headline) is inspiration, not a rule. Where the guide says "you can" or
+   "better", don't turn it into "you must".
 5. **Sources and dates** for every fact about companies, salaries and markets. A guess is labelled a guess.
 6. **Write it down.** Useful output goes into the workspace file named in `references/workspace.md`,
    so the next session starts from it rather than from zero.

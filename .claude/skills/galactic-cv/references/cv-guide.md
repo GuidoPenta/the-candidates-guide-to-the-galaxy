@@ -7,10 +7,14 @@ Source: https://github.com/GuidoPenta/galactic-CV-guide-for-developers (MIT, © 
 - Italian version (original, slightly richer): https://github.com/GuidoPenta/galactic-CV-guide-for-developers/blob/main/index.md
 - Companion typography guide recommended by the guide itself: Simon Di Fresco, *Your CV looks like sh\*t* — https://github.com/SimonDiff/devs-cv-typography-guidelines (CC0). Its rules are in `recruiter-rubric.md`, Block C.
 
-> **Scope warning (from the guide).** The guide is written for the **Italian** job market. Rules
-> tied to Italy (the data-processing authorization, the photo being a free choice) must be
-> flagged as such when the user targets another country. Do not silently apply them elsewhere;
-> do not replace them with invented local rules either — say the guide does not cover that market.
+**Source labels**: everything in this file is **[Guido]** (section § in each heading) unless tagged
+otherwise: **[sample]** = shown in the sample CV but not stated as a rule; **[pack]** = this pack's own
+adaptation / general practice; **[cv-review]** / **[Di Fresco]** = the other two sources. Only [Guido]
+items are "what your guide says".
+
+> **Scope warning.** The whole guide targets the **Italian** market; §12 cites Italian law and the
+> EU GDPR. When the user targets another country, say so; do not silently apply the §12 rule
+> elsewhere, and do not replace it with invented local rules — say the guide does not cover that market.
 
 ---
 
@@ -47,11 +51,12 @@ use them as a self-check with the user):
 - [ ] **Aim for one page.** An experienced recruiter reads a CV in 10–20 seconds. (Aim, not dogma:
       see the "at all costs" obstacle above.)
 - [ ] **Concise but comprehensive**: contains all the keywords needed for the target position.
-- [ ] **CV language vs. job ad** (Guido's rule): ad in Italian → the CV can be in Italian **or** English, both
-      are fine; ad in English → the CV must be in English.
-- [ ] **Keep two language versions** of the CV ready.
+- [ ] **CV language vs. job ad** (Guido's rule as clarified by him, 2026-09-25): ad in Italian → the CV
+      can be in Italian **or** English, both are fine; ad in English → the CV must be in English. (The
+      published text still says "se in italiano invialo in italiano"; the clarified rule prevails.)
+- Recommendation, not a check: having two language versions is good ("cosa buona e giusta").
 - [ ] **No Europass.** Guido "STRONGLY" advises against it: outdated, no graphic customization.
-- [ ] Build it with a real template tool: Canva (the example CV), LaTeX templates, or Overleaf.
+- Tools he suggests as options: Canva (the example CV), or you "could use" LaTeX templates or Overleaf.
 - [ ] Minimal aesthetic is fine — the example uses a very minimal template "that works".
 
 ## 2. Photo  ([§2](https://github.com/GuidoPenta/galactic-CV-guide-for-developers/blob/main/docs/english.md#2-the-photo))
@@ -134,8 +139,8 @@ bullets of duties/projects/tech.**
 
 ## 6. Education / training  ([§6](https://github.com/GuidoPenta/galactic-CV-guide-for-developers/blob/main/docs/english.md#6-training-experiences))
 
-- [ ] **Senior profile**: degree only, with **grade** and **thesis title** (the thesis is a
-      potential conversation starter).
+- [ ] **Senior profile**: the degree alone can be enough (Guido's choice in the sample), with
+      **grade** and **thesis title** (the thesis is a potential conversation starter).
 - [ ] **Junior profile**: also include the high-school diploma track and grade (if not a
       graduate: diploma only).
 - [ ] **Ongoing studies** (university, master's, PhD) MUST be listed — e.g. to access curricular
@@ -149,9 +154,8 @@ bullets of duties/projects/tech.**
 
 - [ ] Neat, concise list of acquired skills — and skills in progress may be flagged
       ("work in progress").
-- [ ] **No stars / progress bars** as proficiency indicators: many ATSs may not recognize
-      graphic signs. (The guide mentions progress bars as a graphic option, then warns about ATS;
-      when in doubt, use text.)
+- [ ] Stars / progress bars used? Warn: many ATSs may not recognise graphic signs; prefer text.
+      (Guido offers a progress bar as an option for skills in progress, then gives this warning.)
 - [ ] **Ordered by strength / daily use first**, coherent with the target role: applying as FE →
       FE languages/frameworks first; BE languages, databases and others last.
 - [ ] Contains **all the keywords** the company/selector is looking for, so the ATS can surface
@@ -197,26 +201,35 @@ gives many conversation starters.
       interpretation for the user; just note they will be read this way.
 
 Languages:
-- [ ] At least one language besides the native one (preferably English) — Guido considers it
-      FUNDAMENTAL.
-- [ ] Level stated for each language (the example uses "mother tongue", "B1").
+- [ ] At least one language besides Italian ("oltre all'italiano"; preferably English) — Guido
+      considers it FUNDAMENTAL.
+- [ ] Level stated for each language [sample: "mother tongue", "B1" — not a stated rule].
 - [ ] Language certifications included, if any.
 
 ## 12. Data-processing authorization (Italy)  ([§12](https://github.com/GuidoPenta/galactic-CV-guide-for-developers/blob/main/docs/english.md#12-data-processing-authorization))
 
 - Legislative Decree 101/2018: consent to processing personal data in the CV is **no longer
-  mandatory** in Italy. Guido still **recommends including it**, because:
+  mandatory** in Italy; each candidate chooses freely. Guido still **recommends including it**, because:
   - it authorizes employer, HR and recruiters to process the data protected by Italian privacy law
     and the GDPR;
   - it lets the employer contact you right away and keep your CV for future selections;
   - without it the employer must ask for authorization first → delays and bureaucracy.
-- [ ] Italian applications: authorization sentence present at the bottom.
+- [ ] Italian applications: authorization sentence present? Recommended, not mandatory; the sample
+      places it at the bottom.
 - [ ] Non-Italian applications: flag that this rule is Italy-specific in the guide.
 
-Sample sentence used in the example CV (Italian law references as written there):
+Sample sentence used in the example CV — the default to suggest (Italian, as written there):
+> Autorizzo il trattamento dei miei dati personali presenti nel cv ai sensi del Decreto Legislativo
+> 30 giugno 2003, n. 196 "Codice in materia di protezione dei dati personali" e dell'art. 13 del
+> GDPR (Regolamento UE 2016/679).
+
+English equivalent (for an English CV):
 > I authorize the processing of my personal data in the CV in accordance with Legislative Decree
 > No. 196 of June 30, 2003 "Code on the Protection of Personal Data" and Article 13 of the GDPR
 > (EU Regulation 2016/679).
+
+Alternative, shorter [cv-review]: "I authorize the processing of my personal data pursuant to
+Legislative Decree 101/2018."
 
 ## 13. Final considerations  ([§13](https://github.com/GuidoPenta/galactic-CV-guide-for-developers/blob/main/docs/english.md#13-final-considerations))
 
@@ -237,29 +250,32 @@ Markdown output use: Header (name, title, contacts) → About Me → Experience 
 Soft Skills → Education → Certifications → Publications → Languages → Hobbies → Authorization.
 (This linear order is an adaptation, not a rule from the guide.)
 
-## Common mistakes (as called out by the guide)
+## Common mistakes (derived from the guide)
+
+The first group are things the guide calls out; the second are softer suggestions derived from it.
 
 | Mistake | Fix |
 |---------|-----|
 | No email and/or phone | Add both, at the top |
 | Contacts at the bottom of the CV | Move them to the top, immediately visible |
-| Unprofessional email | Use a name-based address |
+| Unprofessional email | Use a professional address (no `devils88` / `bananakiller83`) |
 | Non-clickable LinkedIn/GitHub | Make links clickable |
-| Europass format | Use a real template (Canva, LaTeX, Overleaf) |
-| Italian CV sent to an English ad | English ad → English CV, always (an Italian ad accepts either); keep two versions |
-| Stars / progress bars for skills | Plain text list, strongest first |
-| Skills in random order | Strongest / daily-use first, role-relevant first |
+| Europass format | Use a real template (Canva, or LaTeX / Overleaf) |
+| Italian CV sent to an English ad | English ad → English CV (an Italian ad accepts either); two versions help |
+| Missing keywords for the position | Add the posting's keywords for technologies the user really has (§1, §7) |
 | Cliché soft skills ("works well under pressure") | Real, personality-specific ones |
 | No hobbies section | Add one — conversation starters |
-| Ongoing studies / bootcamp omitted | List them with expected end date |
+| Ongoing studies omitted | List them; Academy / Bootcamp also with expected end date |
 | Unprofessional photo (party, beach, cropped group, provocative) | Professional half-length, or avatar, or none |
 | CV as a shopping list of tech | Tell a concise, coherent story |
-| Omitting the thesis title (graduates) | Add it — talking point |
+| *Softer:* Stars / progress bars for skills | Warn some ATSs may not recognise them; suggest text |
+| *Softer:* Skills not ordered by strength | Suggest strongest / daily-use and role-relevant first |
+| *Softer:* Degree without grade or thesis title | Suggest adding them — the thesis is a talking point |
 
 ## Notes
 
 - The guide's sample bullets describe **duties** ("FE platform improvements"), not measured
   results. Guido does not require metrics; the recruiter rubric (Block A3 in
-  `recruiter-rubric.md`) does reward measured results. When both apply, keep Guido's structure
+  `recruiter-rubric.md`, [cv-review]) does reward measured results. When both apply, keep Guido's structure
   and add a result only if the user supplies one — never invent numbers.
 - The sample CV is intentionally goliardic (Star Wars); copy its structure, not its jokes.

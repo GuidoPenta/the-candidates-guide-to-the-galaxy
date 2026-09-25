@@ -28,7 +28,8 @@ analysis needs a CV and offer `galactic-cv`.
 - Map it to a real role **by its duties, not its title**, using `references/job-roles.md`, and flag it if
   title and content don't match (the guide: "DevOps is a methodology, not a job title"). For roles the
   reference doesn't describe, reason from the duties.
-- Red flags and questions raised, using `references/job-hunt-strategy.md`.
+- Questions raised by the posting (see `references/job-hunt-strategy.md` §5.3); any red flags are general
+  practice, labelled as such.
 - Keywords the screener or ATS will look for.
 
 ## 3. Research the company → `company.md`

@@ -34,8 +34,9 @@ from CV to signed offer. The person who opened it is a job seeker, not (necessar
 ## If you are contributing to the repo
 
 - Skills: `.claude/skills/galactic-*/SKILL.md`. Knowledge lives in each skill's `references/`, as operational
-  summaries of the source guides, with a link back to them. Keep references faithful to the source; mark anything
-  that doesn't come from it.
+  summaries of the source guides, with a link back to them. Keep references faithful to the source (the Italian
+  text of Guido's guides is canonical), and tag every rule with its origin: [Guido], [cv-review], [Di Fresco],
+  [Dataskew] or [pack]. Don't harden "can" into "must", and don't turn an example into a rule.
 - Zero dependencies: no scripts, and no install step beyond cloning.
 - English for everything committed, except the user-facing `README.md`, which is Italian. `README.en.md` is its
   English twin, and the two must stay in sync.

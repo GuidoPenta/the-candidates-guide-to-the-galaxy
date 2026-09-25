@@ -13,6 +13,10 @@
 > English doc drops the headings and a few questions). Questions are translated from Italian and
 > cross-checked with the English doc. Where the English doc mistranslates, this file corrects it and
 > says so (see "Translation fixes" at the end).
+>
+> **Source labels.** **[Guido]** = from Guido's guides (sections 1, 2 and the question bank in 3 are
+> [Guido] unless tagged otherwise). **[pack]** = this skill pack's own heuristic or general practice,
+> not Guido's rule (the interviewer tags in 3 and all of section 4 are [pack]).
 
 ---
 
@@ -25,13 +29,13 @@ Guido's position: as a candidate you not only *can* ask questions, you **must**.
 - get the most complete picture possible of the role, the duties, the team and the other things that matter;
 - avoid going silent at the classic "so, do you have any questions for us?".
 
-The underlying stance: in the current market (tech and many other sectors) the candidate has
-negotiating power, because companies struggle to find motivated, qualified people. So **the company
+The underlying stance: at the time of writing (2023), in Guido's view, candidates had negotiating
+power (in tech and many other sectors), because companies struggled to find motivated, qualified people. So **the company
 is not the only one choosing** — the candidate can (and, in Guido's opinion, must) choose the right
 company for their personal and professional moment.
 
-The same stance appears in the negotiation guide: "the interview is ALWAYS two-way" and "ASK
-QUESTIONS — you're not just there to answer"
+The same stance appears in the negotiation guide: "interviews are always a two-way street" and "ASK
+QUESTIONS. You're not just there to answer; you're there to ask!"
 ([negotiation guide, section 3](https://github.com/GuidoPenta/galactic-negotiation-guide-for-developers/blob/main/docs/english.md#3-play-your-cards-right)).
 Good questions reveal growth potential and how much the company values its developers.
 
@@ -39,9 +43,9 @@ Good questions reveal growth potential and how much the company values its devel
 
 - **Don't ask them all** — otherwise the interview "would last about 7 hours".
 - **Pick the subset that best fits the company** you are approaching.
-- **Do your homework first:** a lot of company information is easy to find online. Don't spend
-  interview time on what a search would tell you (vision/mission, public revenue, stack on the
-  careers page). In Italy, company financial statements (*bilanci*) are often public and free —
+- **Do your homework first:** the guide asks you to pick questions "considerando anche che ormai
+  tantissime informazioni sull'azienda si possono facilmente reperire online". ([pack]: some bank
+  questions may already be answered publicly; ask them only to verify.) In Italy, company financial statements (*bilanci*) are often public and free —
   the negotiation guide explicitly suggests checking them: "you don't want to be hired by a
   company that is going bankrupt, right?"
   ([negotiation guide IT, section 2](https://github.com/GuidoPenta/galactic-negotiation-guide-for-developers/blob/main/README.md#2-prima-del-colloquio-prepara-il-terreno)).
@@ -111,21 +115,22 @@ interviewer types; these are suggestions on who is most likely to answer well):
 36. Is there a personal training budget? `[HR] [MGR]`
 37. Is there a budget for certifications? `[HR] [MGR]`
 
-> Italy context: the CCNL determines level (*livello*), minimums, holidays, leave and more — the
-> negotiation guide notes the contract level affects "holidays, TFR (severance), maternity/paternity
-> and future protections" ([section 4](https://github.com/GuidoPenta/galactic-negotiation-guide-for-developers/blob/main/README.md#4-negoziare-sul-serio)).
-> Outside Italy, ask the equivalent: which contract/collective agreement or employment terms apply.
+> **[pack] note**, Italy context: the CCNL determines level (*livello*), minimums, holidays, leave
+> and more. **[Guido]** The negotiation guide notes the contract level affects "holidays, TFR
+> (*trattamento di fine rapporto*), maternity/paternity and future protections"
+> ([section 4](https://github.com/GuidoPenta/galactic-negotiation-guide-for-developers/blob/main/README.md#4-negoziare-sul-serio)).
+> **[pack]** Outside Italy, ask the equivalent: which contract/collective agreement or employment terms apply.
 > Hand the answers to this block to the **galactic-negotiation** skill — they feed the total-compensation comparison.
 
 ### 3.5 My place in your company (*Il mio posto nella vostra azienda*)
 
 38. Are there specific goals you expect me to reach in the first 30 / 60 / 90 days? `[MGR]`
 39. Is there a model for evaluating my performance / the goals I reach? `[MGR] [HR]`
-40. Will I have 1:1s with my manager / senior / tech lead / supervisor? `[MGR] [ENG]`
+40. Will I have the chance to do 1:1s with my manager / senior / tech lead / supervisor? `[MGR] [ENG]`
 41. How will the team I'm joining be composed? `[MGR] [ENG]`
 42. Are there particular critical issues the team is facing right now? `[MGR] [ENG]`
 43. Why should I choose your company? `[FND] [MGR] [HR]`
-44. Why should you choose me? What struck you positively? `[MGR] [HR]` (typically a closing question)
+44. Why should you choose me? What struck you positively? `[MGR] [HR]`
 
 ---
 
@@ -146,8 +151,8 @@ Everything in this section is an **adaptation by the skill pack**, built on the 
    ("you mentioned X earlier — how does that work in practice?").
 4. Spread the bank across rounds: the same question asked to two different people (e.g. #22
    work-life balance to HR and to a peer) is a useful consistency check.
-5. Always have at least one question ready for the "any questions for us?" moment — the guide's
-   explicit goal is never to go silent.
+5. Always have at least one question ready for the "any questions for us?" moment — one of the
+   guide's stated reasons for asking is not going silent ("non fare scena muta").
 
 ### 4.2 Reading the answers
 

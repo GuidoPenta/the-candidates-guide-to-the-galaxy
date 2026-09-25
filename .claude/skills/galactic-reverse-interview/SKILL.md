@@ -12,9 +12,10 @@ Workspace layout: `.claude/skills/galactic-job-search/references/workspace.md`.
 ## Before the interview → `workspace/applications/<app>/questions.md`
 1. Read `profile.md` (must-haves, deal-breakers), `company.md` (what's already known) and `fit.md`.
 2. Ask who the interviewer is (role) and how much time there will be for questions, if unknown.
-3. Pick **3–5 questions per round, plus 1–2 spares**, from the bank (the reference's rule). Prioritise the user's must-haves and deal-breakers (they must be
-   answered before any offer), then what the research couldn't answer, then questions this interviewer type is
-   best placed to answer. Don't ask what the company's site already answers.
+3. Pick **3–5 questions per round, plus 1–2 spares**, from the bank (a [pack] rule in the reference; the guide only says don't ask them all). Prioritise the
+   user's must-haves and deal-breakers (they must be answered before any offer), then what the research
+   couldn't answer, then questions this interviewer type is best placed to answer. Prefer questions the
+   company's site doesn't already answer (the guide: much can be found online).
 4. Adapt the wording to this company, for example by referencing something specific from `company.md`.
    Keep the core of each question from the guide, and cite its category.
 5. Order them: must-ask first, in case time runs out. For each, note what a good answer and a red flag would
@@ -25,8 +26,9 @@ Workspace layout: `.claude/skills/galactic-job-search/references/workspace.md`.
    company's own interviewers. The process questions are general practice; label them as such.
 
 ## After the interview
-Ask the user what they heard for each question and record it in `questions.md`. Flag answers the guide
-treats as red flags, and questions left unanswered, to ask in the next round. Log a summary line with
+Ask the user what they heard for each question and record it in `questions.md`. Flag worrying answers
+using the reference's §4.2 ([pack] guidance, plus the negotiation guide's warnings on "senza orari" and fake
+P.IVA), and questions left unanswered, to ask in the next round. Log a summary line with
 `galactic-tracker`.
 
 ## Comparing companies

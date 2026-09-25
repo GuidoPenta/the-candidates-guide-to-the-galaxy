@@ -15,6 +15,10 @@ https://github.com/GuidoPenta/galactic-interview-guide-for-developers (MIT, © 2
 > (soft interview, technical interview, real Welyk cases, negotiation, extra exercises and checklists,
 > contributing) are **announced but empty**. Where this file says "not covered by the sources", do not fill
 > the gap with invented "Guido rules": use general good practice and say it is general practice.
+>
+> **Source labels.** **[Guido]** = from Guido's guides (section cited; untagged content in a cited section is
+> [Guido]). **[pack]** = this skill pack's own heuristic or general practice. **[Dataskew]** = Dataskew's
+> guidance, not Guido's.
 
 ---
 
@@ -27,7 +31,7 @@ https://github.com/GuidoPenta/galactic-interview-guide-for-developers (MIT, © 2
 - **Every company, recruiter and process is different.** The guide is a base for self-analysis, not a
   universal answer (dev guide §1.2). Tell the user this when their process doesn't match the template.
 - Audience: juniors on their first job, mids improving strategy, seniors/leads refining communication and
-  negotiation (dev guide §1.1). Scale the depth of prep to the seniority.
+  negotiation (dev guide §1.1). [pack] Scale the depth of prep to the seniority.
 
 ## 1. Stage map (what the sources actually describe)
 
@@ -49,10 +53,11 @@ https://github.com/GuidoPenta/galactic-interview-guide-for-developers (MIT, © 2
 
 - Not written in the source yet (dev guide §3 is an empty heading). What the sources do give for this stage:
   - Arrive with your **own targets clear**: role, seniority, stack, company type, work mode, salary range
-    (dev guide §2.1; see `galactic-application/references/job-hunt-strategy.md`). A screener will ask exactly these.
+    (dev guide §2.1; see `galactic-application/references/job-hunt-strategy.md`). (Likely screening topics;
+    general practice.)
   - Have a **realistic salary range** grounded in market data (TechCompenso, Glassdoor, Levels.fyi, LinkedIn
     Salary: dev guide §2.2) before the call. Hand off strategy to `galactic-negotiation`.
-  - CV and LinkedIn must be consistent with what you say (dev guide §2.3).
+  - Keep CV and LinkedIn up to date and coherent (dev guide §2.3).
   - Some companies put salary range and work mode on the table **in the very first call**, together with
     values (Jointly testimony). Be ready to discuss both at stage one.
 
@@ -109,7 +114,7 @@ https://github.com/GuidoPenta/galactic-interview-guide-for-developers (MIT, © 2
 - What they look for: **how you reason about problems and how you produce quality code**.
 - Language: you can often choose, but **both you and the interviewer must know it**.
 - How to succeed: **explain your reasoning out loud, keep trying solutions, keep moving forward.**
-- When stuck (what the guide implies): keep talking, try the next approach, don't go silent. Practise TDD,
+- When stuck (general practice, suggested by the guide's examples): keep talking, try the next approach, don't go silent. Practise TDD,
   debugging and refactoring against tests, not just algorithm puzzles.
 
 ### 4.4 System design
@@ -141,7 +146,7 @@ adapt your presentation.
 - Why it works, on two levels: **logical-functional** (code works, choices are logical) and **relational**:
   the interviewer judges on **heuristics, not cold data**. Taking control of the reasoning flow and being able
   to expose your thinking is what conveys competence.
-- Mock-interview use: occasionally play a non-technical interviewer and check the user applies steps 1–4.
+- [pack] Mock-interview use: occasionally play a non-technical interviewer and check the user applies steps 1–4.
 
 ## 5. Values, HR and final stages: a real process (Jointly testimony)
 

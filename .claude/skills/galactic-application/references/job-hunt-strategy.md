@@ -13,6 +13,10 @@ Data/AI roles in Italy and EU remote: https://dataskew.io/jobs (Dataskew, by Adr
 > plain text, cite by section number). **Recruiters, referrals, timing/cadence and posting red flags are not
 > written up in the sources**: §5 below collects only the signals the sources do give. Don't invent
 > "Guido rules" for the rest; label general practice as such.
+>
+> **Source labels.** **[Guido]** = from Guido's guides (section cited; untagged content in a cited section
+> is [Guido]). **[pack]** = this skill pack's own heuristic or general practice. **[Dataskew]** = Dataskew's
+> stance (https://dataskew.io, by Adriano Sanges), not Guido's.
 
 ---
 
@@ -37,8 +41,9 @@ Not a whole career plan, but at least these six, written down (store in `workspa
 - [ ] **Work mode**: full remote, hybrid, on site.
 - [ ] **Expected salary range**: a realistic idea of gross annual salary and desired benefits.
 
-Why: it avoids random applications and focuses effort on coherent opportunities. Use the six as the
-**filter** for every posting: a posting that fails one of them is a conscious exception, not a default.
+Why: it avoids random applications and focuses effort on coherent opportunities. Use your checklist to
+go targeted rather than trawling ("il poco ma buono funziona sempre!"). A posting that misses a point isn't
+automatically out: decide consciously.
 
 ## 3. Know (and study) the market (dev guide §2.2)
 
@@ -58,8 +63,8 @@ Base it on concrete data and reliable sources (the guide's list):
 | [Levels.fyi](https://www.levels.fyi/) | International compensation and career-level comparison, esp. product/big tech |
 | LinkedIn Salary | Indicative ranges by position and location |
 
-Skill action: when the user has no salary range, build one from at least two of these (cite source + date)
-before any application or screening call.
+[pack] suggestion: when the user has no salary range, ground it in these sources (ideally more than one;
+cite source + date) before the screening call.
 
 ## 4. Build a solid professional profile before applying (dev guide §2.3)
 
@@ -69,7 +74,7 @@ The profile is the **first point of contact** with recruiters and companies:
 - [ ] **Portfolio and projects**: GitHub, tech blog, open-source contributions, side projects, relevant experience.
 - [ ] **Online presence**: bio, headline, profile photo, any talks or articles.
 - A polished profile **doesn't guarantee an interview, but significantly raises the chance** of being considered.
-- For data roles, a public portfolio of expert-graded projects is available on Dataskew (free).
+- [Dataskew] For data roles, a public portfolio of graded projects is available on Dataskew (free).
 
 ## 5. Reading a job posting
 
@@ -78,36 +83,39 @@ The profile is the **first point of contact** with recruiters and companies:
       language, BI tools. The posting is your study plan.
 - [ ] If a framework is named, assume the **underlying language** will be tested too (React → JS/TS,
       Laravel → PHP; tech guide type 2).
-- [ ] Backend and senior postings → expect **system design** (tech guide type 4).
+- [ ] Backend postings, especially senior ones → **system design** is likely (tech guide type 4).
 
 ### 5.2 Check the title against the content (roles guide intro)
 - The roles guide exists because in the Italian IT market **job titles are "too often" confused,
   misinterpreted and misused in job postings**. Never trust the title alone: map duties to a role with
   `job-roles.md` and flag mismatches.
 - Concrete example from the guide: **"DevOps" is a methodology, not a job title**. A "DevOps Engineer" posting
-  needs its duties read to decide what the job really is (platform, cloud, SRE, sysadmin, DevSecOps…).
-- "Engineer" in Italy: the title "ingegnere" can be legally reserved to people with an engineering degree
-  (roles guide, Software Engineer note). Don't read "Engineer" in an Italian posting as a degree requirement,
-  and don't assume an "ingegnere" title can be used without one.
+  needs its duties read to decide what the job really is (platform, cloud, SRE, sysadmin, DevSecOps…:
+  the skill's examples).
+- "Engineer" in Italy: the guide notes that "engineer" usually translates to "ingegnere", which in some cases
+  is reserved to people with an engineering degree (roles guide, Software Engineer note). [pack] Don't read
+  "Engineer" in an Italian posting as a degree requirement, and don't assume an "ingegnere" title can be used
+  without one.
 
-### 5.3 Signals from the sources (use as questions, not verdicts)
-- **Transparency on salary and work mode early** is a good sign: Jointly states range and work mode in the
-  very first call with the CTO (tech guide, testimony). If a posting or first call is silent on both, add them
-  to the questions for the screening call.
+### 5.3 Signals: [Guido] unless tagged (use as questions, not verdicts)
+- **Salary and work mode**: one real process (Jointly, tech guide testimony) states range and work mode in the
+  first call with the CTO. If a posting or first call is silent on both, add them to your screening
+  questions ([pack]).
 - **Values and ways of working** (agility, engineering practices, relation between Tech and Product) are
-  discussed openly by companies with a clear process (Jointly). A posting with no hint of how the team works is
-  a question to raise, not proof of a problem.
+  discussed openly by companies with a clear process (Jointly). [pack] A posting with no hint of how the team
+  works is a question to raise, not proof of a problem.
 - **Seniority calibrated against the team**: technical steps may assess your level relative to the team
-  you'd join. Read "senior" in a posting relative to the company's size and team.
-- **Product company vs consultancy**: the guide asks you to weigh the difference (§3). Identify which one the
-  posting is before applying.
-- Dataskew's jobs board explicitly excludes **body rental** and recruiter spam and links to the company's own
-  apply page: for data roles, prefer postings that let you apply directly. (Dataskew's stance, not Guido's.)
+  you'd join. Read "senior" in a posting relative to the team.
+- **Product company vs consultancy**: the guide asks you to weigh the difference (§3). [pack] Identify which one
+  the posting is before applying.
+- [Dataskew] Dataskew's jobs board explicitly excludes **body rental** and recruiter spam and links to the
+  company's own apply page: for data roles, prefer postings that let you apply directly.
 - Company reviews (Glassdoor) are listed by the guide as a source on the **hiring process** too (§3).
 
 ## 6. Applying strategy
 
-- [ ] Apply **only** to postings that pass your §2 checklist. Few, targeted applications > volume.
+- [ ] Use your §2 checklist to go targeted rather than trawling ("il poco ma buono funziona sempre!"). A
+      posting that misses a point isn't automatically out: decide consciously.
 - [ ] For each: decode (§5), research the company, tailor the CV (`galactic-cv` targeted mode), prepare.
 - [ ] Before the first call: salary range from data (§3), targets clear (§2), CV/LinkedIn consistent (§4).
 - [ ] Use **communities** for advice, likely interview questions and tools for the role (tech guide step 2:

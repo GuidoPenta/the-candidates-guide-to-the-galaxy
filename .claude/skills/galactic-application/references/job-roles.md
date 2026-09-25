@@ -12,6 +12,9 @@ Role anchors: `https://github.com/GuidoPenta/galactic-tech-job-roles-guide#<role
 > ML Engineer, SRE, Platform Engineer, QA, Tech Lead, Product Manager…) are **empty stubs**. For those, this
 > file says "No definition in the guide yet" and the skill must decide from the posting's duties, labelling
 > its reasoning as its own. It has no salary data and, apart from Software Engineer, no seniority levels.
+>
+> **Source labels.** **[Guido]** = from the roles guide (role entries in §2 and the rules in §1 are [Guido]
+> unless tagged). **[pack]** = this skill pack's own heuristic or inference, not in the guide.
 
 ---
 
@@ -19,7 +22,7 @@ Role anchors: `https://github.com/GuidoPenta/galactic-tech-job-roles-guide#<role
 
 - In Italy, job titles are **"too often" confused, misinterpreted and misused in job postings**. The guide
   aims to bring clarity with clear definitions of roles and responsibilities.
-- Procedure for the skill:
+- [pack] Procedure for the skill:
   1. [ ] Ignore the title at first. List the posting's **actual duties** (verbs + objects).
   2. [ ] Match duties to the "core duties" below. Pick the role whose core duties cover most of them.
   3. [ ] Compare with the title. If they differ, flag it: "Title says X, duties describe Y".
@@ -30,8 +33,8 @@ Role anchors: `https://github.com/GuidoPenta/galactic-tech-job-roles-guide#<role
 
 - **"The DevOps" doesn't exist. DevOps is a methodology, not a job title.**
   ([#devops-engineer](https://github.com/GuidoPenta/galactic-tech-job-roles-guide#devops-engineer)).
-  A "DevOps Engineer" posting must be read by duties: cloud engineering, platform, SRE, sysadmin, CI/CD
-  work, or DevSecOps. Flag it every time and name what the duties actually describe.
+  Read a "DevOps Engineer" posting by its duties and say what they describe (cloud engineering, platform,
+  SRE, sysadmin, CI/CD work, DevSecOps: the skill's examples).
 - **Software Developer = see Software Engineer**: the guide treats them as the same entry.
 - **Developer vs Programmer**: "Software Developer" is the more generic term for any role in software
   development; "Programmer" is more specific: someone who **mainly writes code**.
@@ -85,7 +88,7 @@ Format: **core duties** (what the role does) · **extra** (may also do) · **ski
 - Core: **define the research questions** for business problems; select/collect/integrate data; statistics
   and ML analysis; predictive models; communicate results to decision makers.
 - Extra: algorithms and software; managing data-science projects; training users.
-- Analyst vs Scientist (reading of the guide): the Scientist frames the question and builds models; the
+- [pack] Analyst vs Scientist (reading of the guide): the Scientist frames the question and builds models; the
   Analyst's core is cleaning, analysing and presenting.
 
 ### AI Engineer — [#ai-engineer](https://github.com/GuidoPenta/galactic-tech-job-roles-guide#ai-engineer)
@@ -93,7 +96,7 @@ Format: **core duties** (what the role does) · **extra** (may also do) · **ski
   test/validate; **deploy and maintain in production**.
 - Extra: R&D, training, consulting; collaboration with data science, software engineers, PMs; stakeholder
   communication; **ethical responsibility**.
-- Note: written in 2023, before today's LLM-application meaning of "AI Engineer". Postings may now mean
+- [pack] Note: written in 2023, before today's LLM-application meaning of "AI Engineer". Postings may now mean
   RAG/agents/LLM integration work. Flag the difference instead of forcing the 2023 definition.
 
 ### Database Administrator (DBA) — [#database-administrator](https://github.com/GuidoPenta/galactic-tech-job-roles-guide#database-administrator)
@@ -140,8 +143,8 @@ Format: **core duties** (what the role does) · **extra** (may also do) · **ski
   in a DevOps context); business and IT process understanding; leadership; degree optional but useful.
 - Extra: assess tech strategy/apps/infrastructure for a team or client; advise on architecture (tech, data,
   security, integration); large-scale innovative solutions; strategies and roadmaps; centres of excellence.
-- **Seniority signal**: the only role with an explicit years-of-experience figure. An "Enterprise Architect"
-  posting open to juniors is mislabelled.
+- **Seniority signal**: the only role with an explicit years-of-experience figure. The guide lists 7–10 years
+  for this role; a junior-level EA posting is worth questioning ([pack] inference).
 
 ### Business Analyst — [#business-analyst](https://github.com/GuidoPenta/galactic-tech-job-roles-guide#business-analyst)
 - The **bridge between business needs and technical solutions**: turns requests into detailed requirements.
@@ -159,7 +162,7 @@ Format: **core duties** (what the role does) · **extra** (may also do) · **ski
 - Core: IT strategy with CEO and executives; information systems (servers, DBs, networks, apps); company
   data (security, compliance, analysis); IT people, budgets, resources.
 - Extra: lead digital transformation; develop IT staff; represent the company in the IT sector.
-- CTO vs CIO (reading of the guide): CTO is oriented to the technology **behind the product**; CIO to the
+- [pack] CTO vs CIO (reading of the guide): CTO is oriented to the technology **behind the product**; CIO to the
   company's **internal information systems**.
 
 ### CISO — [#chief-information-security-officer-ciso](https://github.com/GuidoPenta/galactic-tech-job-roles-guide#chief-information-security-officer-ciso)
@@ -183,25 +186,23 @@ Two distinct types; check which one the posting wants:
 ## 3. Seniority signals from the guide
 
 - Junior → basic tasks; Middle → complex tasks; Senior → **design + leadership** (Software Engineer entry).
-  A "senior" posting with no design or leadership duties may really be middle; a "junior" posting asking for
-  design ownership and team leadership is mislabelled.
+  [pack] conclusions: a "senior" posting with no design or leadership duties may really be middle; a "junior"
+  posting asking for design ownership and team leadership is worth questioning.
 - Senior extras across roles: leading teams, consulting other teams/clients, R&D, training others, project
   management (Blockchain, Software Engineer, Big Data Architect).
 - Architect roles (Big Data, Cloud, Enterprise) carry **strategy, vendor selection and management
-  communication**: these are senior by nature. Enterprise Architect: 7–10 years.
+  communication**. Enterprise Architect: 7–10 years.
 - C-level (CTO, CIO, CISO): strategy, budgets, people management, representing the company.
 
-## 4. Mislabelling checklist (quick)
+## 4. Skill heuristics [pack] (not in the guide)
 
-- [ ] Title contains "DevOps" → methodology, not role (§1). Name the real role from duties.
+- [ ] Title contains "DevOps" → methodology, not role ([Guido], §1). Name the real role from duties.
 - [ ] "Data Scientist" whose duties are only cleaning + dashboards → closer to Data Analyst.
-- [ ] "Data Engineer" with no pipelines/storage/governance duties, only reports → closer to Data Analyst.
 - [ ] "Architect" with only implementation duties and no strategy/selection → closer to Engineer/Developer.
-- [ ] "Backend" asking for UI work, or "Software Engineer" that's only coding → check Programmer vs Developer (§1).
 - [ ] "AI Engineer": 2023 ML definition vs current LLM-application work; clarify which.
 - [ ] "Technical Writer": tutorial writer vs product-docs writer.
 - [ ] Seniority claim vs duties (§3).
-- [ ] Italian posting using "Ingegnere": possible legal/degree meaning (§1).
+- [ ] Italian posting using "Ingegnere": possible legal/degree meaning ([Guido], §1).
 
 ## 5. Roles in the index with no definition yet
 

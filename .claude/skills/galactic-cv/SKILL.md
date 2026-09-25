@@ -12,6 +12,14 @@ Knowledge:
 - `references/rewrite-guide.md`: how to rewrite.
 Workspace layout: `.claude/skills/galactic-job-search/references/workspace.md`.
 
+## Source labels
+Every rule in the references is tagged: **[Guido]** (his guide, with §), **[cv-review]** (Matteo Baccan's
+screener rubric), **[Di Fresco]** (typography guidelines), **[pack]** (this pack's own / general practice).
+- Say "your guide / Guido's guide says…" **only** for [Guido] items.
+- Present [cv-review] items as "a structured screener (cv-review) may look for…", and [pack] items as general advice.
+- When [Guido] and [cv-review] conflict, [Guido] wins and [cv-review] items are never forced (e.g. never force
+  a numeric result into a bullet: Guido's own sample bullets describe duties).
+
 ## Input
 - The CV comes from `workspace/cv/original/` or a paste. You can read PDF, images (PNG/JPG), Markdown and text
   directly. For DOCX, ask for a PDF export or pasted text. With a PDF or an image you can also judge layout and
@@ -36,7 +44,9 @@ opening with:
 - **Top 3 fixes** that would change the outcome most, first.
 - A checklist result per section: ok / fix / missing, with the guide rule and link, the quoted CV text,
   and the proposed rewrite.
-- Protected data found (photo, age, marital status…): what the guide says about each.
+- Protected data found: for the photo, Guido's guide leaves it to the user (§2, free choice); for the rest
+  (age, date of birth, marital status, nationality…) say only that a structured screener (cv-review) ignores
+  them. Keeping any of it is the user's call.
 
 ### 2. Targeted review (with a posting)
 Run the rubric's Block A against the posting in `workspace/applications/<app>/posting.md`, or a pasted one.
@@ -47,8 +57,8 @@ extend it rather than duplicating it.
 ### 3. Rewrite
 Follow `references/rewrite-guide.md` (written for the targeted one-page version). Produce Markdown:
 - targeted → `workspace/applications/<app>/cv.md`, ready to send. Language: posting in Italian → CV in Italian **or** English, both fine; posting in English → CV **necessarily** in English (ask which the user prefers);
-- untargeted → `workspace/cv/cv-master.md`, complete and long. It's a working file, so the guide's
-  "no placeholders" rule doesn't apply: open questions go in a final `## Open questions` section.
+- untargeted → `workspace/cv/cv-master.md`, complete and long. It's a working file, so the rewrite guide's
+  "no placeholders" rule (I2, [cv-review]) doesn't apply: open questions go in a final `## Open questions` section.
 Rewrite notes go to `workspace/cv/reviews/YYYY-MM-DD-rewrite-notes.md`, never next to the original.
 Show a diff-style summary of what changed and why. Tell the user how to turn the Markdown into a PDF with
 the tool of their choice, saving the PDF inside `workspace/` (Word/Google Docs paste, a Markdown editor, pandoc). This pack ships no scripts.
@@ -63,8 +73,8 @@ and numbers, the stack. Write `cv-master.md` as the long, honest source every ta
   bullet without one.
 - Quote the CV when criticising it, so every judgement is traceable.
 - Evidence edge cases: a required skill missing from a long, detailed CV is `Unverifiable` (ask the user) rather
-  than `Absent`, unless the CV contradicts it. A vague or unverifiable certification (no issuer, no year) counts
-  as `Declared` at best, and you should ask for the details.
+  than `Absent`, unless the CV contradicts it. A vague certification (no issuer, no year) counts as `Inferred`
+  at best (undated, so not `Verified`); ask for issuer and year — the answer makes it `Declared`.
 - Judge the document, not the person. Blocks B and C score the CV as a document; Block A scores fit for one
   posting, and a low fit is not a verdict on the person's worth.
 - After a rewrite, suggest aligning LinkedIn (`galactic-linkedin`).

@@ -13,6 +13,11 @@ Data roles: https://dataskew.io/ (by Adriano Sanges; site content "All rights re
 > - "No curated resource yet — contributions welcome" means exactly that: don't invent a list and attribute it
 >   to the guides. You may still build a study plan from the posting's stack (see `interview-guide.md` §3).
 > - Resources listed under Dataskew are Dataskew's own recommendations, not Guido's.
+> - **Don't fetch dataskew.io automatically**: its terms forbid automated access (scrapers, scripted
+>   requests). Link it and describe it from this file; the user visits it.
+>
+> **Source labels.** **[Guido]** = from Guido's guides (section cited). **[pack]** = this skill pack's own
+> note. **[Dataskew]** = Dataskew's own content (the Data sections below), not Guido's.
 
 ---
 
@@ -41,7 +46,7 @@ Link: https://github.com/GuidoPenta/galactic-tech-interview-guide#come-preparars
 ## Profile material (dev guide §2.3, all roles)
 
 - Galactic CV Guide for Developers: https://github.com/GuidoPenta/galactic-CV-guide-for-developers (see `galactic-cv`)
-- Galactic LinkedIn Profile Guide for Developers (see `galactic-linkedin`)
+- Galactic LinkedIn Profile Guide for Developers: https://github.com/GuidoPenta/galactic-linkedin-profile-guide-for-developers (see `galactic-linkedin`)
 - Portfolio: GitHub, tech blog, open-source contributions, side projects.
 
 ---
@@ -85,8 +90,9 @@ site on 2026-09-25:
   DuckDB, Airflow, dbt), Startup Stack (31 tasks: DuckDB, Polars, Metabase, serverless), Modern Data Stack
   (34 tasks: Docker, Terraform, Airflow, dlt, BigQuery, dbt, Spark, Kafka), plus Data Analyst and AI Engineer
   roadmaps. https://dataskew.io/roadmaps
-- **Fundamentals**: SQL, Python for data engineering. https://dataskew.io/fundamentals
-- **Hands-on projects, graded by a working (senior) data engineer**, not auto-graded; graded work goes on a
+- **Fundamentals** (7): SQL, Python, Data Modeling, Data Quality & Testing, Data Warehousing, NoSQL, Docker.
+  https://dataskew.io/fundamentals
+- **Hands-on projects, graded by a working engineer** (per the site; AI-powered grading is announced); graded work goes on a
   **public portfolio** visible to hiring companies. Examples: local ETL with dlt + DuckDB + Jupyter (2–4 h),
   scheduled GitHub ETL with Polars, DuckDB + Metabase analytics platform, RAG / LLM agent / LLM evaluation
   projects. https://dataskew.io/projects
@@ -143,7 +149,8 @@ Dataskew's own interview guidance (Beginner roadmap, "interview" step) — attri
 ## Engineering management / tech lead / architect
 
 - Tech guide: books on **management styles** help give confident, complete answers (step 2).
-- Dev guide §1.1: seniors and leads should focus on **communication, negotiation and process management**.
+- Dev guide §1.1 names seniors/leads refining **communication, negotiation and process management** as part
+  of its audience.
 - Curated titles: **No curated resource yet — contributions welcome.**
 
 ## Other roles (game, blockchain, IoT, robotics, technical writing, UX/UI, product)

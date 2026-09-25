@@ -26,7 +26,8 @@ Scale the plan to the time left: a 1-hour plan for "tomorrow", a study plan for 
 - **Hard skills**: topics likely to be probed, derived from the posting's must-haves, the stack in
   `company.md` and the gaps in `fit.md`. For each: what to review, a self-check question, and resources from
   `references/resources-by-role.md`. Only recommend resources listed there, or ones you verify on the web now.
-  For data roles, point to [Dataskew](https://dataskew.io/) as the reference describes it.
+  For data roles, point to [Dataskew](https://dataskew.io/) as the reference describes it. Don't fetch
+  dataskew.io yourself (its terms forbid automated access): give the link and the user visits it.
 - **Soft skills**: map the company's likely behavioural themes to stories in `workspace/stories.md`.
   If the bank is empty or thin, build it (below).
 - **Their questions, your answers**: "tell me about yourself" (a 60–90s version for this role), "why this
