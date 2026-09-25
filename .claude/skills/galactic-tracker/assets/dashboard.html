@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-MXi9a46OCKxZiGa5KrkYSEE5iH3jb1dEwxnolqRn17o='; style-src 'unsafe-inline'; img-src 'none'; connect-src 'none'; font-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Galactic Job Search</title>
+<!--
+  Galactic Job Search dashboard — template.
+  Claude copies this file to workspace/dashboard.html and replaces the JSON between the
+  DATA markers with the user's data (schema: .claude/skills/galactic-tracker/references/dashboard.md).
+  Self-contained: no network, no dependencies. Open it with a double click.
+-->
+<style>
+:root {
+  --bg: #f6f5f1;
+  --surface: #ffffff;
+  --surface-2: #f0eee8;
+  --border: #e2dfd6;
+  --text: #1d1f24;
+  --muted: #666a73;
+  --accent: #8a6d2f;
+  --accent-soft: #f3ead6;
+  --danger: #b3261e;
+  --danger-soft: #fbe9e7;
+  --ok: #2e7d4f;
+  --ok-soft: #e3f3e8;
+  --warn: #9a6400;
+  --warn-soft: #fdf1d8;
+  --shadow: 0 1px 2px rgba(20, 20, 30, .06), 0 2px 8px rgba(20, 20, 30, .04);
+  --radius: 12px;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1016;
+    --surface: #171a22;
+    --surface-2: #1e222c;
+    --border: #2a2f3b;
+    --text: #e8e6e1;
+    --muted: #9a9ea8;
+    --accent: #d9b56a;
+    --accent-soft: #2c2616;
+    --danger: #f08a80;
+    --danger-soft: #3a1c1a;
+    --ok: #7fd1a0;
+    --ok-soft: #16301f;
+    --warn: #f0c060;
+    --warn-soft: #33290f;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4);
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1016; --surface: #171a22; --surface-2: #1e222c; --border: #2a2f3b;
+  --text: #e8e6e1; --muted: #9a9ea8; --accent: #d9b56a; --accent-soft: #2c2616;
+  --danger: #f08a80; --danger-soft: #3a1c1a; --ok: #7fd1a0; --ok-soft: #16301f;
+  --warn: #f0c060; --warn-soft: #33290f; --shadow: 0 1px 2px rgba(0, 0, 0, .4);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.5 var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); }
+button { font: inherit; color: inherit; }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 24px 16px 64px; }
+
+header.top {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px;
+  margin-bottom: 20px;
+}
+header.top h1 { font-size: 22px; margin: 0; letter-spacing: -.01em; }
+header.top h1 span { color: var(--accent); }
+.meta { color: var(--muted); font-size: 13px; }
+.theme-btn {
+  border: 1px solid var(--border); background: var(--surface); border-radius: 999px;
+  padding: 4px 12px; cursor: pointer; font-size: 13px; color: var(--muted); margin-left: 8px;
+}
+
+.banner {
+  border-radius: var(--radius); padding: 10px 14px; margin-bottom: 16px; font-size: 14px;
+  background: var(--warn-soft); color: var(--warn); border: 1px solid transparent;
+}
+
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(128px, 1fr)); gap: 12px; margin-bottom: 24px; }
+.kpi {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 14px 16px; box-shadow: var(--shadow);
+}
+.kpi .n { font-size: 28px; font-weight: 650; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.kpi .l { color: var(--muted); font-size: 13px; margin-top: 2px; }
+
+.grid2 { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 16px; margin-bottom: 28px; }
+@media (max-width: 820px) { .grid2 { grid-template-columns: 1fr; } }
+.panel {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 16px; box-shadow: var(--shadow); min-width: 0;
+}
+.panel h2, section > h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 12px; font-weight: 600; }
+
+.upcoming { list-style: none; margin: 0; padding: 0; }
+.upcoming li {
+  display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 12px; align-items: start;
+  padding: 9px 0; border-top: 1px solid var(--border); cursor: pointer;
+}
+.upcoming li:first-child { border-top: 0; }
+.upcoming li:hover .what b { text-decoration: underline; }
+.when { font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.when small { display: block; font-weight: 400; color: var(--muted); }
+.when.overdue { color: var(--danger); }
+.when.today { color: var(--accent); }
+.what { min-width: 0; }
+.what b { font-weight: 600; }
+.what div { color: var(--muted); font-size: 13px; }
+.empty { color: var(--muted); font-size: 14px; padding: 8px 0; }
+
+.funnel { display: grid; gap: 8px; }
+.frow { display: grid; grid-template-columns: 110px minmax(0, 1fr) 36px; gap: 10px; align-items: center; font-size: 13px; }
+.fbar { height: 12px; background: var(--surface-2); border-radius: 999px; overflow: hidden; }
+.fbar i { display: block; height: 100%; background: var(--accent); border-radius: 999px; min-width: 2px; }
+.frow .c { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+.note { color: var(--muted); font-size: 12px; margin-top: 10px; }
+
+.board {
+  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(230px, 1fr); gap: 12px;
+  overflow-x: auto; padding-bottom: 8px; margin-bottom: 28px;
+}
+.col { background: var(--surface-2); border-radius: var(--radius); padding: 10px; min-height: 120px; }
+.col h3 {
+  font-size: 13px; margin: 2px 4px 10px; display: flex; justify-content: space-between; color: var(--muted);
+  font-weight: 600;
+}
+.col h3 .cnt { font-variant-numeric: tabular-nums; }
+.card {
+  display: block; width: 100%; text-align: left; cursor: pointer;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+  padding: 10px 12px; margin-bottom: 8px; box-shadow: var(--shadow);
+}
+.card:hover { border-color: var(--accent); }
+.card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.card .co { font-weight: 650; }
+.card .ro { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chip {
+  font-size: 11.5px; padding: 1px 8px; border-radius: 999px; background: var(--surface-2); color: var(--muted);
+  white-space: nowrap;
+}
+.chip.fit-hi { background: var(--ok-soft); color: var(--ok); }
+.chip.fit-mid { background: var(--warn-soft); color: var(--warn); }
+.chip.fit-lo { background: var(--danger-soft); color: var(--danger); }
+.chip.late { background: var(--danger-soft); color: var(--danger); }
+.chip.date { background: var(--accent-soft); color: var(--accent); }
+
+table.closed { width: 100%; border-collapse: collapse; font-size: 14px; }
+table.closed th { text-align: left; color: var(--muted); font-weight: 600; font-size: 12px; padding: 6px 8px; border-bottom: 1px solid var(--border); }
+table.closed td { padding: 8px; border-bottom: 1px solid var(--border); }
+table.closed tr { cursor: pointer; }
+table.closed tr:hover td { background: var(--surface-2); }
+.tablewrap { overflow-x: auto; }
+
+/* Detail drawer */
+dialog.drawer {
+  margin: 0 0 0 auto; height: 100%; max-height: 100%; width: min(640px, 100%);
+  border: 0; border-left: 1px solid var(--border); padding: 0;
+  background: var(--surface); color: var(--text);
+}
+dialog.drawer::backdrop { background: rgba(10, 12, 18, .45); }
+.dhead {
+  position: sticky; top: 0; background: var(--surface); border-bottom: 1px solid var(--border);
+  padding: 16px 20px; display: flex; justify-content: space-between; gap: 12px; align-items: start; z-index: 1;
+}
+.dhead h2 { margin: 0; font-size: 20px; }
+.dhead .ro { color: var(--muted); }
+.close {
+  border: 1px solid var(--border); background: var(--surface-2); border-radius: 8px;
+  width: 32px; height: 32px; cursor: pointer; font-size: 18px; line-height: 1; flex: none;
+}
+.dbody { padding: 16px 20px 40px; }
+.dbody section { margin-bottom: 22px; }
+.dbody h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 8px; }
+.facts { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 4px 12px; font-size: 14px; margin: 0; }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; overflow-wrap: anywhere; }
+.md { font-size: 14.5px; }
+.md h4 { font-size: 15px; margin: 14px 0 4px; }
+.md p { margin: 6px 0; }
+.md ul { margin: 6px 0; padding-left: 20px; }
+.md code { background: var(--surface-2); padding: 0 4px; border-radius: 4px; font-size: 13px; }
+.score { display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; }
+.score .big { font-size: 32px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.score .dec { font-weight: 600; }
+.twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 560px) { .twocol { grid-template-columns: 1fr; } }
+.twocol ul { margin: 4px 0; padding-left: 18px; font-size: 14px; }
+.qlist { list-style: none; padding: 0; margin: 0; }
+.qlist li { padding: 8px 0; border-top: 1px solid var(--border); font-size: 14px; }
+.qlist li:first-child { border-top: 0; }
+.qlist .who { font-size: 12px; color: var(--muted); }
+.qlist .ans { color: var(--muted); margin-top: 2px; }
+.log { list-style: none; padding: 0; margin: 0; border-left: 2px solid var(--border); }
+.log li { position: relative; padding: 0 0 12px 16px; font-size: 14px; }
+.log li::before {
+  content: ""; position: absolute; left: -6px; top: 6px; width: 10px; height: 10px;
+  border-radius: 50%; background: var(--accent);
+}
+.log time { display: block; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.path { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12.5px; color: var(--muted); overflow-wrap: anywhere; }
+.welcome { text-align: center; padding: 64px 16px; color: var(--muted); }
+.welcome h2 { color: var(--text); }
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<dialog class="drawer" id="drawer" aria-labelledby="d-title"></dialog>
+
+<!-- DATA:START -->
+<script id="gjs-data" type="application/json">
+{"generated": null, "lang": "en", "applications": []}
+</script>
+<!-- DATA:END -->
+
+<script>
+(function () {
+  "use strict";
+
+  var I18N = {
+    en: {
+      title: "Job search", generated: "Updated", never: "not generated yet",
+      stale: "This dashboard is {n} days old. Ask Claude to “update my dashboard”.",
+      theme: "Theme",
+      kActive: "In progress", kSaved: "Saved", kInterviewing: "Interviewing", kOffers: "Offers", kSent: "Applications sent",
+      upcoming: "Coming up", noUpcoming: "Nothing scheduled. Ask Claude “what should I do next?”.",
+      funnel: "Funnel", funnelNote: "Small numbers are noisy: conversion rates become meaningful after about 5 applications.",
+      funnelEmpty: "No applications sent yet.",
+      board: "Pipeline", closed: "Closed", noClosed: "Nothing closed yet.",
+      overdue: "overdue by {n} d", today: "today", tomorrow: "tomorrow", inDays: "in {n} days",
+      company: "Company", role: "Role", outcome: "Outcome", closedOn: "Last update",
+      facts: "Details", briefing: "Briefing", fit: "Fit", strengths: "Lead with", gaps: "Gaps",
+      questions: "Questions to ask", log: "Log", files: "Folder", nextStep: "Next step",
+      f_status: "Status", f_source: "Source", f_location: "Location", f_mode: "Work mode", f_salary: "Salary",
+      f_saved: "Saved on", f_applied: "Applied on", f_referral: "Referral", f_contacts: "Contacts", f_tags: "Tags",
+      welcomeH: "Your dashboard is empty", welcomeP: "Open this project in Claude Code and say “update my dashboard”. It will fill this page from your workspace.",
+      close: "Close", fitWord: "fit",
+      status: { saved: "Saved", applied: "Applied", screening: "Screening", interviewing: "Interviewing", offer: "Offer",
+        accepted: "Accepted", rejected: "Rejected", withdrawn: "Withdrawn", ghosted: "Ghosted" }
+    },
+    it: {
+      title: "Ricerca di lavoro", generated: "Aggiornata", never: "non ancora generata",
+      stale: "Questa dashboard ha {n} giorni. Chiedi a Claude “aggiorna la dashboard”.",
+      theme: "Tema",
+      kActive: "In corso", kSaved: "Salvate", kInterviewing: "Ai colloqui", kOffers: "Offerte", kSent: "Candidature inviate",
+      upcoming: "In arrivo", noUpcoming: "Niente in programma. Chiedi a Claude “cosa faccio adesso?”.",
+      funnel: "Imbuto", funnelNote: "Con pochi numeri le percentuali ingannano: diventano utili da circa 5 candidature in su.",
+      funnelEmpty: "Nessuna candidatura inviata per ora.",
+      board: "Candidature", closed: "Chiuse", noClosed: "Nessuna candidatura chiusa.",
+      overdue: "scaduto da {n} g", today: "oggi", tomorrow: "domani", inDays: "tra {n} giorni",
+      company: "Azienda", role: "Ruolo", outcome: "Esito", closedOn: "Ultimo aggiornamento",
+      facts: "Dettagli", briefing: "Scheda", fit: "Fit", strengths: "Punti di forza", gaps: "Lacune",
+      questions: "Domande da fare", log: "Diario", files: "Cartella", nextStep: "Prossimo passo",
+      f_status: "Stato", f_source: "Fonte", f_location: "Sede", f_mode: "Modalità", f_salary: "Stipendio",
+      f_saved: "Salvata il", f_applied: "Inviata il", f_referral: "Referral", f_contacts: "Contatti", f_tags: "Tag",
+      welcomeH: "La dashboard è vuota", welcomeP: "Apri questo progetto in Claude Code e scrivi “aggiorna la dashboard”: riempirà questa pagina con i dati del tuo workspace.",
+      close: "Chiudi", fitWord: "fit",
+      status: { saved: "Salvata", applied: "Inviata", screening: "Screening", interviewing: "Colloqui", offer: "Offerta",
+        accepted: "Accettata", rejected: "Rifiutata", withdrawn: "Ritirata", ghosted: "Sparita" }
+    }
+  };
+
+  var PIPELINE = ["saved", "applied", "screening", "interviewing", "offer"];
+  var CLOSED = ["accepted", "rejected", "withdrawn", "ghosted"];
+  var ORDER = ["saved", "applied", "screening", "interviewing", "offer", "accepted"];
+
+  var data;
+  try { data = JSON.parse(document.getElementById("gjs-data").textContent); }
+  catch (e) { data = { generated: null, applications: [] }; }
+  var apps = Array.isArray(data.applications) ? data.applications : [];
+  var T = I18N[data.lang] || I18N.en;
+  document.documentElement.lang = I18N[data.lang] ? data.lang : "en";
+  document.title = T.title + " · Galactic";
+
+  // ---------- helpers ----------
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function safeUrl(u) { return /^https?:\/\//i.test(String(u || "")) ? String(u) : null; }
+  function fmt(tpl, n) { return tpl.replace("{n}", n); }
+  function parseDate(s) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(s || "");
+    return m ? new Date(+m[1], +m[2] - 1, +m[3]) : null;
+  }
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+  function dayDiff(s) { var d = parseDate(s); return d ? Math.round((d - today) / 86400000) : null; }
+  function niceDate(s) {
+    var d = parseDate(s); if (!d) return esc(s || "");
+    try { return d.toLocaleDateString(document.documentElement.lang, { day: "numeric", month: "short", year: d.getFullYear() === today.getFullYear() ? undefined : "numeric" }); }
+    catch (e) { return esc(s); }
+  }
+  function relDay(s) {
+    var n = dayDiff(s); if (n == null) return "";
+    if (n < 0) return fmt(T.overdue, -n);
+    if (n === 0) return T.today;
+    if (n === 1) return T.tomorrow;
+    return fmt(T.inDays, n);
+  }
+  function statusLabel(s) { return T.status[s] || esc(s); }
+  function isClosed(a) { return CLOSED.indexOf(a.status) !== -1; }
+  function reached(a) {
+    var r = a.reached || a.status;
+    var i = ORDER.indexOf(r);
+    return i === -1 ? 0 : i;
+  }
+  function fitClass(score) {
+    if (typeof score !== "number") return "";
+    return score >= 70 ? "fit-hi" : score >= 50 ? "fit-mid" : "fit-lo";
+  }
+  function asList(v) { return Array.isArray(v) ? v : (v ? [v] : []); }
+
+  // Minimal, safe Markdown: headings, lists, bold, italic, code, http(s) links.
+  // Consecutive lines join into one paragraph (or one list item); a blank line ends a block.
+  function md(src) {
+    if (!src) return "";
+    var out = [], para = [], item = null, inList = false;
+    function flushPara() { if (para.length) { out.push("<p>" + inline(para.join(" ")) + "</p>"); para = []; } }
+    function flushItem() { if (item !== null) { out.push("<li>" + inline(item) + "</li>"); item = null; } }
+    function closeList() { flushItem(); if (inList) { out.push("</ul>"); inList = false; } }
+    String(src).split(/\r?\n/).forEach(function (raw) {
+      var line = raw.trim();
+      if (!line) { flushPara(); closeList(); return; }
+      var li = /^[-*]\s+(.*)$/.exec(line);
+      if (li) {
+        flushPara(); flushItem();
+        if (!inList) { out.push("<ul>"); inList = true; }
+        item = li[1];
+        return;
+      }
+      var h = /^#{1,6}\s+(.*)$/.exec(line);
+      if (h) { flushPara(); closeList(); out.push("<h4>" + inline(h[1]) + "</h4>"); return; }
+      if (item !== null) { item += " " + line; return; }
+      closeList();
+      para.push(line);
+    });
+    flushPara(); closeList();
+    return out.join("");
+  }
+  function inline(s) {
+    var t = esc(s);
+    t = t.replace(/`([^`]+)`/g, "<code>$1</code>");
+    t = t.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+    t = t.replace(/(^|[\s(])_([^_]+)_(?=[\s).,;:!?]|$)/g, "$1<em>$2</em>");
+    t = t.replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, function (_, txt, url) {
+      return '<a href="' + url + '" target="_blank" rel="noopener noreferrer">' + txt + "</a>";
+    });
+    return t;
+  }
+
+  // ---------- render ----------
+  var root = document.getElementById("app");
+
+  function render() {
+    var html = [];
+    html.push('<header class="top"><h1>' + esc(T.title) + ' <span>✦</span></h1><div class="meta">' +
+      esc(T.generated) + ": " + (data.generated ? niceDate(data.generated) : esc(T.never)) +
+      '<button class="theme-btn" id="theme" type="button">' + esc(T.theme) + ' ◐</button></div></header>');
+
+    if (!apps.length) {
+      html.push('<div class="welcome"><h2>' + esc(T.welcomeH) + "</h2><p>" + esc(T.welcomeP) + "</p></div>");
+      root.innerHTML = html.join("");
+      bindTheme();
+      return;
+    }
+
+    var age = data.generated ? -dayDiff(data.generated) : null;
+    if (age != null && age > 7) html.push('<div class="banner">' + esc(fmt(T.stale, age)) + "</div>");
+
+    // KPIs
+    var open = apps.filter(function (a) { return !isClosed(a); });
+    var count = function (st) { return apps.filter(function (a) { return a.status === st; }).length; };
+    var sent = apps.filter(function (a) { return reached(a) >= 1; }).length;
+    var inProgress = open.filter(function (a) { return a.status !== "saved"; }).length;
+    html.push('<div class="kpis">' +
+      kpi(inProgress, T.kActive) + kpi(count("saved"), T.kSaved) + kpi(count("interviewing"), T.kInterviewing) +
+      kpi(count("offer"), T.kOffers) + kpi(sent, T.kSent) + "</div>");
+
+    // Upcoming + funnel
+    html.push('<div class="grid2"><div class="panel"><h2>' + esc(T.upcoming) + "</h2>" + upcoming(open) +
+      '</div><div class="panel"><h2>' + esc(T.funnel) + "</h2>" + funnel(sent) + "</div></div>");
+
+    // Board
+    html.push("<section><h2>" + esc(T.board) + '</h2><div class="board">');
+    PIPELINE.forEach(function (st) {
+      var items = open.filter(function (a) { return a.status === st; })
+        .sort(function (a, b) { return String(a.next_step_date || "9999").localeCompare(String(b.next_step_date || "9999")); });
+      html.push('<div class="col"><h3><span>' + esc(statusLabel(st)) + '</span><span class="cnt">' + items.length + "</span></h3>");
+      items.forEach(function (a) { html.push(card(a)); });
+      html.push("</div>");
+    });
+    html.push("</div></section>");
+
+    // Closed
+    var closed = apps.filter(isClosed).sort(function (a, b) { return String(b.updated || "").localeCompare(String(a.updated || "")); });
+    html.push("<section><h2>" + esc(T.closed) + "</h2>");
+    if (!closed.length) html.push('<p class="empty">' + esc(T.noClosed) + "</p>");
+    else {
+      html.push('<div class="panel tablewrap"><table class="closed"><thead><tr><th>' + esc(T.company) + "</th><th>" + esc(T.role) +
+        "</th><th>" + esc(T.outcome) + "</th><th>" + esc(T.closedOn) + "</th></tr></thead><tbody>");
+      closed.forEach(function (a) {
+        html.push('<tr data-id="' + esc(a.id) + '" tabindex="0"><td><b>' + esc(a.company) + "</b></td><td>" + esc(a.role) + "</td><td>" +
+          esc(statusLabel(a.status)) + "</td><td>" + niceDate(a.updated) + "</td></tr>");
+      });
+      html.push("</tbody></table></div>");
+    }
+    html.push("</section>");
+
+    root.innerHTML = html.join("");
+    bindTheme();
+    root.querySelectorAll("[data-id]").forEach(function (el) {
+      el.addEventListener("click", function () { openDetail(el.getAttribute("data-id")); });
+      el.addEventListener("keydown", function (e) { if (e.key === "Enter") openDetail(el.getAttribute("data-id")); });
+    });
+  }
+
+  function kpi(n, label) { return '<div class="kpi"><div class="n">' + n + '</div><div class="l">' + esc(label) + "</div></div>"; }
+
+  function upcoming(open) {
+    var items = open.filter(function (a) { return parseDate(a.next_step_date); })
+      .sort(function (a, b) { return a.next_step_date.localeCompare(b.next_step_date); });
+    if (!items.length) return '<p class="empty">' + esc(T.noUpcoming) + "</p>";
+    return '<ul class="upcoming">' + items.map(function (a) {
+      var n = dayDiff(a.next_step_date);
+      var cls = n < 0 ? "overdue" : n === 0 ? "today" : "";
+      return '<li data-id="' + esc(a.id) + '" tabindex="0"><div class="when ' + cls + '">' + niceDate(a.next_step_date) +
+        "<small>" + esc(relDay(a.next_step_date)) + '</small></div><div class="what"><b>' + esc(a.next_step || statusLabel(a.status)) +
+        "</b><div>" + esc(a.company) + " · " + esc(a.role) + "</div></div></li>";
+    }).join("") + "</ul>";
+  }
+
+  function funnel(sent) {
+    if (!sent) return '<p class="empty">' + esc(T.funnelEmpty) + "</p>";
+    var stages = ["applied", "screening", "interviewing", "offer", "accepted"];
+    var rows = stages.map(function (st) {
+      var i = ORDER.indexOf(st);
+      var n = apps.filter(function (a) { return reached(a) >= i; }).length;
+      var pct = Math.round((n / sent) * 100);
+      return '<div class="frow"><span>' + esc(statusLabel(st)) + '</span><div class="fbar" role="img" aria-label="' + n + " / " + sent +
+        '">' + (n ? '<i style="width:' + pct + '%"></i>' : "") + '</div><span class="c">' + n + "</span></div>";
+    }).join("");
+    return '<div class="funnel">' + rows + "</div>" + (sent < 5 ? '<p class="note">' + esc(T.funnelNote) + "</p>" : "");
+  }
+
+  function card(a) {
+    var chips = [];
+    if (a.fit && typeof a.fit.score === "number") chips.push('<span class="chip ' + fitClass(a.fit.score) + '">' + esc(T.fitWord) + " " + a.fit.score + "</span>");
+    if (a.work_mode) chips.push('<span class="chip">' + esc(a.work_mode) + "</span>");
+    if (a.salary_range) chips.push('<span class="chip">' + esc(a.salary_range) + "</span>");
+    if (a.next_step_date) {
+      var late = dayDiff(a.next_step_date) < 0;
+      chips.push('<span class="chip ' + (late ? "late" : "date") + '">' + esc(relDay(a.next_step_date)) + "</span>");
+    }
+    return '<button class="card" type="button" data-id="' + esc(a.id) + '"><div class="co">' + esc(a.company) + '</div><div class="ro">' +
+      esc(a.role) + '</div><div class="chips">' + chips.join("") + "</div></button>";
+  }
+
+  // ---------- detail ----------
+  var drawer = document.getElementById("drawer");
+
+  function openDetail(id) {
+    var a = apps.filter(function (x) { return x.id === id; })[0];
+    if (!a) return;
+    var h = [];
+    h.push('<div class="dhead"><div><h2 id="d-title">' + esc(a.company) + '</h2><div class="ro">' + esc(a.role) + '</div></div>' +
+      '<button class="close" type="button" aria-label="' + esc(T.close) + '">×</button></div><div class="dbody">');
+
+    if (a.next_step) {
+      h.push("<section><h3>" + esc(T.nextStep) + "</h3><p><b>" + esc(a.next_step) + "</b>" +
+        (a.next_step_date ? " — " + niceDate(a.next_step_date) + " (" + esc(relDay(a.next_step_date)) + ")" : "") + "</p></section>");
+    }
+
+    var src = safeUrl(a.source_url);
+    var facts = [
+      [T.f_status, statusLabel(a.status)],
+      [T.f_source, a.source ? esc(a.source) + (src ? ' · <a href="' + esc(src) + '" target="_blank" rel="noopener noreferrer">link ↗</a>' : "") :
+        (src ? '<a href="' + esc(src) + '" target="_blank" rel="noopener noreferrer">link ↗</a>' : "")],
+      [T.f_location, esc(a.location)], [T.f_mode, esc(a.work_mode)], [T.f_salary, esc(a.salary_range)],
+      [T.f_saved, a.saved_on ? niceDate(a.saved_on) : ""], [T.f_applied, a.applied_on ? niceDate(a.applied_on) : ""],
+      [T.f_referral, esc(a.referral)],
+      [T.f_contacts, asList(a.contacts).map(function (c) { return esc(typeof c === "string" ? c : [c.name, c.role].filter(Boolean).join(" — ")); }).join("<br>")],
+      [T.f_tags, asList(a.tags).map(esc).join(", ")]
+    ].filter(function (f) { return f[1]; });
+    h.push("<section><h3>" + esc(T.facts) + '</h3><dl class="facts">' + facts.map(function (f) {
+      return "<dt>" + esc(f[0]) + "</dt><dd>" + f[1] + "</dd>";
+    }).join("") + "</dl></section>");
+
+    if (a.briefing) h.push("<section><h3>" + esc(T.briefing) + '</h3><div class="md">' + md(a.briefing) + "</div></section>");
+
+    if (a.fit && (typeof a.fit.score === "number" || a.fit.decision)) {
+      h.push("<section><h3>" + esc(T.fit) + '</h3><div class="score">' +
+        (typeof a.fit.score === "number" ? '<span class="big">' + a.fit.score + '</span><span class="chip ' + fitClass(a.fit.score) + '">/100</span>' : "") +
+        (a.fit.decision ? '<span class="dec">' + esc(a.fit.decision) + "</span>" : "") + "</div>");
+      if (a.fit.summary) h.push('<div class="md">' + md(a.fit.summary) + "</div>");
+      var st = asList(a.fit.strengths), gp = asList(a.fit.gaps);
+      if (st.length || gp.length) {
+        h.push('<div class="twocol"><div><b>' + esc(T.strengths) + "</b><ul>" + st.map(function (x) { return "<li>" + inline(x) + "</li>"; }).join("") +
+          "</ul></div><div><b>" + esc(T.gaps) + "</b><ul>" + gp.map(function (x) { return "<li>" + inline(x) + "</li>"; }).join("") + "</ul></div></div>");
+      }
+      h.push("</section>");
+    }
+
+    var qs = asList(a.questions);
+    if (qs.length) {
+      h.push("<section><h3>" + esc(T.questions) + '</h3><ul class="qlist">' + qs.map(function (q) {
+        if (typeof q === "string") return "<li>" + inline(q) + "</li>";
+        return "<li>" + (q.for ? '<div class="who">' + esc(q.for) + "</div>" : "") + inline(q.text) +
+          (q.answer ? '<div class="ans">↳ ' + inline(q.answer) + "</div>" : "") + "</li>";
+      }).join("") + "</ul></section>");
+    }
+
+    var log = asList(a.log).slice().sort(function (x, y) { return String(y.date).localeCompare(String(x.date)); });
+    if (log.length) {
+      h.push("<section><h3>" + esc(T.log) + '</h3><ul class="log">' + log.map(function (l) {
+        return "<li><time>" + niceDate(l.date) + "</time>" + inline(l.text) + "</li>";
+      }).join("") + "</ul></section>");
+    }
+
+    h.push("<section><h3>" + esc(T.files) + '</h3><div class="path">workspace/applications/' + esc(a.id) + "/</div></section>");
+    h.push("</div>");
+
+    drawer.innerHTML = h.join("");
+    drawer.querySelector(".close").addEventListener("click", function () { drawer.close(); });
+    if (typeof drawer.showModal === "function") drawer.showModal(); else drawer.setAttribute("open", "");
+  }
+  drawer.addEventListener("click", function (e) { if (e.target === drawer) drawer.close(); });
+
+  // ---------- theme ----------
+  function bindTheme() {
+    var btn = document.getElementById("theme");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      var cur = document.documentElement.getAttribute("data-theme");
+      var dark = cur ? cur === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+      var next = dark ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      try { localStorage.setItem("gjs-theme", next); } catch (e) {}
+    });
+  }
+  try { var saved = localStorage.getItem("gjs-theme"); if (saved) document.documentElement.setAttribute("data-theme", saved); } catch (e) {}
+
+  render();
+})();
+</script>
+</body>
+</html>

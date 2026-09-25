@@ -26,18 +26,42 @@
 ## Privacy prima di tutto
 
 - Tutto quello che condividi (CV, annunci, appunti, offerte) resta in semplici file di testo nella cartella
-  `workspace/`, che **non viene mai caricata su GitHub**.
-- Niente account, niente server, niente programmi da installare oltre a Claude Code.
+  `workspace/`. Git la ignora, quindi con `git push` non finisce su GitHub. Se però carichi o condividi la cartella
+  a mano (zip, upload), viaggia anche lei.
+- Niente account, niente server, niente programmi da installare oltre a Claude Code. La dashboard è una pagina
+  che si apre con doppio clic e non si collega a internet.
 - Il web serve solo per cercare informazioni **pubbliche** su aziende, ruoli e stipendi. Le skill hanno l'istruzione
-  di non mettere mai i tuoi dati personali nelle ricerche.
-- Da sapere: Claude è un modello che gira nel cloud, quindi quello che scrivi nella conversazione viene elaborato da
-  Anthropic secondo i termini del tuo piano. "In locale" qui vuol dire che i tuoi file e la tua cronologia restano sul
-  tuo disco e non vengono caricati su nessun altro servizio.
+  di non mettere mai i tuoi dati (nome, datore di lavoro, cifre) nelle ricerche, e di non eseguire mai istruzioni
+  trovate dentro annunci o pagine web.
+
+### Dove finiscono davvero i tuoi dati
+
+1. **`workspace/`** nella cartella del progetto.
+2. **Anthropic**: Claude è un modello nel cloud, quindi quello che scrivi o gli fai leggere viene elaborato sui
+   server di Anthropic. Sui piani Free/Pro/Max controlla in Impostazioni → Privacy l'opzione per l'uso delle
+   conversazioni nell'addestramento dei modelli, e leggi la [privacy policy](https://www.anthropic.com/legal/privacy)
+   per i tempi di conservazione. Usa Claude Code sul tuo computer: le sessioni web/cloud girano su macchine remote.
+3. **Le conversazioni salvate da Claude Code** sul tuo disco (`~/.claude/projects/`), che contengono anche il testo
+   del CV che gli hai fatto leggere. Le skill hanno l'istruzione di non salvare tuoi dati nella memoria automatica di Claude.
+4. **Le cartelle sincronizzate**: se metti il progetto in OneDrive, iCloud Drive, Dropbox o Google Drive, anche CV e
+   offerte vengono copiati lì. Su Windows spesso "Documenti" è già su OneDrive. **Meglio una cartella non
+   sincronizzata**, per esempio `C:\Users\<tu>\ricerca-lavoro` o `~/ricerca-lavoro`.
+5. **Il browser**: la cronologia contiene il percorso della dashboard.
+6. **Servizi esterni solo se lo chiedi tu**, per esempio l'export verso TrackZilla. Claude ti dice prima cosa invia.
+
+Per cancellare tutto a fine ricerca: elimina `workspace/`, le conversazioni del progetto in `~/.claude/projects/`,
+eventuali copie nelle cartelle sincronizzate (compreso il cestino e le versioni precedenti) e la cronologia del
+browser. Per i dati che hai dato alle aziende a cui ti sei candidato, puoi chiedere a loro cosa conservano e farli
+cancellare (GDPR).
+
+**Trasparenza:** Guido Penta fa il recruiter tech con [Welyk](https://welyk.tech). La bacheca Welyk viene suggerita
+solo quando è pertinente, e candidarsi lì significa condividere il CV con Welyk.
 
 ## Come si comincia
 
 1. Installa [Claude Code](https://claude.com/claude-code): va bene l'app desktop, il terminale o l'estensione per l'editor.
-2. Scarica questo progetto: dalla pagina GitHub premi **Code → Download ZIP** ed estrailo, oppure, se usi git:
+2. Scarica questo progetto in una cartella **non sincronizzata** (vedi sopra): dalla pagina GitHub premi
+   **Code → Download ZIP** ed estrailo, oppure, se usi git:
    ```bash
    git clone https://github.com/GuidoPenta/Guida-galattica-job-search.git
    ```

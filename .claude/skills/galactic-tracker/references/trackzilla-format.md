@@ -137,7 +137,7 @@ Status and date can be edited afterwards from the list or the Kanban board.
 - If not logged in, or the description is empty, it redirects to the home page and the text is lost.
 - Only the description travels; company, role, salary and work mode are then guessed by the parser, and
   status, date and tags must be set by hand.
-- Keep it to the job-ad text: no personal data in the URL. Very long ads may exceed browser URL limits,
+- Keep it to the job-ad text only, without the Source/Location/Next header lines: no personal data in the URL. Very long ads may exceed browser URL limits,
   so trim to the essentials (title, company, location, salary, work mode, a short summary).
 
 ### C. CSV into the table (self-hosted TrackZilla only)
@@ -171,8 +171,8 @@ user_id,company_name,role_description,job_description,application_date,salary,wo
 | `source_url` | *(none)* | first line of `job_description`: `Source: <url>` |
 | `location` | *(none)* | line in `job_description` (`Location: Milano`) and tag `loc-milano` |
 | `next_step`, `next_step_date` | *(none)* | line in `job_description` (`Next: ... on YYYY-MM-DD`); will go stale, local file stays the source of truth |
-| `contacts` | *(none)* | **keep local by default** (third-party personal data); add only if the user asks |
-| dated log | *(none)* | keep local; optionally a 2-3 line summary at the end of `job_description` |
+| `contacts` | *(none)* | **never exported**: third-party personal data stays local |
+| dated log | *(none)* | **never exported**: stays local |
 | job ad text (if saved in the folder) | `job_description` | after the header lines above |
 
 Suggested `job_description` layout:
@@ -217,7 +217,8 @@ Reverse mapping (TrackZilla → ours, e.g. when the user reads values off the ap
 2. Mind the free plan limit (50 applications): import active applications first, skip `saved`.
 3. For each application, output a ready-to-paste block with every form field (Company, Role, Salary,
    Work Mode, Application date, Status, Tags, Job description) using the mapping above, and optionally
-   the `/import?description=` link with the URL-encoded description.
+   the `/import?description=` link with the URL-encoded job-ad text only (no header lines).
+   TrackZilla is a hosted app (Supabase): whatever is entered there is stored on its servers under its terms.
 4. Remind the user that the local `application.md` stays the source of truth (contacts, next steps, log),
    and that TrackZilla will auto-mark old `in-corso` entries as `ghosting`.
 5. Only if the user self-hosts TrackZilla: generate the CSV from section C.

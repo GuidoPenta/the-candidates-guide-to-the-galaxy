@@ -1,6 +1,6 @@
 ---
 name: galactic-tracker
-description: Local job-application tracker. Logs new applications, records status changes and interview rounds, shows the pipeline and what needs follow-up, gives funnel stats, and exports to CSV or TrackZilla (trackzilla.cv). Everything lives in local Markdown files, with no account and no cloud. Use when the user says "I applied to…", "I had the interview with…", "they rejected me", "I got an offer", "show my applications", "what do I need to follow up on", "export to TrackZilla", or after any other galactic-* skill changes the state of an application.
+description: Local job-application tracker with a browser dashboard. Logs new applications, records status changes and interview rounds, shows the pipeline and what needs follow-up, gives funnel stats, regenerates the dashboard page, and exports to CSV or TrackZilla (trackzilla.cv). Everything lives in local Markdown files, with no account and no cloud. Use when the user says "I applied to…", "I had the interview with…", "they rejected me", "I got an offer", "show my applications", "what do I need to follow up on", "export to TrackZilla", "update my dashboard", or after any other galactic-* skill changes the state of an application.
 ---
 
 # Galactic Tracker
@@ -33,12 +33,20 @@ silence and let them decide.
 ### Pipeline view — regenerate `workspace/tracker.md`
 Generated file, overwritten each time. Header line: `Generated YYYY-MM-DD from applications/ — do not edit.`
 Then:
-- **Needs attention**: overdue `next_step_date`, and processes with no log entry for a long time
-  (see follow-up advice in `.claude/skills/galactic-interview-prep/references/interview-guide.md`).
-- **Active** table: company · role · status · last update · next step · date, sorted by next date.
+- **Needs attention**: overdue `next_step_date`, and processes in `applied`/`screening`/`interviewing` with no
+  log entry for 10+ days. Suggest a polite follow-up; this threshold is general practice, not from the guides.
+- **Active** table: company · role · status · last update · next step · date, sorted by next date
+  (statuses `applied` to `offer`).
+- **Saved, not applied yet**: a separate short list, since these are decisions still pending.
 - **Closed** table: company · role · final status · closed on.
 - **Funnel**: counts per status, and applied→screening→interview→offer conversion. Only show conversion
   with ≥ 5 applications, and say that small numbers are noisy.
+
+### Dashboard — regenerate `workspace/dashboard.html`
+Each time you regenerate `tracker.md`, also regenerate the browser dashboard following `references/dashboard.md`.
+It's a self-contained page built from `assets/dashboard.html`, with no server. It shows the pipeline by stage,
+upcoming dates, the funnel, and a detail panel per application (briefing, fit, questions, log). The first time,
+tell the user they can open `workspace/dashboard.html` with a double click and keep it bookmarked.
 
 ### Rejections
 When a rejection is logged, acknowledge it briefly and humanly. If the user wants, capture what they

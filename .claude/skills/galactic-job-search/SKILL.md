@@ -15,7 +15,8 @@ skill's `references/`. You work **locally**: the user's data stays in `workspace
    Write documents (CVs, messages) in the language of the target market or posting, and ask if unclear.
 2. **Never fabricate.** Never invent experience, numbers, titles, skills or dates for a CV, a profile or
    an interview answer. If a stronger claim needs data, ask the user for it. Suggest honest reframings only.
-3. **Privacy.** Follow the privacy rules in `references/workspace.md`. Workspace content never leaves the machine.
+3. **Privacy.** Follow the privacy rules in `CLAUDE.md` (project root). In short: the data stays in `workspace/`, is
+   processed only by Claude, never goes into web searches, and is never committed.
 4. **Cite the guide.** When advice comes from a Galactic guide, say so briefly and link the section, so the
    user can go deeper. Don't pass off generic advice as the guide's.
 5. **Sources and dates** for every fact about companies, salaries and markets. A guess is labelled a guess.
@@ -30,10 +31,10 @@ If it doesn't:
 1. Create the folder skeleton from `references/workspace.md`. Create only the folders, no placeholder content.
 2. Explain in 3 lines what you'll do together and that everything stays local.
 3. Ask for the CV: tell the user to drop the file into `workspace/cv/original/`, or paste it.
-   You can read PDF, Markdown and text directly. For DOCX, ask them to export it to PDF or paste the text.
+   You can read PDF, images, Markdown and text directly. For DOCX, ask them to export it to PDF or paste the text.
 4. Build `profile.md` through a short conversation of 2–3 questions per turn, not a form: target roles,
-   seniority, location and work mode, languages, contract type, constraints, and compensation (optional
-   and sensitive: say why it helps negotiation later and accept a refusal). Pre-fill what you can read from
+   seniority, location and work mode, languages, contract type, constraints, and target / walk-away compensation
+   (optional and sensitive: say it helps negotiation later and accept a refusal; never ask for the current salary). Pre-fill what you can read from
    the CV and ask the user to confirm.
 5. Propose the first moves (usually a CV review, then LinkedIn, then applications).
 

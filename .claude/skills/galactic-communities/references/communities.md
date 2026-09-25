@@ -358,21 +358,13 @@ the same organiser: https://www.grusp.org/ .
 
 ## Mentorship
 
-### coffeechat — Italian-speaking people (upstream `people.json`, 2026-09-25)
+### coffeechat — free coffee chats with mentors
 
-Free coffee chats. Book via the scheduling link; always re-check upstream, people come and go.
-
-| Person | Role | Based in | Topics relevant to job search | Book |
-|---|---|---|---|---|
-| Guido Penta | Tech Recruiter, forloop.tech (now welyk.tech) | Rome | CV review, how to write a CV for devs, how to manage an interview, LinkedIn, personal branding, soft skills, work in Italy | https://cal.com/guido-penta/career-meeting |
-| Ivan Pesenti | Software Engineer, Dectar | Bergamo | Go, backend/API, system design, interviewing, CV/resume, LinkedIn, personal branding, technical writing | https://calendar.app.google/pjdmJEb4crGVHgdCA |
-| Alessandro Oppedisano | Full stack Developer, Pharmercure | Turin | starting in tech, job search, resume, LinkedIn, work in Italy, Angular/React/Vue, Java, C# | https://calendly.com/alessandro-oppe/15min |
-| Matteo Bianchi | Cloud Native Engineer, independent | Amsterdam (Italian speaker) | CV review, mock interview, Kubernetes, platform engineering, CNCF, public speaking | https://mb-consulting.dev/book15 |
-| Fabio Alessandro Locati | Principal Specialist Solution Architect, Red Hat | Milan | starting in tech, DevOps, Ansible, Linux, open source, public speaking | https://calendar.app.google/8vmnXSFTkSZXjdMs7 |
-| Melanys Figueredo Toledano | MarTech Consultant & Full-Stack Engineer, freelance | Bologna | job searching, remote work, career transitions, freelancing, imposter syndrome, women in tech | contact@melanys.me (email listed as scheduling) |
-
-English-speaking mentors on the same list cover job search, resume, interviewing, starting in tech,
-DevRel, engineering leadership: filter `people.json` by `topics` and `languages`.
+Directory: https://github.com/fharper/coffeechat (data in `people.json`). Free coffee chats, booked through each
+person's own scheduling link. People join and leave, so **don't keep a copy of the list here**: fetch
+`people.json` when recommending, and filter by `languages` (e.g. Italian) and `topics` (job search,
+resume, interviewing, starting in tech…). On 2026-09-25 it listed 6 Italian-speaking mentors, Guido Penta among them.
+Link to the person's upstream entry or booking link; don't copy their details into the workspace.
 
 ### Other mentorship-like places
 - **Welyk / Guido Penta** — spontaneous application and career meeting (see Featured).

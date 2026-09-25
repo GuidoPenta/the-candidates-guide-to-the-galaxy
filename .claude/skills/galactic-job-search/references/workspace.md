@@ -3,15 +3,21 @@
 Every galactic-* skill reads and writes the same local folder: `workspace/` at the root of this project.
 It is git-ignored. This file is the single contract for its layout. If a skill needs a file that is
 missing, it creates it following this layout. It never invents a new location.
+**If a reference file suggests a different file name or location (e.g. "next to the original CV"), this file wins.**
+
+Language: files in the workspace (profile, reviews, fit, notes, briefing) are written in the language of the
+conversation. Documents meant for companies (CV, cover letters, messages) are written in the language of the
+posting or target market; ask if unclear.
 
 ```
 workspace/
 ├── profile.md                 # who the candidate is and what they want (see below)
 ├── stories.md                 # STAR story bank, reused across all interviews
 ├── cv/
-│   ├── original/              # files the user dropped in (PDF, DOCX, MD…), never modified
-│   ├── cv-master.md           # the complete, honest master CV (all experience, all numbers)
-│   └── reviews/               # YYYY-MM-DD-review.md reports from galactic-cv
+│   ├── original/              # files the user dropped in (PDF, image, DOCX, MD…), never modified
+│   ├── cv-master.md           # the complete, honest master CV (all experience, all numbers);
+│   │                          # a working file: open questions go in a final "## Open questions" section
+│   └── reviews/               # YYYY-MM-DD-review.md reports (+ YYYY-MM-DD-rewrite-notes.md) from galactic-cv
 ├── linkedin/
 │   ├── profile-export.*       # the user's pasted text or "Save to PDF" export
 │   └── YYYY-MM-DD-review.md   # reports from galactic-linkedin
@@ -21,11 +27,13 @@ workspace/
 │       ├── posting.md         # the job posting, verbatim, with URL and capture date
 │       ├── company.md         # company research, every fact with source + date
 │       ├── fit.md             # requirements vs evidence, screener score, gaps
+│       ├── briefing.md        # one page to read 10 minutes before a call
 │       ├── cv.md              # CV tailored for this application (optional)
 │       ├── prep.md            # interview preparation plan and mock-interview notes
 │       ├── questions.md       # reverse-interview questions picked + answers heard
 │       └── offer.md           # offer details and negotiation plan (when it gets there)
 ├── tracker.md                 # GENERATED index of all applications, never edited by hand
+├── dashboard.html             # GENERATED browser dashboard (galactic-tracker), open with a double click
 └── exports/                   # CSV / TrackZilla exports
 ```
 
@@ -45,8 +53,8 @@ contract: [employee]           # employee | contractor/P.IVA | either
 notice_period: 2 months
 compensation:
   currency: EUR
-  current: 52000               # optional: only if the user wants to share it
-  target: 65000
+  current: 52000               # only if the user volunteers it: never asked for, never disclosed
+  target: [62000, 68000]       # a number or a [min, max] range
   walk_away: 58000
 must_haves: [fully remote, no on-call]
 deal_breakers: [gambling industry]
@@ -99,12 +107,10 @@ Rules:
   If a fact is a guess, label it as a guess.
 - `posting.md`: paste the posting **verbatim**, because postings get taken down. Keep the URL and capture date.
 
-## Privacy rules (non-negotiable)
+## Privacy rules
 
-1. Workspace content never goes to a third-party service. Don't paste the CV into web tools, and don't
-   put the user's name, email, phone or CV text in web searches or URLs.
-2. The web is for **public information about companies, roles and markets**.
-3. Research on people (interviewers, hiring managers) happens only when the user names them, and covers only
-   their public professional footprint: role, team, public talks and posts about their work. No personal life,
-   no cross-referencing personal data.
-4. Never commit or print workspace content anywhere outside the workspace unless the user asks.
+The privacy rules live in `CLAUDE.md` at the project root, which is always loaded. They apply to every skill.
+Two notes specific to the workspace:
+- `exports/` CSVs contain contacts and salary ranges. Tell the user before they import them into another tool.
+- Don't record health, disability, pregnancy, religion or similar sensitive details unless the user explicitly
+  wants them kept, and never use them in drafts for companies.

@@ -201,12 +201,13 @@ Block C can only be checked once the user exports and shares a rendering; until 
 
 ## 9. Files produced
 
-Next to the original CV:
+Always inside `workspace/`, at the paths set by `.claude/skills/galactic-job-search/references/workspace.md`,
+and never next to an original CV (which may sit outside the workspace):
 
 | File | Content |
 |------|---------|
-| `<cv-name>-<position>-rewritten.md` | the CV source (no position: `<cv-name>-rewritten.md`) |
-| `<cv-name>-<position>-rewritten-notes.md` | target the CV was built for (at the top), origin → line map, what to verify before sending, what stays uncovered, cut content that can be recovered |
+| `workspace/applications/<app>/cv.md` (targeted) or `workspace/cv/cv-master.md` (untargeted) | the CV source |
+| `workspace/cv/reviews/YYYY-MM-DD-rewrite-notes.md` | target the CV was built for (at the top), origin → line map, what to verify before sending, what stays uncovered, cut content that can be recovered |
 
 The notes file is **not part of the CV** and is not sent: it is how the user checks nothing was invented.
 

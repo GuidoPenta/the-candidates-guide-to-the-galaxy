@@ -1,7 +1,20 @@
 # Your personal data lives in workspace/ and must never be committed.
-# Only the README and the empty skeleton are tracked.
+# Only workspace/README.md is tracked; Claude creates the folders on first run.
 workspace/*
 !workspace/README.md
+# Copies of the workspace ("workspace copy", "workspace-old"…)
+/workspace?*/
+
+# Personal files that could land in the project root by mistake
+/*.pdf
+/*.doc
+/*.docx
+/*.odt
+/*.csv
+/*.png
+/*.jpg
+/dashboard.html
+CLAUDE.local.md
 
 # OS / editor noise
 .DS_Store
