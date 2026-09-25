@@ -17,4 +17,5 @@ from CV to signed offer. The person who opened it is a job seeker, not (necessar
   summaries of the source guides, with a link back to them. Keep references faithful to the source; mark anything
   that doesn't come from it.
 - Zero dependencies: no scripts, and no install step beyond cloning.
-- English for everything committed.
+- English for everything committed, except the user-facing `README.md`, which is Italian. `README.en.md` is its
+  English twin, and the two must stay in sync.
