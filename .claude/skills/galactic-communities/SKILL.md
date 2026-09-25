@@ -1,6 +1,6 @@
 ---
 name: galactic-communities
-description: Recommends tech communities, Telegram groups, podcasts, mentorship, remote-job sources and conferences that fit the user's role, stack, city and remote preference. Draws on La Locanda del Tech, Full Remote, Dataskew, the Welyk job board and Guido Penta's awesome-italian-tech-communities list, and explains how to take part without being spammy. Use when the user says "where can I find jobs / people", "communities for…", "Telegram groups", "I want a mentor", "remote companies", "networking", "conferences in Italy", "how do I get referrals".
+description: Recommends communities, Telegram groups, remote-job sources and events that fit the user (Locanda del Tech, Full Remote, Dataskew, Welyk and more). Use when the user asks where to network or find jobs.
 ---
 
 # Galactic Communities

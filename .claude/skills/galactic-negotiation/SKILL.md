@@ -1,6 +1,6 @@
 ---
 name: galactic-negotiation
-description: Prepares the user to negotiate, following Guido Penta's Galactic negotiation guide. Handles the "what are your salary expectations?" question early on, evaluates an offer's total compensation, builds the market data and alternatives (BATNA), writes the counter-offer script, rehearses with a role-play recruiter, and compares multiple offers. Use when the user says "they asked my salary expectations", "I got an offer", "is this offer good?", "how do I negotiate", "should I accept", "counter-offer", "RAL", "two offers".
+description: Salary and offer negotiation (Galactic negotiation guide): salary expectations, offer evaluation, counter-offer script, role-play. Use for RAL, salary, offers, counter-offers.
 ---
 
 # Galactic Negotiation

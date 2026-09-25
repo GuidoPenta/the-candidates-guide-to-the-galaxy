@@ -1,6 +1,6 @@
 ---
 name: galactic-linkedin
-description: Reviews and rewrites a LinkedIn profile following Guido Penta's Galactic LinkedIn guide. Covers keywords recruiters search for, headline, About, experience, skills, education, recommendations, Open to Work, activity, and how to answer recruiters. Works on pasted text or the profile's "Save to PDF" export; it never logs in to LinkedIn. Use when the user says "fix my LinkedIn", "review my LinkedIn profile", "write my headline / About", "recruiters don't find me", "how do I reply to recruiters", or right after a CV review to keep the two consistent.
+description: Reviews and rewrites a LinkedIn profile (headline, About, experience, skills, keywords, recruiter replies) with the Galactic LinkedIn guide. Use when the user asks to improve their LinkedIn.
 ---
 
 # Galactic LinkedIn

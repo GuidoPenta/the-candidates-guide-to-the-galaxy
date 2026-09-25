@@ -1,6 +1,6 @@
 ---
 name: galactic-cv
-description: Reviews, fixes and rewrites a developer's CV following Guido Penta's Galactic CV guide, and shows how a screener will score it against a specific job posting (rubric adapted from Matteo Baccan's cv-review). Modes are a general review, a targeted review against a posting, a one-page rewrite, and building the master CV. Use when the user shares a CV or says "review my CV", "fix my resume", "is my CV good?", "tailor my CV for this job", "rewrite my CV", "why am I not getting callbacks?".
+description: Reviews, rewrites and tailors a CV with Guido Penta's Galactic CV guide, and scores it against a job posting like a screener would. Use when the user shares a CV or asks to fix, tailor or rewrite it.
 ---
 
 # Galactic CV

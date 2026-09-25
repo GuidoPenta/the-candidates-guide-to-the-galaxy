@@ -1,6 +1,6 @@
 ---
 name: galactic-job-search
-description: Entry point and coach for the whole job search, from CV to signed offer. Sets up the private local workspace, builds the candidate profile, tells the user where they stand ("what should I do next?", "where am I with my applications?") and routes to the right galactic-* skill. Use when the user starts a job search, says "help me find a job", "I'm looking for a new job", "let's get started", asks for an overview or next steps, or when it's unclear which galactic-* skill applies. Read this before the other galactic-* skills if the workspace doesn't exist yet.
+description: Job search coach and entry point: sets up the private workspace and profile, says where the user stands and what to do next, routes to the other galactic-* skills. Use to start a job search or when unsure which skill fits.
 ---
 
 # Galactic Job Search — the hub

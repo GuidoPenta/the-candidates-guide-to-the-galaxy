@@ -1,6 +1,6 @@
 ---
 name: galactic-reverse-interview
-description: Picks the questions the candidate should ask interviewers, from Guido Penta's Galactic reverse-interview guide. Questions are tailored to the company research, the interviewer (HR, engineer, manager, founder) and what the user still needs to know to decide. Afterwards it records the answers and spots red flags, and compares companies side by side. Use when the user says "what should I ask them?", "do you have any questions for us?", "reverse interview", "how do I tell if this company is good", or after an interview to debrief the answers they got.
+description: Picks the questions to ask interviewers (Galactic reverse-interview guide), then records answers and red flags. Use when the user asks what to ask at an interview or debriefs one.
 ---
 
 # Galactic Reverse Interview

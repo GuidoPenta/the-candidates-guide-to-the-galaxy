@@ -1,6 +1,6 @@
 ---
 name: galactic-application
-description: Turns a job posting into a complete application file. Saves the posting, decodes what they really want, researches the company on the web (site, product, stack, news, reviews, engineering blog), scores the fit against the user's CV the way a screener would, lists the gaps, and writes a one-page briefing so the user shows up prepared. Use when the user pastes a job posting or a job URL, says "I'm applying to…", "what do you think of this job?", "research this company", "am I a fit?", "I have an interview with X, what should I know?".
+description: Turns a job posting into an application file: decodes the posting, researches the company, scores the fit, writes a pre-call briefing. Use when the user pastes a job posting or URL or asks about a company.
 ---
 
 # Galactic Application

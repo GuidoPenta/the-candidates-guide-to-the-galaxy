@@ -1,6 +1,6 @@
 ---
 name: galactic-interview-prep
-description: Prepares the user for job interviews, both hard skills (technical topics from the posting's stack, live coding, take-home, system design, practice resources per role such as Dataskew for data roles) and soft skills (STAR story bank, "tell me about yourself", "why us", behavioural questions). Runs realistic mock interviews with feedback. Follows Guido Penta's Galactic interview guides. Use when the user says "I have an interview", "help me prepare", "mock interview", "technical interview tomorrow", "what will they ask me", "how do I study for…", "tell me about yourself".
+description: Interview preparation: prep plan, technical topics, STAR stories, mock interviews with feedback. Use when the user has an interview coming or wants to practise.
 ---
 
 # Galactic Interview Prep

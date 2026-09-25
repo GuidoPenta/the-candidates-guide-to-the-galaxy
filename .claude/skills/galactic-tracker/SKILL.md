@@ -1,6 +1,6 @@
 ---
 name: galactic-tracker
-description: Local job-application tracker with a browser dashboard. Logs new applications, records status changes and interview rounds, shows the pipeline and what needs follow-up, gives funnel stats, regenerates the dashboard page, and exports to CSV or TrackZilla (trackzilla.cv). Everything lives in local Markdown files, with no account and no cloud. Use when the user says "I applied to…", "I had the interview with…", "they rejected me", "I got an offer", "show my applications", "what do I need to follow up on", "export to TrackZilla", "update my dashboard", or after any other galactic-* skill changes the state of an application.
+description: Tracks applications locally: log applications and interview outcomes, pipeline and follow-ups, browser dashboard, CSV/TrackZilla export. Use when the user reports a status change or asks for their applications or dashboard.
 ---
 
 # Galactic Tracker
