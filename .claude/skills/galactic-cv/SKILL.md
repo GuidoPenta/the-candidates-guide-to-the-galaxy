@@ -46,7 +46,7 @@ extend it rather than duplicating it.
 
 ### 3. Rewrite
 Follow `references/rewrite-guide.md` (written for the targeted one-page version). Produce Markdown:
-- targeted → `workspace/applications/<app>/cv.md`, ready to send, in the posting's language;
+- targeted → `workspace/applications/<app>/cv.md`, ready to send. Language: posting in Italian → CV in Italian **or** English, both fine; posting in English → CV **necessarily** in English (ask which the user prefers);
 - untargeted → `workspace/cv/cv-master.md`, complete and long. It's a working file, so the guide's
   "no placeholders" rule doesn't apply: open questions go in a final `## Open questions` section.
 Rewrite notes go to `workspace/cv/reviews/YYYY-MM-DD-rewrite-notes.md`, never next to the original.

@@ -47,7 +47,8 @@ use them as a self-check with the user):
 - [ ] **Aim for one page.** An experienced recruiter reads a CV in 10–20 seconds. (Aim, not dogma:
       see the "at all costs" obstacle above.)
 - [ ] **Concise but comprehensive**: contains all the keywords needed for the target position.
-- [ ] **Language matches the job ad.** Ad in English → CV in English; ad in Italian → CV in Italian.
+- [ ] **CV language vs. job ad** (Guido's rule): ad in Italian → the CV can be in Italian **or** English, both
+      are fine; ad in English → the CV must be in English.
 - [ ] **Keep two language versions** of the CV ready.
 - [ ] **No Europass.** Guido "STRONGLY" advises against it: outdated, no graphic customization.
 - [ ] Build it with a real template tool: Canva (the example CV), LaTeX templates, or Overleaf.
@@ -245,7 +246,7 @@ Soft Skills → Education → Certifications → Publications → Languages → 
 | Unprofessional email | Use a name-based address |
 | Non-clickable LinkedIn/GitHub | Make links clickable |
 | Europass format | Use a real template (Canva, LaTeX, Overleaf) |
-| CV language ≠ ad language | Match the ad; keep two versions |
+| Italian CV sent to an English ad | English ad → English CV, always (an Italian ad accepts either); keep two versions |
 | Stars / progress bars for skills | Plain text list, strongest first |
 | Skills in random order | Strongest / daily-use first, role-relevant first |
 | Cliché soft skills ("works well under pressure") | Real, personality-specific ones |

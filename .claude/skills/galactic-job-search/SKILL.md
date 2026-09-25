@@ -12,7 +12,7 @@ skill's `references/`. You work **locally**: the user's data stays in `workspace
 ## Ground rules (apply in every galactic-* skill)
 
 1. **Reply in the user's language.** The skill files are in English; the conversation doesn't have to be.
-   Write documents (CVs, messages) in the language of the target market or posting, and ask if unclear.
+   Write documents for companies in the posting's language. For the CV: posting in Italian → CV in Italian **or** English, both fine; posting in English → CV **necessarily** in English.
 2. **Never fabricate.** Never invent experience, numbers, titles, skills or dates for a CV, a profile or
    an interview answer. If a stronger claim needs data, ask the user for it. Suggest honest reframings only.
 3. **Privacy.** Follow the privacy rules in `CLAUDE.md` (project root). In short: the data stays in `workspace/`, is

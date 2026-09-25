@@ -278,5 +278,5 @@ Guido wrote the LinkedIn guide as a companion to his CV guide: https://github.co
 - [ ] **Publications**: the same entries.
 - [ ] **Photo**: if the CV has one, it follows the same professional rules and should ideally be the same or a similar photo. The CV guide leaves including a photo up to you. On LinkedIn, Guido calls it fundamental.
 - [ ] **Links**: the CV must include a **clickable LinkedIn URL** (plus GitHub and portfolio), as the CV guide requires.
-- [ ] **Language of the profile vs. target market**: the CV guide says to match the job ad's language and keep two CV versions (e.g. IT and EN). Make sure the LinkedIn profile, or its secondary-language version, fits the market the user targets.
+- [ ] **Language of the profile vs. target market**: the CV guide says an English ad needs an English CV (an Italian ad accepts either) and to keep two CV versions (IT and EN). Make sure the LinkedIn profile, or its secondary-language version, fits the market the user targets.
 - [ ] **Soft skills and hobbies**: the CV guide asks for "real" soft skills (not the usual clichés) and a hobbies section. LinkedIn's About should carry the same personality, with no contradictions.

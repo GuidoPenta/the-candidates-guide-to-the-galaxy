@@ -6,8 +6,8 @@ missing, it creates it following this layout. It never invents a new location.
 **If a reference file suggests a different file name or location (e.g. "next to the original CV"), this file wins.**
 
 Language: files in the workspace (profile, reviews, fit, notes, briefing) are written in the language of the
-conversation. Documents meant for companies (CV, cover letters, messages) are written in the language of the
-posting or target market; ask if unclear.
+conversation. Documents meant for companies (cover letters, messages) are written in the language of the posting. The CV:
+posting in Italian → CV in Italian **or** English, both fine; posting in English → CV **necessarily** in English.
 
 ```
 workspace/

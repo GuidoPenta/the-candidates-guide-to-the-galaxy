@@ -146,7 +146,7 @@ One row per item, result `Yes` / `Partial` / `No` / `N/A`, with a short note.
 | # | Item | What to check |
 |---|------|---------------|
 | B1 | Conciseness | Essential content, no repetition; not Europass |
-| B2 | Language matches posting | Posting in English → CV in English, and vice versa |
+| B2 | Language fits the posting | Posting in English → CV in English (required). Posting in Italian → CV in Italian or English, both pass |
 | B3 | Contacts | Professional email, phone, LinkedIn and GitHub/portfolio as links; at the top, not at the bottom |
 | B4 | About Me | Present; contains current job title, main technologies, career goal; no empty phrases ("results-oriented", "expert in all technologies") |
 | B5 | Professional experience | Each entry with start/end dates and company; bullets on projects, tech, results; uniform structure |
