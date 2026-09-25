@@ -125,7 +125,7 @@ authorization 1. This is an estimate; the user's actual export is the check.
 Writing rules for the file:
 - Section titles with `#`; `##` only for internal grouping.
 - No trailing-backslash line breaks (they don't survive conversions); new line = new paragraph.
-- **No tables, images, level bars, stars** — ATSs don't read them (rubric B8, Guide §7).
+- **No level bars or stars** for skills: some ATSs may not recognise graphic signs (rubric B8, Guide §7). Keep the Markdown source free of tables too, since they don't survive conversions well.
 - **Bold** only on company names and skill labels — skimming landmarks (C12). Never bold inside bullets.
 - Every experience has one header line `**Company** — Role · dates · location`, same form for all (B5).
 - Experiences in descending end-date order, no exceptions — it makes growth readable (B6).

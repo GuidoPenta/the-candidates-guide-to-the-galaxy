@@ -15,8 +15,11 @@ Workspace layout: `.claude/skills/galactic-job-search/references/workspace.md`.
 ## Input
 - The CV comes from `workspace/cv/original/` or a paste. You can read PDF, images (PNG/JPG), Markdown and text
   directly. For DOCX, ask for a PDF export or pasted text. With a PDF or an image you can also judge layout and
-  typography (Block C). If the user only has an image, note it as a finding: an image has no clickable links and no
-  text an ATS can parse, so they should send a PDF.
+  typography (Block C). An image CV is fine to review; the only point worth noting is that links in an image
+  aren't clickable.
+- **ATS claims**: say only what `references/cv-guide.md` says (recruiters read every CV, the ATS is a filtering
+  tool, stars and progress bars may not be recognised, keywords matter). Don't add myths about what ATSs can't
+  read, such as images, PDFs or columns, or promise an "ATS-proof" CV.
 - File names and locations always follow `.claude/skills/galactic-job-search/references/workspace.md`, even
   where a reference file suggests a different one.
 - Read `workspace/profile.md` for target roles and market.
