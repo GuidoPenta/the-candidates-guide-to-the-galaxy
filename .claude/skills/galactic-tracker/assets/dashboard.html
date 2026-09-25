@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-MXi9a46OCKxZiGa5KrkYSEE5iH3jb1dEwxnolqRn17o='; style-src 'unsafe-inline'; img-src 'none'; connect-src 'none'; font-src 'none'; form-action 'none'; base-uri 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-7epNKVhG2rEVnZQMuB1QlLJOR8/Ls5/q1kTokTj896g='; style-src 'unsafe-inline'; img-src 'none'; connect-src 'none'; font-src 'none'; form-action 'none'; base-uri 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Galactic Job Search</title>
 <!--
@@ -80,6 +80,32 @@ header.top h1 span { color: var(--accent); }
   border: 1px solid var(--border); background: var(--surface); border-radius: 999px;
   padding: 4px 12px; cursor: pointer; font-size: 13px; color: var(--muted); margin-left: 8px;
 }
+
+.tz-btn {
+  border: 1px solid var(--accent); background: var(--accent-soft); color: var(--accent); border-radius: 999px;
+  padding: 4px 12px; cursor: pointer; font-size: 13px; font-weight: 600; margin-left: 8px;
+}
+dialog.modal {
+  width: min(560px, calc(100% - 32px)); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 0; background: var(--surface); color: var(--text); box-shadow: 0 10px 40px rgba(0,0,0,.25);
+}
+dialog.modal::backdrop { background: rgba(10, 12, 18, .45); }
+.mbody { padding: 18px 20px 20px; font-size: 14.5px; }
+.mbody h2 { margin: 0 0 6px; font-size: 18px; }
+.mbody p { margin: 8px 0; }
+.mbody ul { margin: 6px 0; padding-left: 20px; }
+.mbody .muted { color: var(--muted); font-size: 13px; }
+.mactions { display: flex; gap: 8px; justify-content: flex-end; align-items: center; margin-top: 14px; flex-wrap: wrap; }
+.btn-primary {
+  border: 0; background: var(--accent); color: var(--surface); border-radius: 8px; padding: 8px 14px;
+  font-weight: 600; cursor: pointer;
+}
+.btn-primary[disabled] { opacity: .45; cursor: not-allowed; }
+.btn-ghost {
+  border: 1px solid var(--border); background: var(--surface-2); color: var(--text); border-radius: 8px;
+  padding: 8px 14px; cursor: pointer; text-decoration: none; font-size: 14px;
+}
+.okmsg { background: var(--ok-soft); color: var(--ok); border-radius: 8px; padding: 8px 12px; margin-top: 10px; }
 
 .banner {
   border-radius: var(--radius); padding: 10px 14px; margin-bottom: 16px; font-size: 14px;
@@ -216,6 +242,7 @@ dialog.drawer::backdrop { background: rgba(10, 12, 18, .45); }
 <body>
 <div class="wrap" id="app"></div>
 <dialog class="drawer" id="drawer" aria-labelledby="d-title"></dialog>
+<dialog class="modal" id="tz" aria-labelledby="tz-title"></dialog>
 
 <!-- DATA:START -->
 <script id="gjs-data" type="application/json">
@@ -245,6 +272,18 @@ dialog.drawer::backdrop { background: rgba(10, 12, 18, .45); }
       f_saved: "Saved on", f_applied: "Applied on", f_referral: "Referral", f_contacts: "Contacts", f_tags: "Tags",
       welcomeH: "Your dashboard is empty", welcomeP: "Open this project in Claude Code and say “update my dashboard”. It will fill this page from your workspace.",
       close: "Close", fitWord: "fit",
+      tzBtn: "Export for TrackZilla",
+      tzTitle: "Export for TrackZilla",
+      tzIntro: "Prefer to track online? [TrackZilla](https://www.trackzilla.cv/) is a free job-application tracker. This button creates a file with your applications, ready to import there in one go.",
+      tzCount: "Applications in the file: {n}",
+      tzNone: "No application to export yet. Saved-only ones are left out: in TrackZilla they would look already sent.",
+      tzIn: "**In the file:** company, role, date, salary, work mode, status, tags and a short description.",
+      tzOut: "**Not in the file:** contacts and your log. They stay on your computer.",
+      tzAccount: "You need a TrackZilla account (the free plan holds up to 50 applications). Once imported, the data is stored on TrackZilla’s servers.",
+      tzSteps: "**Then:** open TrackZilla → **Applications** → **Import CSV** → choose the file → check the preview → confirm. Applications already there are skipped, so you can import again later.",
+      tzDownload: "Download the file",
+      tzDone: "File downloaded: {n}. You’ll find it in your Downloads folder.",
+      tzOpen: "Open TrackZilla ↗",
       status: { saved: "Saved", applied: "Applied", screening: "Screening", interviewing: "Interviewing", offer: "Offer",
         accepted: "Accepted", rejected: "Rejected", withdrawn: "Withdrawn", ghosted: "Ghosted" }
     },
@@ -265,6 +304,18 @@ dialog.drawer::backdrop { background: rgba(10, 12, 18, .45); }
       f_saved: "Salvata il", f_applied: "Inviata il", f_referral: "Referral", f_contacts: "Contatti", f_tags: "Tag",
       welcomeH: "La dashboard è vuota", welcomeP: "Apri questo progetto in Claude Code e scrivi “aggiorna la dashboard”: riempirà questa pagina con i dati del tuo workspace.",
       close: "Chiudi", fitWord: "fit",
+      tzBtn: "Esporta per TrackZilla",
+      tzTitle: "Esporta per TrackZilla",
+      tzIntro: "Preferisci tracciare online? [TrackZilla](https://www.trackzilla.cv/) è un tracker gratuito delle candidature. Questo bottone crea un file con le tue candidature, pronto da importare lì in un colpo solo.",
+      tzCount: "Candidature nel file: {n}",
+      tzNone: "Nessuna candidatura da esportare per ora. Quelle solo salvate restano fuori: su TrackZilla sembrerebbero già inviate.",
+      tzIn: "**Nel file:** azienda, ruolo, data, stipendio, modalità, stato, tag e una breve descrizione.",
+      tzOut: "**Non nel file:** contatti e diario. Restano sul tuo computer.",
+      tzAccount: "Ti serve un account TrackZilla (il piano gratuito arriva a 50 candidature). Una volta importati, i dati stanno sui server di TrackZilla.",
+      tzSteps: "**Poi:** apri TrackZilla → **Candidature** → **Import CSV** → scegli il file → controlla l’anteprima → conferma. Le candidature già presenti vengono saltate, quindi puoi reimportare più avanti.",
+      tzDownload: "Scarica il file",
+      tzDone: "File scaricato: {n}. Lo trovi nella cartella Download.",
+      tzOpen: "Apri TrackZilla ↗",
       status: { saved: "Salvata", applied: "Inviata", screening: "Screening", interviewing: "Colloqui", offer: "Offerta",
         accepted: "Accettata", rejected: "Rifiutata", withdrawn: "Ritirata", ghosted: "Sparita" }
     }
@@ -366,6 +417,7 @@ dialog.drawer::backdrop { background: rgba(10, 12, 18, .45); }
     var html = [];
     html.push('<header class="top"><h1>' + esc(T.title) + ' <span>✦</span></h1><div class="meta">' +
       esc(T.generated) + ": " + (data.generated ? niceDate(data.generated) : esc(T.never)) +
+      (apps.length ? '<button class="tz-btn" id="tzbtn" type="button">🦖 ' + esc(T.tzBtn) + '</button>' : '') +
       '<button class="theme-btn" id="theme" type="button">' + esc(T.theme) + ' ◐</button></div></header>');
 
     if (!apps.length) {
@@ -419,6 +471,8 @@ dialog.drawer::backdrop { background: rgba(10, 12, 18, .45); }
 
     root.innerHTML = html.join("");
     bindTheme();
+    var tzb = document.getElementById("tzbtn");
+    if (tzb) tzb.addEventListener("click", openTz);
     root.querySelectorAll("[data-id]").forEach(function (el) {
       el.addEventListener("click", function () { openDetail(el.getAttribute("data-id")); });
       el.addEventListener("keydown", function (e) { if (e.key === "Enter") openDetail(el.getAttribute("data-id")); });
@@ -535,6 +589,52 @@ dialog.drawer::backdrop { background: rgba(10, 12, 18, .45); }
     if (typeof drawer.showModal === "function") drawer.showModal(); else drawer.setAttribute("open", "");
   }
   drawer.addEventListener("click", function (e) { if (e.target === drawer) drawer.close(); });
+
+  // ---------- TrackZilla export ----------
+  // Each application may carry a precomputed "trackzilla" row (see references/dashboard.md).
+  // The CSV is built here, in the browser: nothing is sent anywhere.
+  var TZ_COLS = ["company_name", "role_description", "job_description", "application_date", "salary", "work_mode", "status", "tags"];
+  var tzDialog = document.getElementById("tz");
+
+  function tzRows() { return apps.filter(function (a) { return a.trackzilla && a.trackzilla.company_name; }); }
+  function csvCell(v) { return '"' + String(v == null ? "" : v).replace(/"/g, '""') + '"'; }
+  function tzCsv(rows) {
+    var lines = [TZ_COLS.map(csvCell).join(",")];
+    rows.forEach(function (a) {
+      var r = a.trackzilla;
+      lines.push(TZ_COLS.map(function (c) { return csvCell(c === "tags" ? asList(r[c]).join(";") : r[c]); }).join(","));
+    });
+    return "﻿" + lines.join("\r\n") + "\r\n";
+  }
+  function isoToday() {
+    var d = new Date();
+    return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+  }
+  function openTz() {
+    var rows = tzRows();
+    tzDialog.innerHTML = '<div class="mbody"><h2 id="tz-title">🦖 ' + esc(T.tzTitle) + "</h2>" +
+      "<p>" + inline(T.tzIntro) + "</p>" +
+      "<p><b>" + esc(rows.length ? fmt(T.tzCount, rows.length) : T.tzNone) + "</b></p>" +
+      "<ul><li>" + inline(T.tzIn) + "</li><li>" + inline(T.tzOut) + "</li></ul>" +
+      '<p class="muted">' + esc(T.tzAccount) + "</p>" +
+      "<p>" + inline(T.tzSteps) + "</p>" +
+      '<div id="tz-msg"></div>' +
+      '<div class="mactions"><a class="btn-ghost" href="https://www.trackzilla.cv/" target="_blank" rel="noopener noreferrer">' + esc(T.tzOpen) + "</a>" +
+      '<button class="btn-ghost" type="button" id="tz-close">' + esc(T.close) + "</button>" +
+      '<button class="btn-primary" type="button" id="tz-dl"' + (rows.length ? "" : " disabled") + ">" + esc(T.tzDownload) + "</button></div></div>";
+    tzDialog.querySelector("#tz-close").addEventListener("click", function () { tzDialog.close(); });
+    tzDialog.querySelector("#tz-dl").addEventListener("click", function () {
+      var name = "trackzilla-" + isoToday() + ".csv";
+      var url = URL.createObjectURL(new Blob([tzCsv(rows)], { type: "text/csv;charset=utf-8" }));
+      var link = document.createElement("a");
+      link.href = url; link.download = name;
+      document.body.appendChild(link); link.click(); link.remove();
+      setTimeout(function () { URL.revokeObjectURL(url); }, 2000);
+      tzDialog.querySelector("#tz-msg").innerHTML = '<div class="okmsg">' + esc(fmt(T.tzDone, name)) + "</div>";
+    });
+    if (typeof tzDialog.showModal === "function") tzDialog.showModal(); else tzDialog.setAttribute("open", "");
+  }
+  tzDialog.addEventListener("click", function (e) { if (e.target === tzDialog) tzDialog.close(); });
 
   // ---------- theme ----------
   function bindTheme() {

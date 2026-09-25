@@ -54,7 +54,17 @@ After regenerating, tell the user the file path and that they can open it (or re
       },
       "briefing": "Markdown: the content of briefing.md",
       "questions": [{ "for": "Recruiter", "text": "…", "answer": null }],
-      "log": [{ "date": "2026-09-25", "text": "Saved. Fit 72/100 (Call)." }]
+      "log": [{ "date": "2026-09-25", "text": "Saved. Fit 72/100 (Call)." }],
+      "trackzilla": {
+        "company_name": "Acme",
+        "role_description": "Senior Backend Engineer",
+        "job_description": "Location: Milan (hybrid)\nNext: technical interview on 2026-10-02\n---\n<short summary of the posting>",
+        "application_date": "2026-09-26",
+        "salary": "55-70k",
+        "work_mode": "ibrido",
+        "status": "colloquio-tecnico",
+        "tags": ["go", "fintech"]
+      }
     }
   ]
 }
@@ -77,6 +87,11 @@ Field sources and rules:
 - `questions`: from `questions.md`, the chosen questions in order, with the interviewer type in `for` and the
   answer heard, if any, in `answer`.
 - `log`: every dated line of the application's log.
+- `trackzilla`: the application's row for the **Export for TrackZilla** button, already converted with the mapping in
+  `references/trackzilla-format.md` (TrackZilla status and work-mode values, `application_date` = `applied_on`,
+  the `job_description` layout from section D, query strings stripped from any URL). Set it to `null` for `saved`
+  applications, which are left out. **Never** put contacts or log lines in it. The page builds the CSV locally,
+  in the browser, when the user clicks the button.
 - Omit fields you don't have, or set them to `null`. Never invent values to fill the page.
 
 ## Privacy

@@ -33,6 +33,11 @@ Built on Guido Penta's Galactic guides. You talk, I do the work, and everything 
 - File: `<PROJECT>/workspace/dashboard.html`. Double-click it, or just ask me "open my dashboard".
 - It updates when you tell me something new. Ask "update my dashboard", then refresh the page (F5).
 
+🦖 **TrackZilla**: prefer to track online as well? [TrackZilla](https://www.trackzilla.cv/) is a free
+application tracker. In the dashboard, the **Export for TrackZilla** button gives you a file to import there in
+one go (or ask me "export to TrackZilla"). You need a TrackZilla account (free plan: up to 50 applications).
+Contacts and your log are never included.
+
 **Your files**: everything is in `<PROJECT>/workspace/` (CV, profile, one folder per application).
 It's never uploaded to GitHub. Tip: keep this project out of OneDrive, iCloud or Dropbox (see the README).
 

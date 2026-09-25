@@ -21,7 +21,7 @@
 | Le tue domande | `galactic-reverse-interview` | Domande su misura da fare, segnali d'allarme, confronto tra aziende ([guida](https://github.com/GuidoPenta/galactic-reverse-interview-guide-for-developers)) |
 | Offerta | `galactic-negotiation` | Come rispondere sulla RAL, valutazione dell'offerta, testo della controproposta, simulazione della trattativa ([guida](https://github.com/GuidoPenta/galactic-negotiation-guide-for-developers)) |
 | Community | `galactic-communities` | Gruppi, mentor, fonti di lavoro da remoto ed eventi adatti a te ([lista](https://github.com/GuidoPenta/awesome-italian-tech-communities)) |
-| Tracking | `galactic-tracker` | Le tue candidature in un colpo d'occhio, cosa ricontattare, statistiche, export in CSV o verso [TrackZilla](https://www.trackzilla.cv/) |
+| Tracking | `galactic-tracker` | Le tue candidature in un colpo d'occhio in una dashboard nel browser, cosa ricontattare, statistiche. Bottone **🦖 Esporta per TrackZilla** per importarle su [TrackZilla](https://www.trackzilla.cv/) (serve un account, gratuito fino a 50 candidature) |
 
 ## Privacy prima di tutto
 

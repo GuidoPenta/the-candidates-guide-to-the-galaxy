@@ -21,7 +21,7 @@ It runs locally, your data stays on your machine, and it's built on the
 | Your questions | `galactic-reverse-interview` | Tailored questions to ask, red flags to watch, company comparison ([guide](https://github.com/GuidoPenta/galactic-reverse-interview-guide-for-developers)) |
 | Offer | `galactic-negotiation` | Salary-expectation answers, offer evaluation, counter-offer script, role-play ([guide](https://github.com/GuidoPenta/galactic-negotiation-guide-for-developers)) |
 | Community | `galactic-communities` | Groups, mentors, remote-job sources and events that fit you ([list](https://github.com/GuidoPenta/awesome-italian-tech-communities)) |
-| Tracking | `galactic-tracker` | Local pipeline, follow-ups, funnel stats, export to CSV or [TrackZilla](https://www.trackzilla.cv/) |
+| Tracking | `galactic-tracker` | Browser dashboard of your applications, follow-ups, funnel stats. **🦖 Export for TrackZilla** button to import them into [TrackZilla](https://www.trackzilla.cv/) (needs an account, free up to 50 applications) |
 
 ## Privacy first
 

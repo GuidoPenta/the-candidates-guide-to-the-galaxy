@@ -63,7 +63,10 @@ always failing at the same stage, and point them out gently with a concrete sugg
 
 ### Export
 - **CSV**: `workspace/exports/applications-YYYY-MM-DD.csv`, one row per application, frontmatter fields as columns.
-- **TrackZilla**: write a CSV that TrackZilla's **Import CSV** button accepts
+- **TrackZilla, from the dashboard**: the dashboard has an **🦖 Export for TrackZilla** button that downloads
+  the same CSV, built in the browser from the `trackzilla` rows (see `references/dashboard.md`). Mention it when
+  the user talks about TrackZilla. It requires a TrackZilla account (free plan: up to 50 applications).
+- **TrackZilla, from Claude**: write a CSV that TrackZilla's **Import CSV** button accepts
   (`workspace/exports/trackzilla-YYYY-MM-DD.csv`), following `references/trackzilla-format.md` for the
   exact format and the status/work-mode mapping. The user uploads it in the app. First tell them what goes in
   and that TrackZilla is a hosted app, so the data will be stored on its servers. Contacts and the private log
