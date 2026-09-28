@@ -7,7 +7,7 @@ and no network. It is read-only: to change something, the user talks to Claude, 
 - Output: `workspace/dashboard.html`. It is git-ignored, because it contains the user's data.
 
 ## When to regenerate
-Every time `tracker.md` is regenerated, and whenever the user asks ("update my dashboard", "aggiorna la dashboard").
+**Only when the user asks** ("open my dashboard", "update my dashboard", "aprimi / aggiorna la dashboard"). It is an optional extra: don't regenerate it after every update.
 After regenerating, tell the user the file path and that they can open it (or refresh it) in the browser.
 
 ## How

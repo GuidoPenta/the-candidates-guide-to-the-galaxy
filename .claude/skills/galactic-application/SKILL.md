@@ -62,6 +62,6 @@ the user's 3 strengths for this role, 2 gaps and how to address them, and the to
 `questions.md`. Facts come from `company.md`; don't add unsourced ones.
 
 ## 6. Next steps
-Log `Saved. Fit NN/100 (decision).` in `application.md`, then regenerate the tracker and dashboard with `galactic-tracker`.
+Log `Saved. Fit NN/100 (decision).` in `application.md`, then regenerate the tracker with `galactic-tracker` (the dashboard only if the user asks for it).
 Offer: a tailored CV (`galactic-cv`, targeted mode, saved as the application's `cv.md`), logging the
 application once sent (`galactic-tracker`), and interview prep once a call is booked.

@@ -31,7 +31,7 @@ Built on Guido Penta's Galactic guides. You talk, I do the work, and everything 
 
 **Your dashboard**: a page with all your applications, deadlines and stages.
 - File: `<PROJECT>/workspace/dashboard.html`. Double-click it, or just ask me "open my dashboard".
-- It updates when you tell me something new. Ask "update my dashboard", then refresh the page (F5).
+- It's optional: I update it only when you ask ("update my dashboard"), then refresh the page (F5).
 
 🦖 **TrackZilla**: prefer to track online as well? [TrackZilla](https://www.trackzilla.cv/) is a free
 application tracker. In the dashboard, the **Export for TrackZilla** button gives you a file to import there in
