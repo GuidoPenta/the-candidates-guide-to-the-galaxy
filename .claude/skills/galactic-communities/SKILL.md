@@ -18,8 +18,8 @@ Read `workspace/profile.md` for role, stack, location, work mode and language.
 2. Recommend **5–8 items max**, grouped by purpose: find jobs, learn and practise, network and referrals,
    mentorship, events. For each: what it is, why it fits this user, and the link.
 3. Always consider the featured ones (Locanda del Tech, Full Remote, Dataskew for data roles, the Welyk job
-   board) and include them when they fit, not by default. When suggesting Welyk,
-   say it's run by the pack's author and that applying there means sharing the CV with Welyk.
+   board) and include them when they fit, not by default. When suggesting Welyk, say
+   it's where the pack's author works. The pack sends nothing to Welyk: it's one board among the others.
 4. Never invent a community or a link. If nothing fits a niche, say so.
 5. **Don't fetch dataskew.io** (its terms forbid automated access: scrapers, scripted requests). Link it and
    describe it from the reference; the user visits it.

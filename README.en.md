@@ -13,8 +13,8 @@ It runs locally, your data stays on your machine, and it's built on the
 
 | Phase | Skill | What you get |
 |---|---|---|
-| Start | `galactic-job-search` | Private workspace, your profile, "what should I do next?" |
-| CV | `galactic-cv` | Review against the [Galactic CV guide](https://github.com/GuidoPenta/galactic-CV-guide-for-developers), screener score against a posting (rubric from [cv-review](https://github.com/matteobaccan/cv-review)), honest rewrites |
+| Getting started | `galactic-job-search` | Private workspace, your profile, "what should I do next?" |
+| CV | `galactic-cv` | Review against the [Galactic CV guide](https://github.com/GuidoPenta/galactic-CV-guide-for-developers), screener score against a posting (rubric from [cv-review](https://github.com/matteobaccan/cv-review)) |
 | LinkedIn | `galactic-linkedin` | Keyword map, paste-ready headline/About/experience rewrites, recruiter reply templates ([guide](https://github.com/GuidoPenta/galactic-linkedin-profile-guide-for-developers)) |
 | Application | `galactic-application` | The posting decoded, company research with sources, fit analysis, a one-page briefing |
 | Interview | `galactic-interview-prep` | Prep plan, STAR story bank, mock interviews with feedback, practice resources per role ([guide](https://github.com/GuidoPenta/galactic-tech-interview-guide)) |
@@ -26,7 +26,7 @@ It runs locally, your data stays on your machine, and it's built on the
 ## Privacy first
 
 - Everything you share (CV, postings, notes, offers) is stored as plain Markdown in `workspace/`. Git ignores it,
-  so `git push` never sends it to GitHub. If you upload or share the folder by hand (zip, upload), it travels too.
+  so `git push` never sends it to GitHub. If you upload or share the folder by hand (zip, upload), obviously be careful.
 - No accounts, no servers, no scripts, no dependencies. The dashboard is a page you open with a double click, and
   it never connects to the internet.
 - The web is used only to research **public** information about companies, roles and salaries. The skills are
@@ -52,8 +52,8 @@ To delete everything when you're done: remove `workspace/`, the project's conver
 any copies in synced folders (including their trash and version history) and your browser history. For the data
 you gave to companies you applied to, you can ask them what they keep and have it deleted (GDPR).
 
-**Disclosure:** Guido Penta works as a tech recruiter at [Welyk](https://welyk.tech). The Welyk job board is suggested
-only when it fits, and applying there means sharing your CV with Welyk.
+**Disclosure:** Guido Penta works as a tech recruiter at [Welyk](https://welyk.tech). The tool sends nothing to Welyk:
+the Welyk job board is listed among the suggested communities, like the others.
 
 ## Get started
 

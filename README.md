@@ -13,21 +13,21 @@
 
 | Fase | Skill | Cosa ottieni |
 |---|---|---|
-| Si parte | `galactic-job-search` | Uno spazio di lavoro privato, il tuo profilo, e la risposta a "cosa faccio adesso?" |
-| CV | `galactic-cv` | Revisione secondo la [Guida galattica al CV](https://github.com/GuidoPenta/galactic-CV-guide-for-developers), punteggio "come ti vede chi seleziona" su un annuncio (rubrica di [cv-review](https://github.com/matteobaccan/cv-review)), riscritture oneste |
+| Per iniziare | `galactic-job-search` | Uno spazio di lavoro privato, il tuo profilo, e la risposta a "cosa faccio adesso?" |
+| CV | `galactic-cv` | Revisione secondo la [Guida galattica al CV](https://github.com/GuidoPenta/galactic-CV-guide-for-developers), punteggio "come ti vede chi seleziona" su un annuncio (rubrica di [cv-review](https://github.com/matteobaccan/cv-review)) |
 | LinkedIn | `galactic-linkedin` | Mappa delle parole chiave, titolo/About/esperienze riscritti e pronti da incollare, risposte tipo per i recruiter ([guida](https://github.com/GuidoPenta/galactic-linkedin-profile-guide-for-developers)) |
 | Candidatura | `galactic-application` | L'annuncio decifrato, ricerca sull'azienda con le fonti, analisi del fit, una scheda di una pagina da leggere prima della call |
 | Colloquio | `galactic-interview-prep` | Piano di preparazione, archivio di storie (metodo STAR), colloqui simulati con feedback, risorse per ruolo ([guida](https://github.com/GuidoPenta/galactic-tech-interview-guide)) |
 | Le tue domande | `galactic-reverse-interview` | Domande su misura da fare, segnali d'allarme, confronto tra aziende ([guida](https://github.com/GuidoPenta/galactic-reverse-interview-guide-for-developers)) |
 | Offerta | `galactic-negotiation` | Come rispondere sulla RAL, valutazione dell'offerta, testo della controproposta, simulazione della trattativa ([guida](https://github.com/GuidoPenta/galactic-negotiation-guide-for-developers)) |
 | Community | `galactic-communities` | Gruppi, mentor, fonti di lavoro da remoto ed eventi adatti a te ([lista](https://github.com/GuidoPenta/awesome-italian-tech-communities)) |
-| Tracking | `galactic-tracker` | Le tue candidature in un colpo d'occhio in una dashboard nel browser, cosa ricontattare, statistiche. Bottone **🦖 Esporta per TrackZilla** per importarle su [TrackZilla](https://www.trackzilla.cv/) (serve un account, gratuito fino a 50 candidature) |
+| Tracking | `galactic-tracker` | Le tue candidature in un colpo d'occhio in una dashboard nel browser, chi ricontattare, statistiche. Bottone **🦖 Esporta per TrackZilla** per importarle su [TrackZilla](https://www.trackzilla.cv/) (serve un account, gratuito fino a 50 candidature) |
 
 ## Privacy prima di tutto
 
 - Tutto quello che condividi (CV, annunci, appunti, offerte) resta in semplici file di testo nella cartella
   `workspace/`. Git la ignora, quindi con `git push` non finisce su GitHub. Se però carichi o condividi la cartella
-  a mano (zip, upload), viaggia anche lei.
+  a mano (zip, upload), ovviamente stai attento/a.
 - Niente account, niente server, niente programmi da installare oltre a Claude Code. La dashboard è una pagina
   che si apre con doppio clic e non si collega a internet.
 - Il web serve solo per cercare informazioni **pubbliche** su aziende, ruoli e stipendi. Le skill hanno l'istruzione
@@ -54,8 +54,8 @@ eventuali copie nelle cartelle sincronizzate (compreso il cestino e le versioni 
 browser. Per i dati che hai dato alle aziende a cui ti sei candidato, puoi chiedere a loro cosa conservano e farli
 cancellare (GDPR).
 
-**Trasparenza:** Guido Penta fa il recruiter tech con [Welyk](https://welyk.tech). La bacheca Welyk viene suggerita
-solo quando è pertinente, e candidarsi lì significa condividere il CV con Welyk.
+**Trasparenza:** Guido Penta lavora come recruiter tech in [Welyk](https://welyk.tech). Il tool non invia nulla a Welyk:
+la bacheca Welyk compare tra le community suggerite, come le altre.
 
 ## Come si comincia
 
