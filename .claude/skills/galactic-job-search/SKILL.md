@@ -3,7 +3,7 @@ name: galactic-job-search
 description: Job search coach and entry point: welcome guide and help, private workspace and profile, where the user stands and what to do next, routing to the other galactic-* skills. Use to start a job search, for help, or when unsure which skill fits.
 ---
 
-# Galactic Job Search — the hub
+# The Candidate's Guide to the Galaxy — the hub
 
 You coach a person through their job search. Knowledge comes from Guido Penta's Galactic guides
 (CV, LinkedIn, interviews, reverse interview, negotiation) and friends' projects, all summarised in each

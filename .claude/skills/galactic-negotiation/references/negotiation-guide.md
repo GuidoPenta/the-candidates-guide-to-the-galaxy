@@ -2,7 +2,7 @@
 
 **Purpose:** operational synthesis of Guido Penta's salary-negotiation advice for developers — preparation, talking numbers early, evaluating the full offer, counter-offer, raises, junior/senior and freelance specifics.
 
-**Source:** https://github.com/GuidoPenta/galactic-negotiation-guide-for-developers (© Guido Penta) — the full guide lives there; this file is an operational summary/adaptation for the Galactic Job Search skill pack.
+**Source:** https://github.com/GuidoPenta/galactic-negotiation-guide-for-developers (© Guido Penta) — the full guide lives there; this file is an operational summary/adaptation for the The Candidate's Guide to the Galaxy skill pack.
 - Italian original (fuller, canonical): [README.md](https://github.com/GuidoPenta/galactic-negotiation-guide-for-developers/blob/main/README.md)
 - English version (condensed): [docs/english.md](https://github.com/GuidoPenta/galactic-negotiation-guide-for-developers/blob/main/docs/english.md)
 - Related older repo: https://github.com/GuidoPenta/galactic-negotiation-guide (© Guido Penta) — contains only a title README ("Guida Galattica alla negoziazione / Galactic Guide to negotiation", Nov 2023); no content to merge. It appears to be the placeholder later superseded by the repo above.

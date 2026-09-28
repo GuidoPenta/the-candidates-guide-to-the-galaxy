@@ -1,6 +1,6 @@
 # Notice
 
-Galactic Job Search — Copyright (c) 2026 Guido Penta.
+The Candidate's Guide to the Galaxy — Copyright (c) 2026 Guido Penta.
 Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) (see `LICENSE`):
 you may share and adapt it for **non-commercial** purposes, with attribution, under the same license.
 For commercial use, contact the author.

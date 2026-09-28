@@ -14,7 +14,7 @@ Rules:
 
 ---
 
-## 🌌 Galactic Job Search: your job search coach, from CV to offer
+## 🌌 The Candidate's Guide to the Galaxy: your coach from CV to signed offer. Don't panic.
 
 Built on Guido Penta's Galactic guides. You talk, I do the work, and everything stays in files on your computer.
 

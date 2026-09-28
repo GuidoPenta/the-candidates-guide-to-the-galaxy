@@ -2,7 +2,7 @@
 
 **Purpose:** the full question bank a candidate can ask the people interviewing them, organized by theme, with guidance on choosing, targeting and reading the answers.
 
-**Source:** https://github.com/GuidoPenta/galactic-reverse-interview-guide-for-developers (© Guido Penta) — the full guide lives there; this file is an operational adaptation for the Galactic Job Search skill pack.
+**Source:** https://github.com/GuidoPenta/galactic-reverse-interview-guide-for-developers (© Guido Penta) — the full guide lives there; this file is an operational adaptation for the The Candidate's Guide to the Galaxy skill pack.
 - Italian original (canonical, organized by theme): [README.md](https://github.com/GuidoPenta/galactic-reverse-interview-guide-for-developers/blob/main/README.md)
 - English version (flat list, no categories): [docs/english.md](https://github.com/GuidoPenta/galactic-reverse-interview-guide-for-developers/blob/main/docs/english.md)
 - Also available: [French](https://github.com/GuidoPenta/galactic-reverse-interview-guide-for-developers/blob/main/docs/french.md) (categorized), [Spanish](https://github.com/GuidoPenta/galactic-reverse-interview-guide-for-developers/blob/main/docs/spanish.md) (flat)

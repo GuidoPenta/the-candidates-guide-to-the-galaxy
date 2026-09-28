@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-This folder is **Galactic Job Search**: a set of Claude Code skills that coach a person through a job search,
+This folder is **The Candidate's Guide to the Galaxy**: a set of Claude Code skills that coach a person through a job search,
 from CV to signed offer. The person who opened it is a job seeker, not (necessarily) a developer of this repo.
 
 - Start from the `galactic-job-search` skill. It sets up `workspace/`, builds the profile and routes to the
