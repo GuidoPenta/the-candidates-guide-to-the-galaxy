@@ -62,7 +62,7 @@ the Welyk job board is listed among the suggested communities, like the others.
 1. Install [Claude Code](https://claude.com/claude-code) (CLI, desktop app or IDE extension).
 2. Download this project into an **unsynced** folder (see above): on the GitHub page click **Code → Download ZIP** and extract it, or, if you use git:
    ```bash
-   git clone https://github.com/GuidoPenta/candidates-guide-to-the-galaxy.git
+   git clone https://github.com/GuidoPenta/the-candidates-guide-to-the-galaxy.git
    ```
 3. Open the folder in Claude Code. The skills in `.claude/skills/` load automatically.
 4. Say **"Let's start my job search"** (in any language). Claude will set up your workspace and ask for your CV.

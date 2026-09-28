@@ -65,7 +65,7 @@ la bacheca Welyk compare tra le community suggerite, come le altre.
 2. Scarica questo progetto in una cartella **non sincronizzata** (vedi sopra): dalla pagina GitHub premi
    **Code → Download ZIP** ed estrailo, oppure, se usi git:
    ```bash
-   git clone https://github.com/GuidoPenta/candidates-guide-to-the-galaxy.git
+   git clone https://github.com/GuidoPenta/the-candidates-guide-to-the-galaxy.git
    ```
 3. Apri la cartella in Claude Code. Le skill si caricano da sole.
 4. Scrivi **"Iniziamo la mia ricerca di lavoro"**. Claude prepara il tuo spazio di lavoro e ti chiede il CV.
