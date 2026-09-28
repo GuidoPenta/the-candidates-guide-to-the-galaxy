@@ -2,12 +2,12 @@
 
 🇮🇹 [Versione italiana](README.md)
 
-**An all-in-one job search coach for [Claude Code](https://claude.com/claude-code), from your CV to the signed offer.**
-It runs locally, your data stays on your machine, and it's built on the
-[Galactic guides](https://github.com/GuidoPenta) for developers.
+**A ready-to-use Claude skill for your job search, from your CV to the signed offer, running inside
+[Claude Code](https://claude.com/claude-code).** It runs locally, your data stays on your machine, and it's built on the
+[Galactic guides](https://github.com/GuidoPenta) for people working in tech.
 
-> Paste a job posting, and it researches the company, tells you how a recruiter will score your CV, prepares
-> you for the interview, gives you smart questions to ask, and coaches you through the negotiation.
+> Paste a job posting: the system researches the company, tells you how your CV will be assessed, prepares
+> you for the interview, suggests the right questions to ask and coaches you through the negotiation.
 
 ## What it does
 

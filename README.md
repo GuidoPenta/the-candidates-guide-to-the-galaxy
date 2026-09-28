@@ -2,11 +2,11 @@
 
 🇬🇧 [English version](README.en.md)
 
-**Un coach "tutto in uno" per la ricerca di lavoro, dal CV all'offerta firmata, che gira dentro
+**Una skill per Claude "chiavi in mano" per la ricerca di lavoro: dal CV all'offerta firmata, che gira dentro
 [Claude Code](https://claude.com/claude-code).** Lavora in locale, i tuoi dati restano sul tuo computer, e si basa sulle
-[Guide galattiche](https://github.com/GuidoPenta) per sviluppatori.
+[Guide galattiche](https://github.com/GuidoPenta) per chi lavora nel Tech.
 
-> Incolli un annuncio di lavoro. Lui studia l'azienda, ti dice come un recruiter valuterà il tuo CV, ti prepara al
+> Incolli un annuncio di lavoro, il sistema studia l'azienda, ti dice come verrà valutato il tuo CV, ti prepara al
 > colloquio, ti suggerisce le domande giuste da fare e ti accompagna nella negoziazione.
 
 ## Cosa fa
