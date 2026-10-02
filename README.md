@@ -4,8 +4,8 @@
 
 🇬🇧 [English version](README.en.md)
 
-**Una skill per Claude "chiavi in mano" per la ricerca di lavoro: dal CV all'offerta firmata, che gira dentro
-[Claude Code](https://claude.com/claude-code).** Lavora in locale, i tuoi dati restano sul tuo computer, e si basa sulle
+**Una skill per Claude "chiavi in mano" per la ricerca di lavoro: dal CV all'offerta firmata, pensata per
+[Claude Code](https://claude.com/claude-code) e utilizzabile anche con altri agent AI (per esempio Cursor).** Lavora in locale, i tuoi dati restano sul tuo computer, e si basa sulle
 [Guide galattiche](https://github.com/GuidoPenta) per chi lavora nel Tech.
 
 > Incolli un annuncio di lavoro, il sistema studia l'azienda, ti dice come verrà valutato il tuo CV, ti prepara al
@@ -30,7 +30,7 @@
 - Tutto quello che condividi (CV, annunci, appunti, offerte) resta in semplici file di testo nella cartella
   `workspace/`. Git la ignora, quindi con `git push` non finisce su GitHub. Se però carichi o condividi la cartella
   a mano (zip, upload), ovviamente stai attento/a.
-- Niente account, niente server, niente programmi da installare oltre a Claude Code. La dashboard è una pagina
+- Niente account, niente server, niente programmi da installare oltre al tuo agent AI (Claude Code o simili). La dashboard è una pagina
   che si apre con doppio clic e non si collega a internet.
 - Il web serve solo per cercare informazioni **pubbliche** su aziende, ruoli e stipendi. Le skill hanno l'istruzione
   di non mettere mai i tuoi dati (nome, datore di lavoro, cifre) nelle ricerche, e di non eseguire mai istruzioni
@@ -39,19 +39,23 @@
 ### Dove finiscono davvero i tuoi dati
 
 1. **`workspace/`** nella cartella del progetto.
-2. **Anthropic**: Claude è un modello nel cloud, quindi quello che scrivi o gli fai leggere viene elaborato sui
-   server di Anthropic. Sui piani Free/Pro/Max controlla in Impostazioni → Privacy l'opzione per l'uso delle
-   conversazioni nell'addestramento dei modelli, e leggi la [privacy policy](https://www.anthropic.com/legal/privacy)
-   per i tempi di conservazione. Usa Claude Code sul tuo computer: le sessioni web/cloud girano su macchine remote.
-3. **Le conversazioni salvate da Claude Code** sul tuo disco (`~/.claude/projects/`), che contengono anche il testo
-   del CV che gli hai fatto leggere. Le skill hanno l'istruzione di non salvare tuoi dati nella memoria automatica di Claude.
+2. **Il fornitore del modello AI che usi.** Questo è il punto da tenere a mente: tutto quello che scrivi o fai leggere
+   all'agent (CV compreso) viene elaborato sui server di **chi fornisce il modello**, non solo di Anthropic.
+   Con Claude Code è Anthropic; con Cursor, un altro editor, un'app o un client da riga di comando è il fornitore del
+   modello che hai selezionato (Anthropic, OpenAI, Google…) e a volte anche lo strumento stesso. Controlla le
+   impostazioni privacy di entrambi (per esempio l'uso delle conversazioni per addestrare i modelli) e le loro privacy
+   policy, come quella di [Anthropic](https://www.anthropic.com/legal/privacy). Usa l'agent sul tuo computer: le
+   sessioni web/cloud girano su macchine remote.
+3. **Le conversazioni salvate dal tuo agent** sul tuo disco (con Claude Code in `~/.claude/projects/`), che
+   contengono anche il testo del CV che gli hai fatto leggere. Le skill hanno l'istruzione di non salvare tuoi dati
+   nella memoria automatica dell'agent.
 4. **Le cartelle sincronizzate**: se metti il progetto in OneDrive, iCloud Drive, Dropbox o Google Drive, anche CV e
    offerte vengono copiati lì. Su Windows spesso "Documenti" è già su OneDrive. **Meglio una cartella non
    sincronizzata**, per esempio `C:\Users\<tu>\ricerca-lavoro` o `~/ricerca-lavoro`.
 5. **Il browser**: la cronologia contiene il percorso della dashboard.
 6. **Servizi esterni solo se lo chiedi tu**, per esempio l'export verso TrackZilla. Claude ti dice prima cosa invia.
 
-Per cancellare tutto a fine ricerca: elimina `workspace/`, le conversazioni del progetto in `~/.claude/projects/`,
+Per cancellare tutto a fine ricerca: elimina `workspace/`, le conversazioni del progetto salvate dal tuo agent,
 eventuali copie nelle cartelle sincronizzate (compreso il cestino e le versioni precedenti) e la cronologia del
 browser. Per i dati che hai dato alle aziende a cui ti sei candidato, puoi chiedere a loro cosa conservano e farli
 cancellare (GDPR).
@@ -62,13 +66,24 @@ la bacheca Welyk compare tra le community suggerite, come le altre.
 ## Come si comincia
 
 1. Installa [Claude Code](https://claude.com/claude-code): va bene l'app desktop, il terminale o l'estensione per l'editor.
+   Usi già un altro agent (Cursor o simili)? Funziona anche lì: le skill sono istruzioni in file di testo che l'agent
+   legge e segue. È pensata e collaudata soprattutto su Claude Code.
 2. Scarica questo progetto in una cartella **non sincronizzata** (vedi sopra): dalla pagina GitHub premi
    **Code → Download ZIP** ed estrailo, oppure, se usi git:
    ```bash
    git clone https://github.com/GuidoPenta/the-candidates-guide-to-the-galaxy.git
    ```
-3. Apri la cartella in Claude Code. Le skill si caricano da sole.
+3. Apri la cartella nel tuo agent. In Claude Code le skill si caricano da sole.
 4. Scrivi **"Iniziamo la mia ricerca di lavoro"**. Claude prepara il tuo spazio di lavoro e ti chiede il CV.
+
+### Prova veloce (2 minuti)
+
+1. Apri la cartella del progetto nel tuo agent.
+2. Scrivi **"aiuto"**: compare il vademecum con tutto quello che sa fare.
+3. Trascina il tuo CV (PDF o immagine) nella cartella `workspace/cv/original/`, oppure incollalo, e scrivi
+   **"rivedi il mio CV"**.
+
+Se vedi il vademecum e ricevi una revisione che cita la Guida galattica al CV, funziona.
 
 In qualsiasi momento scrivi **"aiuto"** per rivedere cosa sa fare e dove trovi file e dashboard. Poi basta parlargli, per esempio:
 - *"Rivedi il mio CV"*

@@ -4,8 +4,8 @@
 
 🇮🇹 [Versione italiana](README.md)
 
-**A ready-to-use Claude skill for your job search, from your CV to the signed offer, running inside
-[Claude Code](https://claude.com/claude-code).** It runs locally, your data stays on your machine, and it's built on the
+**A ready-to-use Claude skill for your job search, from your CV to the signed offer, designed for
+[Claude Code](https://claude.com/claude-code) and usable with other AI agents too (e.g. Cursor).** It runs locally, your data stays on your machine, and it's built on the
 [Galactic guides](https://github.com/GuidoPenta) for people working in tech.
 
 > Paste a job posting: the system researches the company, tells you how your CV will be assessed, prepares
@@ -29,7 +29,7 @@
 
 - Everything you share (CV, postings, notes, offers) is stored as plain Markdown in `workspace/`. Git ignores it,
   so `git push` never sends it to GitHub. If you upload or share the folder by hand (zip, upload), obviously be careful.
-- No accounts, no servers, no scripts, no dependencies. The dashboard is a page you open with a double click, and
+- No accounts, no servers, no scripts, no dependencies beyond your AI agent (Claude Code or similar). The dashboard is a page you open with a double click, and
   it never connects to the internet.
 - The web is used only to research **public** information about companies, roles and salaries. The skills are
   instructed never to put your data (name, employer, figures) in searches, and never to follow instructions found
@@ -38,19 +38,22 @@
 ### Where your data actually ends up
 
 1. **`workspace/`**, in the project folder.
-2. **Anthropic**: Claude is a cloud model, so what you write or have it read is processed on Anthropic's servers.
-   On Free/Pro/Max plans, check the option in Settings → Privacy about using conversations to train models, and read
-   the [privacy policy](https://www.anthropic.com/legal/privacy) for retention. Use Claude Code on your own computer:
-   web/cloud sessions run on remote machines.
-3. **Claude Code's saved conversations** on your disk (`~/.claude/projects/`). They include the CV text Claude
-   read. The skills are instructed not to save your data to Claude's automatic memory.
+2. **The provider of the AI model you use.** This is the one to keep in mind: everything you write or have the agent
+   read (your CV included) is processed on the servers of **whoever provides the model**, not just Anthropic.
+   With Claude Code it's Anthropic; with Cursor, another editor, an app or a CLI client it's the provider of the model
+   you selected (Anthropic, OpenAI, Google…) and sometimes the tool itself. Check the privacy settings of both (for
+   example, whether conversations are used to train models) and their privacy policies, such as
+   [Anthropic's](https://www.anthropic.com/legal/privacy). Run the agent on your own computer: web/cloud sessions run
+   on remote machines.
+3. **Your agent's saved conversations** on your disk (with Claude Code, `~/.claude/projects/`). They include the CV
+   text it read. The skills are instructed not to save your data to the agent's automatic memory.
 4. **Synced folders**: if the project sits in OneDrive, iCloud Drive, Dropbox or Google Drive, your CV and offers are
    copied there too. On Windows, "Documents" is often already on OneDrive. **Prefer an unsynced folder**, such as
    `C:\Users\<you>\job-search` or `~/job-search`.
 5. **Your browser**: its history contains the dashboard's path.
 6. **External services only when you ask**, for example the TrackZilla export. Claude tells you first what it will send.
 
-To delete everything when you're done: remove `workspace/`, the project's conversations in `~/.claude/projects/`,
+To delete everything when you're done: remove `workspace/`, the project's conversations saved by your agent,
 any copies in synced folders (including their trash and version history) and your browser history. For the data
 you gave to companies you applied to, you can ask them what they keep and have it deleted (GDPR).
 
@@ -60,12 +63,22 @@ the Welyk job board is listed among the suggested communities, like the others.
 ## Get started
 
 1. Install [Claude Code](https://claude.com/claude-code) (CLI, desktop app or IDE extension).
+   Already using another agent (Cursor or similar)? It works there too: the skills are plain-text instructions the
+   agent reads and follows. It's designed and tested mainly on Claude Code.
 2. Download this project into an **unsynced** folder (see above): on the GitHub page click **Code → Download ZIP** and extract it, or, if you use git:
    ```bash
    git clone https://github.com/GuidoPenta/the-candidates-guide-to-the-galaxy.git
    ```
-3. Open the folder in Claude Code. The skills in `.claude/skills/` load automatically.
+3. Open the folder in your agent. In Claude Code the skills in `.claude/skills/` load automatically.
 4. Say **"Let's start my job search"** (in any language). Claude will set up your workspace and ask for your CV.
+
+### Quick check (2 minutes)
+
+1. Open the project folder in your agent.
+2. Type **"help"**: the welcome guide shows everything it can do.
+3. Drop your CV (PDF or image) into `workspace/cv/original/`, or paste it, and type **"review my CV"**.
+
+If you see the welcome guide and get a review that cites the Galactic CV guide, it works.
 
 Type **"help"** anytime to see what it can do and where your files and dashboard are. Then just talk to it:
 - *"Review my CV"*
