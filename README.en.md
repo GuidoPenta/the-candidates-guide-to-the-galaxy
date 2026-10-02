@@ -60,6 +60,25 @@ you gave to companies you applied to, you can ask them what they keep and have i
 **Disclosure:** Guido Penta works as a tech recruiter at [Welyk](https://welyk.tech). The tool sends nothing to Welyk:
 the Welyk job board is listed among the suggested communities, like the others.
 
+## ATS: myths and facts
+
+Communities are full of confusion about this. In short, with sources in
+[ats.md](.claude/skills/galactic-cv/references/ats.md):
+
+- **"The ATS auto-rejects 75% of CVs"**: a legend. The figure goes back to a 2012 CV-optimisation company that never
+  published a study.
+- **An ATS is the software where applications land and are managed**: database, stages, search. It's not a robot
+  deciding instead of people.
+- **Automatic filters exist, but someone configures them**: mostly knockout questions in the application form
+  (location, work permit, availability). Answer them carefully.
+- **There's no "ATS-proof" CV.** What matters is a clear, relevant CV: a text PDF (not a photo), contacts in the body
+  of the page, the posting's keywords only for what you've really done.
+- **LinkedIn or the company site?** If the company has an ATS it changes little: you end up there either way. If it
+  doesn't, the channel decides which "container" you land in and who looks at it first. And the site confirms the
+  role is still open.
+
+Ask Claude **"what is an ATS?"** or **"should I apply on LinkedIn or on the company site?"** for the full version.
+
 ## Get started
 
 1. Install [Claude Code](https://claude.com/claude-code) (CLI, desktop app or IDE extension).

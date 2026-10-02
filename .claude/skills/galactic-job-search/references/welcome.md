@@ -27,6 +27,7 @@ Built on Guido Penta's Galactic guides. You talk, I do the work, and everything 
 - ❓ **Your questions**: "What should I ask the recruiter?"
 - 💰 **Negotiation**: "They asked my salary expectations", "They offered me 48k, is it good?"
 - 👥 **Communities**: "Where can I find groups for frontend developers?"
+- 🤖 **ATS**: "What is an ATS?", "Should I apply on LinkedIn or on the company site?" (myths vs facts)
 - 📊 **Tracking**: "I applied to Acme", "The interview went well", "Where am I with my applications?"
 
 **Your dashboard**: a page with all your applications, deadlines and stages.

@@ -63,6 +63,24 @@ cancellare (GDPR).
 **Trasparenza:** Guido Penta lavora come recruiter tech in [Welyk](https://welyk.tech). Il tool non invia nulla a Welyk:
 la bacheca Welyk compare tra le community suggerite, come le altre.
 
+## ATS: miti e verità
+
+Nelle community se ne sentono di tutti i colori. In breve, con le fonti nel file
+[ats.md](.claude/skills/galactic-cv/references/ats.md):
+
+- **"L'ATS scarta in automatico il 75% dei CV"**: leggenda. Il dato risale a una società di ottimizzazione CV del
+  2012 che non ha mai pubblicato uno studio.
+- **Un ATS è il software dove arrivano e si gestiscono le candidature**: archivio, fasi, ricerca. Non è un robot che
+  decide al posto delle persone.
+- **I filtri automatici esistono, ma li configura qualcuno**: soprattutto le domande eliminatorie nel form (sede,
+  permesso di lavoro, disponibilità). Rispondi con cura.
+- **Il CV "a prova di ATS" non esiste.** Conta un CV chiaro e pertinente: PDF testuale (non una foto), contatti nel
+  corpo della pagina, parole chiave dell'annuncio solo per quello che hai fatto davvero.
+- **LinkedIn o sito dell'azienda?** Se l'azienda ha un ATS cambia poco: finisci comunque lì. Se non ce l'ha, il canale
+  decide in quale "contenitore" finisci e chi lo guarda per primo. E il sito ti conferma che la posizione è ancora aperta.
+
+Chiedi a Claude **"cos'è un ATS?"** o **"mi candido da LinkedIn o dal sito?"** per la versione completa.
+
 ## Come si comincia
 
 1. Installa [Claude Code](https://claude.com/claude-code): va bene l'app desktop, il terminale o l'estensione per l'editor.
