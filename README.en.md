@@ -4,7 +4,7 @@
 
 🇮🇹 [Versione italiana](README.md)
 
-**A ready-to-use Claude skill for your job search, from your CV to the signed offer, designed for
+**A ready-to-use set of Claude skills for your job search, from your CV to the signed offer, designed for
 [Claude Code](https://claude.com/claude-code) and usable with other AI agents too (e.g. Cursor).** It runs locally, your data stays on your machine, and it's built on the
 [Galactic guides](https://github.com/GuidoPenta) for people working in tech.
 

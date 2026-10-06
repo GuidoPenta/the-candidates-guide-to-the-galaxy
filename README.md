@@ -4,7 +4,7 @@
 
 🇬🇧 [English version](README.en.md)
 
-**Una skill per Claude "chiavi in mano" per la ricerca di lavoro: dal CV all'offerta firmata, pensata per
+**Un insieme di skill per Claude "chiavi in mano" per la ricerca di lavoro: dal CV all'offerta firmata, pensato per
 [Claude Code](https://claude.com/claude-code) e utilizzabile anche con altri agent AI (per esempio Cursor).** Lavora in locale, i tuoi dati restano sul tuo computer, e si basa sulle
 [Guide galattiche](https://github.com/GuidoPenta) per chi lavora nel Tech.
 
