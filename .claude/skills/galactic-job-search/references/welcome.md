@@ -16,7 +16,8 @@ Rules:
 
 ## 🌌 The Candidate's Guide to the Galaxy: your coach from CV to signed offer. Don't panic.
 
-Built on Guido Penta's Galactic guides. You talk, I do the work, and everything stays in files on your computer.
+Built on Guido Penta's Galactic guides. You talk, I do the work. Your files stay on your computer; what you have
+me read is processed by the AI model provider (see the README's privacy section).
 
 **What I can do** (just ask, in your own words):
 - 📄 **CV**: "Review my CV", "Tailor my CV for this job"

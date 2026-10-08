@@ -5,7 +5,7 @@
 🇬🇧 [English version](README.en.md)
 
 **Una skill per Claude "chiavi in mano" per la ricerca di lavoro: dal CV all'offerta firmata, pensata per
-[Claude Code](https://claude.com/claude-code) e utilizzabile anche con altri agent AI (per esempio Cursor).** Lavora in locale, i tuoi dati restano sul tuo computer, e si basa sulle
+[Claude Code](https://claude.com/claude-code) e utilizzabile anche con altri agent AI (per esempio Cursor).** I tuoi file restano sul tuo computer ([cosa passa invece dall'AI](#privacy-cosa-resta-sul-tuo-computer-e-cosa-no)), e si basa sulle
 [Guide galattiche](https://github.com/GuidoPenta) per chi lavora nel Tech.
 
 > Incolli un annuncio di lavoro, il sistema studia l'azienda, ti dice come verrà valutato il tuo CV, ti prepara al
@@ -25,40 +25,46 @@
 | Community | `galactic-communities` | Gruppi, mentor, fonti di lavoro da remoto ed eventi adatti a te ([lista](https://github.com/GuidoPenta/awesome-italian-tech-communities)) |
 | Tracking | `galactic-tracker` | Le tue candidature in un colpo d'occhio in una dashboard nel browser, chi ricontattare, statistiche. Bottone **🦖 Esporta per TrackZilla** per importarle su [TrackZilla](https://www.trackzilla.cv/) (serve un account, gratuito fino a 50 candidature) |
 
-## Privacy prima di tutto
+## Privacy: cosa resta sul tuo computer e cosa no
 
-- Tutto quello che condividi (CV, annunci, appunti, offerte) resta in semplici file di testo nella cartella
-  `workspace/`. Git la ignora, quindi con `git push` non finisce su GitHub. Se però carichi o condividi la cartella
-  a mano (zip, upload), ovviamente stai attento/a.
-- Niente account, niente server, niente programmi da installare oltre al tuo agent AI (Claude Code o simili). La dashboard è una pagina
-  che si apre con doppio clic e non si collega a internet.
-- Il web serve solo per cercare informazioni **pubbliche** su aziende, ruoli e stipendi. Le skill hanno l'istruzione
-  di non mettere mai i tuoi dati (nome, datore di lavoro, cifre) nelle ricerche, e di non eseguire mai istruzioni
-  trovate dentro annunci o pagine web.
+**In una frase:** i tuoi **file** restano sul tuo computer, ma tutto quello che fai **leggere all'AI** passa dai
+server del fornitore del modello che usi. Il progetto non ha un server suo: né Guido né Welyk ricevono i tuoi dati.
 
-### Dove finiscono davvero i tuoi dati
+### ✅ Cosa resta sul tuo computer
+- **I tuoi file**: CV, profilo, annunci, appunti, offerte, in semplici file di testo nella cartella `workspace/`.
+  Git la ignora, quindi con `git push` non finisce su GitHub. Se però carichi o condividi la cartella a mano (zip,
+  upload), ovviamente stai attento/a.
+- **La dashboard**: è una pagina che si apre con doppio clic e non si collega a internet.
+- **Niente account e niente server** del progetto: ti serve solo il tuo agent AI (Claude Code o simili).
 
-1. **`workspace/`** nella cartella del progetto.
-2. **Il fornitore del modello AI che usi.** Questo è il punto da tenere a mente: tutto quello che scrivi o fai leggere
-   all'agent (CV compreso) viene elaborato sui server di **chi fornisce il modello**, non solo di Anthropic.
-   Con Claude Code è Anthropic; con Cursor, un altro editor, un'app o un client da riga di comando è il fornitore del
-   modello che hai selezionato (Anthropic, OpenAI, Google…) e a volte anche lo strumento stesso. Controlla le
-   impostazioni privacy di entrambi (per esempio l'uso delle conversazioni per addestrare i modelli) e le loro privacy
-   policy, come quella di [Anthropic](https://www.anthropic.com/legal/privacy). Usa l'agent sul tuo computer: le
-   sessioni web/cloud girano su macchine remote.
-3. **Le conversazioni salvate dal tuo agent** sul tuo disco (con Claude Code in `~/.claude/projects/`), che
-   contengono anche il testo del CV che gli hai fatto leggere. Le skill hanno l'istruzione di non salvare tuoi dati
-   nella memoria automatica dell'agent.
-4. **Le cartelle sincronizzate**: se metti il progetto in OneDrive, iCloud Drive, Dropbox o Google Drive, anche CV e
-   offerte vengono copiati lì. Su Windows spesso "Documenti" è già su OneDrive. **Meglio una cartella non
-   sincronizzata**, per esempio `C:\Users\<tu>\ricerca-lavoro` o `~/ricerca-lavoro`.
-5. **Il browser**: la cronologia contiene il percorso della dashboard.
-6. **Servizi esterni solo se lo chiedi tu**, per esempio l'export verso TrackZilla. Claude ti dice prima cosa invia.
+### ⚠️ Cosa esce dal tuo computer
+1. **Verso il fornitore del modello AI: sempre.** È così che funziona qualsiasi assistente AI, non solo questo:
+   quello che scrivi e quello che fai leggere all'agent (CV compreso) viene elaborato sui server di **chi fornisce
+   il modello**. Con Claude Code è Anthropic; con Cursor, un altro editor, un'app o un client da riga di comando è il
+   fornitore del modello che hai scelto (Anthropic, OpenAI, Google…) e a volte anche lo strumento stesso.
+   Controlla le impostazioni privacy di entrambi (per esempio se le conversazioni vengono usate per addestrare i
+   modelli) e le loro privacy policy, come quella di [Anthropic](https://www.anthropic.com/legal/privacy).
+   Preferisci l'agent sul tuo computer: le sessioni web/cloud girano su macchine remote.
+2. **Verso il web: solo ricerche su informazioni pubbliche** (aziende, ruoli, stipendi). Le skill hanno l'istruzione
+   di non mettere mai i tuoi dati (nome, datore di lavoro, cifre) nelle ricerche, e di non eseguire mai istruzioni
+   trovate dentro annunci o pagine web.
+3. **Verso altri servizi: solo se lo chiedi tu**, per esempio l'export verso TrackZilla. Prima ti viene detto
+   cosa viene inviato.
 
-Per cancellare tutto a fine ricerca: elimina `workspace/`, le conversazioni del progetto salvate dal tuo agent,
-eventuali copie nelle cartelle sincronizzate (compreso il cestino e le versioni precedenti) e la cronologia del
-browser. Per i dati che hai dato alle aziende a cui ti sei candidato, puoi chiedere a loro cosa conservano e farli
-cancellare (GDPR).
+### 📁 Copie che forse non sai di avere
+- **Le conversazioni salvate dal tuo agent** sul tuo disco (con Claude Code in `~/.claude/projects/`): contengono
+  anche il testo del CV che gli hai fatto leggere. Le skill hanno l'istruzione di non salvare i tuoi dati nella
+  memoria automatica dell'agent.
+- **Le cartelle sincronizzate**: se metti il progetto in OneDrive, iCloud Drive, Dropbox o Google Drive, anche CV e
+  offerte vengono copiati lì. Su Windows spesso "Documenti" è già su OneDrive. **Meglio una cartella non
+  sincronizzata**, per esempio `C:\Users\<tu>\ricerca-lavoro` o `~/ricerca-lavoro`.
+- **Il browser**: la cronologia contiene il percorso della dashboard.
+
+### 🧹 Per cancellare tutto a fine ricerca
+Elimina `workspace/`, le conversazioni del progetto salvate dal tuo agent, eventuali copie nelle cartelle
+sincronizzate (compreso il cestino e le versioni precedenti) e la cronologia del browser. Per i dati che hai dato
+alle aziende a cui ti sei candidato/a, puoi chiedere a loro cosa conservano e farli cancellare (GDPR). Per quelli
+elaborati dal fornitore dell'AI, vedi la sua privacy policy.
 
 **Trasparenza:** Guido Penta lavora come recruiter tech in [Welyk](https://welyk.tech). Il tool non invia nulla a Welyk:
 la bacheca Welyk compare tra le community suggerite, come le altre.
