@@ -7,7 +7,6 @@
 **Un insieme di skill per Claude "chiavi in mano" per la ricerca di lavoro: dal CV all'offerta firmata, pensato per
 [Claude Code](https://claude.com/claude-code) e utilizzabile anche con altri agent AI (per esempio Cursor).** I tuoi file restano sul tuo computer ([cosa passa invece dall'AI](#privacy-cosa-resta-sul-tuo-computer-e-cosa-no)), e si basa sulle
 [Guide galattiche](https://github.com/GuidoPenta) per chi lavora nel Tech.
-[Guide galattiche](https://github.com/GuidoPenta) per chi lavora nel Tech.
 
 > Incolli un annuncio di lavoro, il sistema studia l'azienda, ti dice come verrà valutato il tuo CV, ti prepara al
 > colloquio, ti suggerisce le domande giuste da fare e ti accompagna nella negoziazione.
