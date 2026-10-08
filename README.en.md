@@ -4,8 +4,8 @@
 
 🇮🇹 [Versione italiana](README.md)
 
-**A ready-to-use set of Claude skills for your job search, from your CV to the signed offer, designed for
-[Claude Code](https://claude.com/claude-code) and usable with other AI agents too (e.g. Cursor).** Your files stay on your computer ([what goes through the AI instead](#privacy-what-stays-on-your-computer-and-what-doesnt)), and it's built on the
+**A ready-to-use set of AI skills for your job search, from your CV to the signed offer. Designed for
+[Claude Code](https://claude.com/claude-code), it also works with other AI agents (e.g. Cursor).** Your files stay on your computer ([what goes through the AI instead](#privacy-what-stays-on-your-computer-and-what-doesnt)), and it's built on the
 [Galactic guides](https://github.com/GuidoPenta) for people working in tech.
 
 > Paste a job posting: the system researches the company, tells you how your CV will be assessed, prepares
