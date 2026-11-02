@@ -69,7 +69,7 @@ the Welyk job board is listed among the suggested communities, like the others.
 ## ATS: myths and facts
 
 Communities are full of confusion about this. In short, with sources in
-[ats.md](.claude/skills/galactic-cv/references/ats.md):
+[ats.md](https://github.com/GuidoPenta/the-candidates-guide-to-the-galaxy/blob/main/.claude/skills/galactic-cv/references/ats.md):
 
 - **"The ATS auto-rejects 75% of CVs"**: a legend. The figure goes back to a 2012 CV-optimisation company that never
   published a study.

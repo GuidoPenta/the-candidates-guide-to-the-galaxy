@@ -72,7 +72,7 @@ la bacheca Welyk compare tra le community suggerite, come le altre.
 ## ATS: miti e verità
 
 Nelle community se ne sentono di tutti i colori. In breve, con le fonti nel file
-[ats.md](.claude/skills/galactic-cv/references/ats.md):
+[ats.md](https://github.com/GuidoPenta/the-candidates-guide-to-the-galaxy/blob/main/.claude/skills/galactic-cv/references/ats.md):
 
 - **"L'ATS scarta in automatico il 75% dei CV"**: leggenda. Il dato risale a una società di ottimizzazione CV del
   2012 che non ha mai pubblicato uno studio.
