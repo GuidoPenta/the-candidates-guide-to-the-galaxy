@@ -62,6 +62,7 @@ Every Block A row carries a state and a **verbatim quote** from the CV.
 | Case | Rule |
 |------|------|
 | Required language level "fluent" | Native / C1 / C2 / fluent / professional → `Verified`; good / B2 / intermediate → `Unverifiable`; school / basic / A1–B1 → `Absent`; not stated → `Unverifiable`. Certification (IELTS, TOEFL, Cambridge) ≥ C1 → `Verified` |
+| Mixed language levels in the CV (e.g. comprehension C1, writing B2, speaking B1) [pack] | Never average. If the posting names the skill that matters ("spoken English", "written communication"), judge that skill with the row above. If it gives one generic level, `Verified` only if every stated skill meets it; otherwise `Inferred`, naming the skill below the level, plus a neutral question ("How do you handle meetings in English?"). If the posting gives several per-skill levels, one row per skill |
 | Location / work mode in the posting | Gate item only if the posting marks it as required ("residence required", "on-site mandatory"). Otherwise it is not a requirement. If the CV says nothing about availability (remote, relocation), it goes to "to clarify", to be asked, never "add your city/address to the CV" |
 | Dates with years only | Plain year difference (2016–2019 = 3); "present" = current year. Write "±1 year per experience" next to the total |
 | Lead / manager role | Counts as technical experience only if the entry names the technologies used; management-only text counts for A4, not A1/A2 |
@@ -101,6 +102,11 @@ One row per mandatory requirement: state + quote.
 - A requirement covered only by `Declared` passes the gate but always stays a question for the interview.
 - If the posting doesn't separate mandatory from nice-to-have: mandatory = marked
   "required / must" or with a numeric threshold ("5+ years"); the rest is nice-to-have. Say so.
+- **Single undifferentiated list** headed "Requirements" / "Requisiti" (no nice-to-have section, no
+  markers) [pack]: treat every item as mandatory **except** those worded as a preference ("plus",
+  "nice to have", "gradito", "preferibile", "è un plus"). State this assumption at the top of the report,
+  and if the gate fails or is `To verify` only because of such an item, say so and show what the gate
+  would be if it were nice-to-have. The user decides how to read the posting.
 - Requirements come only from a real posting: nobody is screened out on a requirement the
   evaluator wrote.
 
@@ -143,6 +149,27 @@ Candidate fixes by row:
 | `Pass` | < 55 | **Do not proceed** |
 
 B and C **never** enter the decision or the ranking.
+
+### Overqualification signal [pack]
+
+A1 has no upper bound, so a profile far more senior than the posting asks for scores as a full match.
+A real screener often stops there (budget, motivation, retention). Add this signal for the candidate to
+prepare; it changes **neither the gate, nor Score A, nor the decision** (same principle as gaps: a
+question, not a penalty).
+
+- **Trigger only on an explicit ceiling in the posting**: a maximum number of years ("1–2 years", "up to
+  3 years") or an explicit junior level ("junior", "entry level", "neolaureato"). No ceiling → no signal.
+- **Measure only with the years already computed for A1** (the explicit sum from dates). Never use age,
+  date of birth, graduation year or any other protected data, and never mention them in the signal.
+- **Threshold**: the computed years are **more than twice the posting's maximum and at least 5 years
+  above it** (e.g. "1–2 years" → triggers from 7 years). For a "junior" posting without numbers, treat
+  the maximum as 2 years.
+- **Output**: one line in "Risks and gaps" ("The posting targets up to N years; the CV shows M: a screener
+  may question fit, budget or motivation") and one neutral question in "Questions a screener will ask
+  you", e.g. "What draws you to a role at this level?". Help the user prepare an honest answer.
+
+Acceptance check: a "1–2 years" posting with a 14-year CV shows the risk and the question, and Score A
+and the decision are the same as without the signal; a posting with no ceiling shows nothing.
 
 ## Block B — Content (Galactic CV Guide + cv-review)
 
@@ -257,10 +284,10 @@ Source: <posting file | URL, retrieved on <date> | none: Block A N/A>. Weights: 
 - <max 5, each referencing an A/B/C row>
 
 ## Risks and gaps
-- <max 5, only Inferred / Unverifiable / Absent items>
+- <max 5, only Inferred / Unverifiable / Absent items, plus the overqualification signal if triggered>
 
 ## Questions a screener will ask you
-1. <max 5, priority order; first covers the gate if "To verify"; each tied to an Inferred/Unverifiable/Absent row>
+1. <max 5, priority order; first covers the gate if "To verify"; each tied to an Inferred/Unverifiable/Absent row or to the overqualification signal>
 
 ## Conversation starters in your CV
 - <hobbies, thesis, publications, aspirational certifications (PM/Scrum)> or `None`
