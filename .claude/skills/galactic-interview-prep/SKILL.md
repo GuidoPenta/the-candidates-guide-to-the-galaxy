@@ -53,6 +53,19 @@ When the user asks for a mock, or it's the obvious next step:
 - Close with 3 takeaways, appended to `prep.md`.
 
 ## 5. After the interview
-Ask how it went, log it with `galactic-tracker`, and note the questions asked in `prep.md`, since they're gold
-for the next round and for the next company. If useful, offer a short thank-you or follow-up
-message as a draft for the user to send (general practice; the guides don't prescribe one).
+Ask how it went and log it with `galactic-tracker`.
+
+**Questions journal → `workspace/interview-questions.md`.** Ask which questions they were asked and append
+them, one line each: date · company · stage · question · how it went (the user's own words). Keep only the
+questions, never names of interviewers or confidential details the company shared. It becomes the user's
+personal question bank: when preparing a new interview, read it first and reuse what's relevant (same stack,
+same stage). Also note the round's questions in the application's `prep.md`.
+
+**Messages after the interview** [pack] (general practice; the guides don't prescribe them). Offer short drafts,
+in the language of the process, for the user to send; you never send anything:
+- **Thank-you**, same or next day: one concrete thing from the conversation, interest confirmed, no pressure.
+- **Follow-up** when the promised answer is late (or after about 10 days of silence): polite, short, asks for an
+  update on timing.
+- **Feedback request** after a rejection: thanks, one specific question ("what would have made the
+  difference?"), no arguing with the decision.
+Keep them human and brief; never include salary figures (privacy rule 5).

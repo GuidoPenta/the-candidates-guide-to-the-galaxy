@@ -13,8 +13,11 @@ posting in Italian → CV in Italian **or** English, both fine; posting in Engli
 workspace/
 ├── profile.md                 # who the candidate is and what they want (see below)
 ├── stories.md                 # STAR story bank, reused across all interviews
+├── interview-questions.md     # questions asked in past interviews (personal question bank)
+├── weekly/                    # YYYY-MM-DD.md weekly reviews, only if the user keeps them
 ├── cv/
 │   ├── original/              # files the user dropped in (PDF, image, DOCX, MD…), never modified
+│   ├── cv-master.en.md / .it.md  # second-language version, on request
 │   ├── cv-master.md           # the complete, honest master CV (all experience, all numbers);
 │   │                          # a working file: open questions go in a final "## Open questions" section
 │   └── reviews/               # YYYY-MM-DD-review.md reports (+ YYYY-MM-DD-rewrite-notes.md) from galactic-cv

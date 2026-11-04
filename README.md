@@ -15,13 +15,13 @@
 
 | Fase | Skill | Cosa ottieni |
 |---|---|---|
-| Per iniziare | `galactic-job-search` | Uno spazio di lavoro privato, il tuo profilo, e la risposta a "cosa faccio adesso?" |
-| CV | `galactic-cv` | Revisione secondo la [Guida galattica al CV](https://github.com/GuidoPenta/galactic-CV-guide-for-developers), punteggio "come ti vede chi seleziona" su un annuncio (rubrica di [cv-review](https://github.com/matteobaccan/cv-review)) |
+| Per iniziare | `galactic-job-search` | Uno spazio di lavoro privato, il tuo profilo, la risposta a "cosa faccio adesso?" e il riepilogo settimanale |
+| CV | `galactic-cv` | Revisione secondo la [Guida galattica al CV](https://github.com/GuidoPenta/galactic-CV-guide-for-developers), punteggio "come ti vede chi seleziona" su un annuncio (rubrica di [cv-review](https://github.com/matteobaccan/cv-review)), versione in inglese o in italiano |
 | LinkedIn | `galactic-linkedin` | Mappa delle parole chiave, titolo/About/esperienze riscritti e pronti da incollare, risposte tipo per i recruiter ([guida](https://github.com/GuidoPenta/galactic-linkedin-profile-guide-for-developers)) |
 | Candidatura | `galactic-application` | L'annuncio decifrato, ricerca sull'azienda con le fonti, analisi del fit, una scheda di una pagina da leggere prima della call |
-| Colloquio | `galactic-interview-prep` | Piano di preparazione, archivio di storie (metodo STAR), colloqui simulati con feedback, risorse per ruolo ([guida](https://github.com/GuidoPenta/galactic-tech-interview-guide)) |
+| Colloquio | `galactic-interview-prep` | Piano di preparazione, archivio di storie (metodo STAR), colloqui simulati con feedback, diario delle domande ricevute, messaggi di ringraziamento e sollecito, risorse per ruolo ([guida](https://github.com/GuidoPenta/galactic-tech-interview-guide)) |
 | Le tue domande | `galactic-reverse-interview` | Domande su misura da fare, segnali d'allarme, confronto tra aziende ([guida](https://github.com/GuidoPenta/galactic-reverse-interview-guide-for-developers)) |
-| Offerta | `galactic-negotiation` | Come rispondere sulla RAL, valutazione dell'offerta, testo della controproposta, simulazione della trattativa ([guida](https://github.com/GuidoPenta/galactic-negotiation-guide-for-developers)) |
+| Offerta | `galactic-negotiation` | Come rispondere sulla RAL, valutazione dell'offerta, testo della controproposta, simulazione della trattativa, da RAL a netto con [QuantoPrendo.io](https://quantoprendo.io) ([guida](https://github.com/GuidoPenta/galactic-negotiation-guide-for-developers)) |
 | Community | `galactic-communities` | Gruppi, mentor, fonti di lavoro da remoto ed eventi adatti a te ([lista](https://github.com/GuidoPenta/awesome-italian-tech-communities)) |
 | Tracking | `galactic-tracker` | Le tue candidature in un colpo d'occhio in una dashboard nel browser, chi ricontattare, statistiche. Bottone **🦖 Esporta per TrackZilla** per importarle su [TrackZilla](https://www.trackzilla.cv/) (serve un account, gratuito fino a 50 candidature) |
 

@@ -15,13 +15,13 @@
 
 | Phase | Skill | What you get |
 |---|---|---|
-| Getting started | `galactic-job-search` | Private workspace, your profile, "what should I do next?" |
-| CV | `galactic-cv` | Review against the [Galactic CV guide](https://github.com/GuidoPenta/galactic-CV-guide-for-developers), screener score against a posting (rubric from [cv-review](https://github.com/matteobaccan/cv-review)) |
+| Getting started | `galactic-job-search` | Private workspace, your profile, "what should I do next?" and a weekly review |
+| CV | `galactic-cv` | Review against the [Galactic CV guide](https://github.com/GuidoPenta/galactic-CV-guide-for-developers), screener score against a posting (rubric from [cv-review](https://github.com/matteobaccan/cv-review)), English or Italian version |
 | LinkedIn | `galactic-linkedin` | Keyword map, paste-ready headline/About/experience rewrites, recruiter reply templates ([guide](https://github.com/GuidoPenta/galactic-linkedin-profile-guide-for-developers)) |
 | Application | `galactic-application` | The posting decoded, company research with sources, fit analysis, a one-page briefing |
-| Interview | `galactic-interview-prep` | Prep plan, STAR story bank, mock interviews with feedback, practice resources per role ([guide](https://github.com/GuidoPenta/galactic-tech-interview-guide)) |
+| Interview | `galactic-interview-prep` | Prep plan, STAR story bank, mock interviews with feedback, a journal of the questions you were asked, thank-you and follow-up messages, practice resources per role ([guide](https://github.com/GuidoPenta/galactic-tech-interview-guide)) |
 | Your questions | `galactic-reverse-interview` | Tailored questions to ask, red flags to watch, company comparison ([guide](https://github.com/GuidoPenta/galactic-reverse-interview-guide-for-developers)) |
-| Offer | `galactic-negotiation` | Salary-expectation answers, offer evaluation, counter-offer script, role-play ([guide](https://github.com/GuidoPenta/galactic-negotiation-guide-for-developers)) |
+| Offer | `galactic-negotiation` | Salary-expectation answers, offer evaluation, counter-offer script, role-play, gross to net with [QuantoPrendo.io](https://quantoprendo.io) ([guide](https://github.com/GuidoPenta/galactic-negotiation-guide-for-developers)) |
 | Community | `galactic-communities` | Groups, mentors, remote-job sources and events that fit you ([list](https://github.com/GuidoPenta/awesome-italian-tech-communities)) |
 | Tracking | `galactic-tracker` | Browser dashboard of your applications, follow-ups, funnel stats. **🦖 Export for TrackZilla** button to import them into [TrackZilla](https://www.trackzilla.cv/) (needs an account, free up to 50 applications) |
 

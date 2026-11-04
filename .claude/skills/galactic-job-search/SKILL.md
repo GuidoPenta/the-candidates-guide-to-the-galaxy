@@ -47,6 +47,22 @@ If it doesn't:
 When the user asks for help or what you can do ("aiuto", "cosa sai fare?", "come funziona?", or
 `/galactic-job-search` with nothing else), show the welcome guide from `references/welcome.md` and stop there.
 
+## Weekly review
+
+On request ("riepilogo settimanale", "weekly review", "com'è andata questa settimana?"), in chat:
+1. **Done**: applications sent, interviews held, answers received in the last 7 days (from the logs).
+2. **Coming up**: next steps and dates for the next 7 days, overdue ones first.
+3. **Three suggestions** for next week, each naming the skill that does it.
+4. One honest, encouraging line. Job hunting is long: point out the progress, not just what's missing.
+Save it to `workspace/weekly/YYYY-MM-DD.md` only if the user wants to keep it.
+
+## Out of scope
+
+This pack does **not** cover, and doesn't offer: cover letters; resignations, notice periods and other
+employment-law steps (point to a labour consultant); doing take-home assignments for the user (helping them
+understand the brief and plan their approach is fine; writing the solution is not). If asked, say so plainly and
+briefly.
+
 ## "Where am I?" — status
 
 1. Read every `workspace/applications/*/application.md`. Use `galactic-tracker` to regenerate `tracker.md`.
@@ -66,6 +82,7 @@ When the user asks for help or what you can do ("aiuto", "cosa sai fare?", "come
 | find communities, groups, mentors, remote-job sources, events | `galactic-communities` |
 | log an application, update a status, see the pipeline, open or update the dashboard, export to TrackZilla | `galactic-tracker` |
 | get help, see what this can do | this skill, section "Help" |
+| a weekly summary of progress | this skill, section "Weekly review" |
 
 The skills hand off to each other. A typical loop for one application:
 `galactic-application` → (`galactic-cv` tailoring) → `galactic-tracker` (applied) → `galactic-interview-prep`

@@ -20,16 +20,19 @@ Built on Guido Penta's Galactic guides. You talk, I do the work. Your files stay
 me read is processed by the AI model provider (see the README's privacy section).
 
 **What I can do** (just ask, in your own words):
-- 📄 **CV**: "Review my CV", "Tailor my CV for this job"
+- 📄 **CV**: "Review my CV", "Tailor my CV for this job", "Make the English version of my CV"
 - 💼 **LinkedIn**: "Improve my LinkedIn" (from your profile's *Save to PDF* export)
 - 🔎 **A job posting**: "I'm interested in this job: [paste]". I research the company, check how well you fit,
   and give you a one-page briefing.
-- 🎤 **Interviews**: "I have an interview on Thursday, help me prepare", "Let's do a mock interview"
+- 🎤 **Interviews**: "I have an interview on Thursday, help me prepare", "Let's do a mock interview",
+  "Write a thank-you note", "They never got back to me, help me follow up"
 - ❓ **Your questions**: "What should I ask the recruiter?"
 - 💰 **Negotiation**: "They asked my salary expectations", "They offered me 48k, is it good?"
+  (for gross → net, I'll point you to QuantoPrendo.io)
 - 👥 **Communities**: "Where can I find groups for frontend developers?"
 - 🤖 **ATS**: "What is an ATS?", "Should I apply on LinkedIn or on the company site?" (myths vs facts)
-- 📊 **Tracking**: "I applied to Acme", "The interview went well", "Where am I with my applications?"
+- 📊 **Tracking**: "I applied to Acme", "The interview went well", "Where am I with my applications?",
+  "Weekly review"
 
 **Your dashboard**: a page with all your applications, deadlines and stages.
 - File: `<PROJECT>/workspace/dashboard.html`. Double-click it, or just ask me "open my dashboard".

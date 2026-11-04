@@ -66,6 +66,14 @@ Rewrite notes go to `workspace/cv/reviews/YYYY-MM-DD-rewrite-notes.md`, never ne
 Show a diff-style summary of what changed and why. Tell the user how to turn the Markdown into a PDF with
 the tool of their choice, saving the PDF inside `workspace/` (Word/Google Docs paste, a Markdown editor, pandoc). This pack ships no scripts.
 
+### 3b. Second-language version
+Guido's guide recommends having two versions of the CV, Italian and English [Guido §1]. On request, produce the
+other-language version from `cv-master.md` (or the latest CV) as a **rewrite, not a word-for-word translation**:
+natural phrasing for that market, job titles as they're used there, the same facts and dates, nothing added.
+Save it as `workspace/cv/cv-master.en.md` / `cv-master.it.md` (or the application's `cv.en.md`). Keep the
+data-processing sentence only in the Italian version, and remind the user which version to send: English posting
+→ English CV; Italian posting → either.
+
 ### 4. Build the master CV
 When the CV is thin, interview the user one role at a time: what they built, for whom, the scale, the results
 and numbers, the stack. Write `cv-master.md` as the long, honest source every targeted CV is cut from.

@@ -17,5 +17,5 @@ This project includes summaries and adaptations of works released under their ow
   https://github.com/SimonDiff/devs-cv-typography-guidelines
 
 Those works keep their original licenses; the CC BY-NC-SA license applies to this project's own content.
-Other projects and communities (Dataskew, Full Remote, La Locanda del Tech, TrackZilla, Awesome Italia Remote,
+Other projects and communities (Dataskew, Full Remote, La Locanda del Tech, TrackZilla,
 Italian tech conferences) are only linked and described, not copied.

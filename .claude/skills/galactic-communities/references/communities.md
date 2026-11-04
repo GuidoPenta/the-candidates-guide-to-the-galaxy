@@ -7,7 +7,6 @@
 > | List | Canonical upstream | Raw file to fetch |
 > |---|---|---|
 > | Italian tech communities | https://github.com/GuidoPenta/awesome-italian-tech-communities (site: https://guidopenta.github.io/awesome-italian-tech-communities/) — this repo *is* the upstream, not a fork | https://raw.githubusercontent.com/GuidoPenta/awesome-italian-tech-communities/main/README.md |
-> | Remote-friendly companies | https://github.com/italiaremote/awesome-italia-remote (web view: https://italiaremote.com/companies). `GuidoPenta/awesome-italia-remote` is a fork | README (generated): https://raw.githubusercontent.com/italiaremote/awesome-italia-remote/main/README.md — one JSON per company in `data/` |
 > | Italian tech conferences | https://github.com/techconfit/techconfit.github.io (site: https://techconfit.github.io). `GuidoPenta/tech-conferences-italy` is a fork | one Markdown file per event in `_conferences/` (front matter: `name`, `website`, `location`, `date_start`, `date_end`) |
 > | Welyk job board | https://github.com/GuidoPenta/welyk-job-board (site: https://guidopenta.github.io/welyk-job-board/) | https://raw.githubusercontent.com/GuidoPenta/welyk-job-board/main/README.md |
 >
@@ -18,7 +17,7 @@
 >
 > **Source labels.** **[Guido]** = from Guido's lists (awesome-italian-tech-communities, welyk-job-board).
 > **[pack]** = this skill pack's own note or general practice. **[Dataskew]** = from Dataskew's own site.
-> Third-party lists (Awesome Italia Remote, techconfit) are cited by name.
+> Third-party lists (techconfit) are cited by name.
 >
 > **Dataskew: don't fetch dataskew.io automatically.** Its terms forbid automated access (scrapers, scripted
 > requests). Link it and describe it from this file; the user visits it.
@@ -287,27 +286,13 @@ All entries below are Italian-language unless stated. Links are as listed upstre
 
 | Source | What | Link | Tags |
 |---|---|---|---|
-| **Awesome Italia Remote** | 348 remote-friendly or full-remote companies that hire Italian talent (on 2026-09-25), based in Italy or abroad with operations in Italy. Maintained by Alessandro Marino and Edoardo Costantini | https://italiaremote.com/companies · https://github.com/italiaremote/awesome-italia-remote | `work:remote` `work:jobs` `lang:en` |
 | **fullremote.it** | curated full-remote offers, newsletter, Telegram | see Featured | `work:remote` `work:jobs` `lang:it` |
 | **Dataskew jobs** | data and AI roles, Italy + EU remote | see Featured | `role:data` `work:remote` |
 | **Welyk job board** | roles managed by Guido Penta, with RAL | see Featured | `work:jobs` `work:salary` |
 
-### How Awesome Italia Remote is structured (useful for filtering)
-
-- Grouped by **remote policy**, then by **category**:
-  - Remote policy: **Full** (no physical offices), **Hybrid** (remote only some days), **Optional** (you choose, may occasionally be asked on site).
-  - Categories: *Software and Cloud*, *Marketing and Writing*, *HR*, *Design and UX*, *Cybersecurity*.
-- Each row: Name, Career Page, **Company Type** (Product, Consulting, B2B), **Hiring Policy**, **Stack**.
-- Hiring policy is decisive for Italian candidates:
-  - **Direct** — "Company is hiring directly with a legal entity in Italy".
-  - **Contract** — hires contractors; a **Partita IVA** (VAT number) is required.
-  - **Intermediary** — hires through a payroll intermediary / EOR in Italy.
-- Machine-readable source: one JSON per company in `data/` with fields
-  `name`, `url`, `career_page_url`, `type`, `categories` (e.g. `cloud_software`), `remote_policy`,
-  `hiring_policies[]`, `tags[]` (stack). The README is generated from it ("do not edit manually").
-- **Filtering recipe:** match `tags[]` to the user's stack, `remote_policy` to their preference,
-  and warn when the only option is `Contract` (they need a Partita IVA and should compare net pay,
-  see galactic-negotiation).
+> **Awesome Italia Remote is deliberately not used** [Guido]: the list hasn't been maintained for years,
+> so its companies and hiring policies are unreliable. Prefer the curated, up-to-date sources above
+> (Full Remote's weekly newsletter and company page, the communities' job channels, the Welyk board).
 
 ---
 
