@@ -11,6 +11,23 @@
 > Paste a job posting: the system researches the company, tells you how your CV will be assessed, prepares
 > you for the interview, suggests the right questions to ask and coaches you through the negotiation.
 
+> **📣 Changelog — November 4, 2026 update**
+>
+> ✅ **New today**
+> - **Second-language CV**: an English or Italian version rewritten for the market, not translated word for word
+> - **Messages after the interview**: drafts for thank-you, follow-up and feedback-request notes
+> - **Interview questions journal**: your own archive of the questions you were asked, to prepare for the next ones
+> - **Weekly review**: what you did, what's coming up and three suggestions
+> - **Gross to net (Italy)**: pointer to [QuantoPrendo.io](https://quantoprendo.io) by Nicola De Lillo
+>
+> 🔜 **Coming next week**
+> - **Job and company finder**: from your CV and profile, open postings and companies to approach, with a first
+>   fit check and protection against scam postings
+> - **"What's new"**: run the search again and see only postings published since last time
+> - **Favourite companies**: on request, check whether the companies you like have opened roles
+> - **Salary reference**: pointer to TechCompenso for postings without a salary
+> - **Repeatable checks**: test cases to make sure the skills don't slip back into wrong advice
+
 ## What it does
 
 | Phase | Skill | What you get |

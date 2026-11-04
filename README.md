@@ -11,6 +11,23 @@
 > Incolli un annuncio di lavoro, il sistema studia l'azienda, ti dice come verrà valutato il tuo CV, ti prepara al
 > colloquio, ti suggerisce le domande giuste da fare e ti accompagna nella negoziazione.
 
+> **📣 Changelog — aggiornamento del 04/11/2026**
+>
+> ✅ **Novità di oggi**
+> - **CV in doppia lingua**: versione inglese o italiana riscritta per il mercato, non tradotta parola per parola
+> - **Messaggi dopo il colloquio**: bozze di ringraziamento, sollecito e richiesta di feedback
+> - **Diario delle domande ricevute**: il tuo archivio delle domande fatte ai colloqui, per prepararti ai successivi
+> - **Riepilogo settimanale**: cosa hai fatto, cosa ti aspetta e tre suggerimenti
+> - **Da RAL a netto**: rimando a [QuantoPrendo.io](https://quantoprendo.io) di Nicola De Lillo
+>
+> 🔜 **In arrivo la prossima settimana**
+> - **Ricerca di annunci e aziende**: dal tuo CV e profilo, annunci aperti e aziende a cui scrivere, con una prima
+>   valutazione del fit e protezioni contro annunci truffa
+> - **"Cosa c'è di nuovo"**: rilanci la ricerca e vedi solo gli annunci usciti dall'ultima volta
+> - **Aziende preferite**: controlla su richiesta se le aziende che ti piacciono hanno aperto posizioni
+> - **Riferimento agli stipendi**: rimando a TechCompenso per gli annunci senza RAL
+> - **Collaudi ripetibili**: casi di prova per verificare che le skill non ricomincino a dare consigli sbagliati
+
 ## Cosa fa
 
 | Fase | Skill | Cosa ottieni |
