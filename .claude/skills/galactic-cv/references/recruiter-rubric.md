@@ -77,8 +77,10 @@ Every Block A row carries a state and a **verbatim quote** from the CV.
 
 Never use, in any criterion: age or date of birth, gender, photo (appearance), marital status and
 children, nationality, place of birth, religion, health, political or union opinions, graduation
-year as a proxy for age. List what the CV contains only to state it was ignored. Never deduce
-location or seniority from them.
+year as a proxy for age. List which **categories** the CV contains only to state they were ignored (e.g. "photo,
+date of birth, marital status"). For health, religion, political or union opinions and similar sensitive data,
+write only "sensitive data present, not recorded" with no detail (privacy rule 7). Never deduce location or
+seniority from them.
 
 Gaps and frequent job changes weigh on **no** criterion; a screener following this rubric puts
 them in "to clarify" as a neutral question ("What did you do between 2019 and 2021?").
@@ -261,7 +263,7 @@ Source: <posting file | URL, retrieved on <date> | none: Block A N/A>. Weights: 
 - Nice-to-have: ...
 
 ## Protected data present (ignored by a structured screener)
-<list, e.g. "date of birth, photo"> or `None`
+<categories only, e.g. "date of birth, photo"; for health/religion/opinions: "sensitive data present, not recorded"> or `None`
 
 ## A0. Mandatory gate
 | Requirement | State | Evidence (quote from CV) |

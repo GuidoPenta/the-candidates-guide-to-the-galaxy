@@ -24,15 +24,16 @@ screener rubric), **[Di Fresco]** (typography guidelines), **[pack]** (this pack
 ## Input
 - The CV comes from `workspace/cv/original/` or a paste. You can read PDF, images (PNG/JPG), Markdown and text
   directly. For DOCX, ask for a PDF export or pasted text. With a PDF or an image you can also judge layout and
-  typography (Block C). An image CV is fine to review; the only point worth noting is that links in an image
-  aren't clickable.
+  typography (Block C). An image CV is fine to review. About formats, say only what `references/ats.md` documents,
+  with its labels: links in an image aren't clickable, and some systems may not parse an image (it **varies**), so a
+  text PDF is the safer choice to send. No absolutes.
 - **No residence on the CV**: never suggest adding the city of residence/domicile or a home address; the guide
   doesn't ask for it. Location matters only as availability (remote, relocation), and it goes in `profile.md`, not on the CV.
 - **ATS questions** ("what is an ATS?", "will my CV pass the ATS?", "LinkedIn or company site?"): answer from
   `references/ats.md`, which is sourced and tagged; keep its "documented / varies / anecdotal" nuance and quote
-  Guido's take where relevant. Otherwise say only what `references/cv-guide.md` says (recruiters read every CV, the ATS is a filtering
-  tool, stars and progress bars may not be recognised, keywords matter). Don't add myths about what ATSs can't
-  read, such as images, PDFs or columns, or promise an "ATS-proof" CV.
+  Guido's take where relevant, and `references/cv-guide.md` (recruiters read every CV, the ATS is a filtering
+  tool, stars and progress bars may not be recognised, keywords matter). Never state absolutes that the sources
+  don't support ("ATSs can't read images/PDFs/columns"), and never promise an "ATS-proof" CV.
 - File names and locations always follow `.claude/skills/galactic-job-search/references/workspace.md`, even
   where a reference file suggests a different one.
 - Read `workspace/profile.md` for target roles and market.
@@ -42,7 +43,7 @@ screener rubric), **[Di Fresco]** (typography guidelines), **[pack]** (this pack
 ### 1. General review (no posting)
 Apply every checklist in `references/cv-guide.md`, plus Blocks B (content) and C (typography) of the
 rubric. Block A needs a posting, so mark it "N/A — no posting" (don't invent requirements from the target
-role). Output goes to `workspace/cv/reviews/YYYY-MM-DD-review.md`, using the rubric's report structure,
+role). Output goes to `workspace/cv/reviews/YYYY-MM-DD-review.md` (add `-2`, `-3` if that file already exists), using the rubric's report structure,
 opening with:
 - **Top 3 fixes** that would change the outcome most, first.
 - A checklist result per section: ok / fix / missing, with the guide rule and link, the quoted CV text,
@@ -54,8 +55,9 @@ opening with:
 ### 2. Targeted review (with a posting)
 Run the rubric's Block A against the posting in `workspace/applications/<app>/posting.md`, or a pasted one.
 Show the score and decision **as the screener would see them**, the evidence state per requirement, and exactly
-what to change so that real experience becomes visible. If `galactic-application` already wrote `fit.md`,
-extend it rather than duplicating it.
+what to change so that real experience becomes visible. Write it to the application's `fit.md` (create it if
+missing; if `galactic-application` already wrote it, extend it rather than duplicating it). With a pasted posting
+and no application folder, create one first (see `galactic-application` §1).
 
 ### 3. Rewrite
 Follow `references/rewrite-guide.md` (written for the targeted one-page version). Produce Markdown:

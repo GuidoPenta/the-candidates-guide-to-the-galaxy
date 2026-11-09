@@ -3,7 +3,9 @@
 The dashboard is a **single self-contained HTML file** the user opens with a double click. There is no server
 and no network. It is read-only: to change something, the user talks to Claude, and Claude regenerates the page.
 
-- Template: `.claude/skills/galactic-tracker/assets/dashboard.html`. Never edit it to insert data.
+- Template: `.claude/skills/galactic-tracker/assets/dashboard.html`. Never edit it to insert data, and keep every
+  byte outside the data block identical (LF line endings): the page is protected by a hash of its script, so any
+  change there blocks the script and the page comes out blank.
 - Output: `workspace/dashboard.html`. It is git-ignored, because it contains the user's data.
 
 ## When to regenerate
@@ -15,8 +17,10 @@ After regenerating, tell the user the file path and that they can open it (or re
 2. Build the JSON below from every `workspace/applications/*/` folder.
 3. Replace **only** the text between `<script id="gjs-data" type="application/json">` and its `</script>`
    (inside the `DATA:START` / `DATA:END` markers) with the JSON. Everything else stays byte-identical.
-4. In the serialized JSON, escape every `<` as `<`, `>` as `>` and `&` as `&`. These are valid
-   JSON escapes, and text from the web can then never close the script tag or inject markup.
+4. In the serialized JSON, replace every `<` with the six characters `\u003c`, every `>` with `\u003e` and
+   every `&` with `\u0026` (backslash, "u", four hex digits). These are valid JSON escapes, so the data is
+   unchanged, and text from the web can never close the script tag or inject markup. (Keep this line as written:
+   each escape is six literal characters.)
 5. Write the result to `workspace/dashboard.html`.
 
 ## JSON schema
@@ -58,7 +62,7 @@ After regenerating, tell the user the file path and that they can open it (or re
       "trackzilla": {
         "company_name": "Acme",
         "role_description": "Senior Backend Engineer",
-        "job_description": "Location: Milan (hybrid)\nNext: technical interview on 2026-10-02\n---\n<short summary of the posting>",
+        "job_description": "Source: https://example.com/careers/123\nLocation: Milan (hybrid)\nNext: technical interview on 2026-10-02\n---\n<short summary of the posting>",
         "application_date": "2026-09-26",
         "salary": "55-70k",
         "work_mode": "ibrido",
@@ -102,5 +106,5 @@ template's main script** (contributors only), recompute the hash of the exact te
 Contacts are third-party names: they're shown only in the local page, never exported.
 
 The page only contains what is already in the workspace, and it makes no network requests. Its external links (the
-posting URL and links in the briefing) only open when the user clicks them. Don't put `compensation.current`
+posting URL and links in the briefing) only open when the user clicks them. Don't put `compensation.current` or `walk_away`
 from `profile.md` in the dashboard.

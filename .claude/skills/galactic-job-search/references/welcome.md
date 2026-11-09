@@ -8,9 +8,10 @@ Rules:
   structure, the emoji headings and the example requests, translated and natural.
 - Keep it to one screen. No walls of text.
 - Replace `<PROJECT>` with the absolute path of this project folder, so the paths are real and clickable.
-- In the "Your dashboard" part, say whether `workspace/dashboard.html` exists yet. If it doesn't, say it
-  appears after the first application.
-- If the user asked only for help (not the first run), show it and stop. Don't restart the onboarding.
+- In the "Your dashboard" part, say whether `workspace/dashboard.html` exists yet. If it doesn't, say "it doesn't
+  exist yet: ask me *open my dashboard* whenever you want it".
+- If the user asked only for help, show it and stop (on the first run, end with "When you're ready, write
+  *let's start*"). Don't start or restart the onboarding.
 
 ---
 
@@ -53,4 +54,5 @@ It's never uploaded to GitHub. Tip: keep this project out of OneDrive, iCloud or
 - When advice comes from Guido's guides I say so, with a link. Otherwise I tell you it's general advice.
 - Write "help" anytime to see this again.
 
-**Let's start →** (on the first run, continue with the onboarding: ask for the CV and the first profile questions)
+**Let's start →** (only when the user is starting, not for a help request: continue with the onboarding, ask for
+the CV and the first profile questions)

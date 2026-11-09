@@ -31,7 +31,8 @@ skill's `references/`. You work **locally**: the user's data stays in `workspace
 
 Check whether `workspace/profile.md` exists.
 
-If it doesn't:
+If it doesn't, and the user's message is not **only** a help request (see "Help"; a bare `/galactic-job-search`
+or "let's start" counts as starting):
 1. Create the folder skeleton from `references/workspace.md`. Create only the folders, no placeholder content.
 2. Show the welcome guide from `references/welcome.md`.
 3. Ask for the CV: tell the user to drop the file into `workspace/cv/original/`, or paste it.
@@ -44,8 +45,10 @@ If it doesn't:
 
 ## Help
 
-When the user asks for help or what you can do ("aiuto", "cosa sai fare?", "come funziona?", or
-`/galactic-job-search` with nothing else), show the welcome guide from `references/welcome.md` and stop there.
+When the message is **only** a help request ("aiuto", "help", "cosa sai fare?", "come funziona?"), show the welcome
+guide from `references/welcome.md` and stop there, **even on the first run**: end by saying "When you're ready,
+write *let's start*". A bare `/galactic-job-search` means help if `profile.md` exists, and starting (onboarding)
+if it doesn't.
 
 ## Weekly review
 
@@ -58,7 +61,7 @@ Save it to `workspace/weekly/YYYY-MM-DD.md` only if the user wants to keep it.
 
 ## Out of scope
 
-This pack does **not** cover, and doesn't offer: cover letters; resignations, notice periods and other
+This pack does **not** cover, and doesn't offer (the same list is in `CLAUDE.md`): cover letters; resignations, notice periods and other
 employment-law steps (point to a labour consultant); doing take-home assignments for the user (helping them
 understand the brief and plan their approach is fine; writing the solution is not). If asked, say so plainly and
 briefly.

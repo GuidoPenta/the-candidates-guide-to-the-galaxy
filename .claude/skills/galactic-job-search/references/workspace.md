@@ -6,7 +6,7 @@ missing, it creates it following this layout. It never invents a new location.
 **If a reference file suggests a different file name or location (e.g. "next to the original CV"), this file wins.**
 
 Language: files in the workspace (profile, reviews, fit, notes, briefing) are written in the language of the
-conversation. Documents meant for companies (cover letters, messages) are written in the language of the posting. The CV:
+conversation. Documents meant for companies (messages, application answers) are written in the language of the posting. The CV:
 posting in Italian → CV in Italian **or** English, both fine; posting in English → CV **necessarily** in English.
 
 ```
@@ -34,7 +34,7 @@ workspace/
 │       ├── company.md         # company research, every fact with source + date
 │       ├── fit.md             # requirements vs evidence, screener score, gaps
 │       ├── briefing.md        # one page to read 10 minutes before a call
-│       ├── cv.md              # CV tailored for this application (optional)
+│       ├── cv.md              # CV tailored for this application (optional; cv.en.md / cv.it.md for a second language)
 │       ├── prep.md            # interview preparation plan and mock-interview notes
 │       ├── questions.md       # reverse-interview questions picked + answers heard
 │       └── offer.md           # offer details and negotiation plan (when it gets there)
@@ -117,6 +117,7 @@ Rules:
 
 The privacy rules live in `CLAUDE.md` at the project root, which is always loaded. They apply to every skill.
 Two notes specific to the workspace:
-- `exports/` CSVs contain contacts and salary ranges. Tell the user before they import them into another tool.
+- `exports/` CSVs contain salary ranges and application details (never contacts or the log). Tell the user before
+  they import them into another tool.
 - Don't record health, disability, pregnancy, religion or similar sensitive details unless the user explicitly
   wants them kept, and never use them in drafts for companies.

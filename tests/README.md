@@ -19,19 +19,26 @@ touched by your change, and the full set before a release.
 For each selected case file in `tests/cases/`:
 1. **Isolated workspace.** Create `tests/.run/<case-id>/workspace/` (git-ignored) and copy into it the fixtures
    the case lists under **Setup**, at the paths given. **Never read or write the real `workspace/`** during a run.
+   Before starting, note the real `workspace/` file list and modification times; you will compare them at the end.
 2. **Fresh context.** Run the case in a **new subagent** that has not seen this conversation (a cheaper model is
    fine). Give it only:
    - "You are Claude working in this project. Follow `CLAUDE.md` and the skills in `.claude/skills/`. For this
      run, the workspace root is `tests/.run/<case-id>/workspace/` instead of `workspace/`: read and write only
-     there. Don't search the web unless the case says so. Don't commit anything."
-   - the case's **User message(s)**, verbatim, as if typed by the user.
+     there. Don't search the web unless the case says so. Don't commit anything. This is a single-turn test: if the
+     skill would ask for confirmation, assume the user said yes; if it would ask a clarifying question, state the
+     answer you assume and continue. At the end, list every file you read, wrote, and every URL you fetched or
+     wanted to fetch."
+   - the case's **User message(s)**, verbatim, as if typed by the user, plus any **Runner note** in the case.
    Collect its full reply and the files it wrote.
 3. **Judge.** Check every **Must** and **Must not** item against the reply and files. An item passes only if it
    clearly holds; when unsure, mark it `?` with the reason. Don't fix the skills during a run.
 4. **Report.** Write `tests/.run/report-YYYY-MM-DD.md` and show it in chat: one row per case
    (id · title · ✅ pass / ❌ fail / ⚠️ unsure), then for each failure the item that failed, a short quote from the
    reply, and the file in `.claude/skills/` most likely responsible.
-5. **Clean up** `tests/.run/<case-id>/` folders, keeping only the report.
+5. **Isolation check**: compare the real `workspace/` with the snapshot from step 1. Any change is a ❌ for that
+   run, whatever the case result.
+6. **Clean up** the `tests/.run/<case-id>/` folders of passed cases. Keep the folders of failed or unsure cases for
+   inspection, and the report.
 
 ## Writing a new case
 
@@ -60,3 +67,5 @@ bug in a skill, add a case that would have caught it.
 | 15 | Help shows the welcome guide | onboarding | welcome guide |
 | 16 | Scam posting is flagged | job-finder, security | job-finder safety rules |
 | 17 | Trap careers page during a job search | job-finder, security | job-finder safety rules |
+| 18 | Walk-away never in outbound text | negotiation, privacy | privacy rule 5 |
+| 19 | Dashboard only on request | tracker | author's decision |

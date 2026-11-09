@@ -339,7 +339,6 @@ the same organiser: https://www.grusp.org/ .
 ## Mentorship
 
 ### Mentorship-like places
-- **Welyk / Guido Penta** — spontaneous application (see Featured).
 - **Full Remote Telegram group** — peer CV review and interview debriefs (see Featured).
 - **Dataskew** — portfolio projects reviewed by working data engineers (see Featured).
 - **CTO Mastermind** — for aspiring tech leads and CTOs (see Leadership).

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-7epNKVhG2rEVnZQMuB1QlLJOR8/Ls5/q1kTokTj896g='; style-src 'unsafe-inline'; img-src 'none'; connect-src 'none'; font-src 'none'; form-action 'none'; base-uri 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-xtx0O5WOwqh8/Lf+Nyz4JznKhvSu35T556JyKaFnKSc='; style-src 'unsafe-inline'; img-src 'none'; connect-src 'none'; font-src 'none'; form-action 'none'; base-uri 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Candidate's Guide to the Galaxy</title>
 <!--
@@ -328,7 +328,8 @@ dialog.drawer::backdrop { background: rgba(10, 12, 18, .45); }
   var data;
   try { data = JSON.parse(document.getElementById("gjs-data").textContent); }
   catch (e) { data = { generated: null, applications: [] }; }
-  var apps = Array.isArray(data.applications) ? data.applications : [];
+  if (!data || typeof data !== "object") data = { generated: null, applications: [] };
+  var apps = Array.isArray(data.applications) ? data.applications.filter(function (a) { return a && typeof a === "object"; }) : [];
   var T = I18N[data.lang] || I18N.en;
   document.documentElement.lang = I18N[data.lang] ? data.lang : "en";
   document.title = T.title + " · Galactic";
@@ -359,7 +360,7 @@ dialog.drawer::backdrop { background: rgba(10, 12, 18, .45); }
     if (n === 1) return T.tomorrow;
     return fmt(T.inDays, n);
   }
-  function statusLabel(s) { return T.status[s] || esc(s); }
+  function statusLabel(s) { return Object.prototype.hasOwnProperty.call(T.status, s) ? T.status[s] : String(s == null ? "" : s); }
   function isClosed(a) { return CLOSED.indexOf(a.status) !== -1; }
   function reached(a) {
     var r = a.reached || a.status;
@@ -475,7 +476,7 @@ dialog.drawer::backdrop { background: rgba(10, 12, 18, .45); }
     if (tzb) tzb.addEventListener("click", openTz);
     root.querySelectorAll("[data-id]").forEach(function (el) {
       el.addEventListener("click", function () { openDetail(el.getAttribute("data-id")); });
-      el.addEventListener("keydown", function (e) { if (e.key === "Enter") openDetail(el.getAttribute("data-id")); });
+      if (el.tagName !== "BUTTON") el.addEventListener("keydown", function (e) { if (e.key === "Enter") openDetail(el.getAttribute("data-id")); });
     });
   }
 
@@ -483,7 +484,7 @@ dialog.drawer::backdrop { background: rgba(10, 12, 18, .45); }
 
   function upcoming(open) {
     var items = open.filter(function (a) { return parseDate(a.next_step_date); })
-      .sort(function (a, b) { return a.next_step_date.localeCompare(b.next_step_date); });
+      .sort(function (a, b) { return String(a.next_step_date).localeCompare(String(b.next_step_date)); });
     if (!items.length) return '<p class="empty">' + esc(T.noUpcoming) + "</p>";
     return '<ul class="upcoming">' + items.map(function (a) {
       var n = dayDiff(a.next_step_date);
@@ -537,7 +538,7 @@ dialog.drawer::backdrop { background: rgba(10, 12, 18, .45); }
 
     var src = safeUrl(a.source_url);
     var facts = [
-      [T.f_status, statusLabel(a.status)],
+      [T.f_status, esc(statusLabel(a.status))],
       [T.f_source, a.source ? esc(a.source) + (src ? ' · <a href="' + esc(src) + '" target="_blank" rel="noopener noreferrer">link ↗</a>' : "") :
         (src ? '<a href="' + esc(src) + '" target="_blank" rel="noopener noreferrer">link ↗</a>' : "")],
       [T.f_location, esc(a.location)], [T.f_mode, esc(a.work_mode)], [T.f_salary, esc(a.salary_range)],
@@ -574,7 +575,7 @@ dialog.drawer::backdrop { background: rgba(10, 12, 18, .45); }
       }).join("") + "</ul></section>");
     }
 
-    var log = asList(a.log).slice().sort(function (x, y) { return String(y.date).localeCompare(String(x.date)); });
+    var log = asList(a.log).map(function (l) { return typeof l === "string" ? { date: "", text: l } : (l || {}); }).slice().sort(function (x, y) { return String(y.date).localeCompare(String(x.date)); });
     if (log.length) {
       h.push("<section><h3>" + esc(T.log) + '</h3><ul class="log">' + log.map(function (l) {
         return "<li><time>" + niceDate(l.date) + "</time>" + inline(l.text) + "</li>";
@@ -586,6 +587,7 @@ dialog.drawer::backdrop { background: rgba(10, 12, 18, .45); }
 
     drawer.innerHTML = h.join("");
     drawer.querySelector(".close").addEventListener("click", function () { drawer.close(); });
+    if (drawer.open) return;
     if (typeof drawer.showModal === "function") drawer.showModal(); else drawer.setAttribute("open", "");
   }
   drawer.addEventListener("click", function (e) { if (e.target === drawer) drawer.close(); });
@@ -596,8 +598,15 @@ dialog.drawer::backdrop { background: rgba(10, 12, 18, .45); }
   var TZ_COLS = ["company_name", "role_description", "job_description", "application_date", "salary", "work_mode", "status", "tags"];
   var tzDialog = document.getElementById("tz");
 
-  function tzRows() { return apps.filter(function (a) { return a.trackzilla && a.trackzilla.company_name; }); }
-  function csvCell(v) { return '"' + String(v == null ? "" : v).replace(/"/g, '""') + '"'; }
+  function tzRows() {
+    return apps.filter(function (a) { return a.trackzilla && a.trackzilla.company_name; })
+      .sort(function (a, b) { return (isClosed(a) ? 1 : 0) - (isClosed(b) ? 1 : 0); });
+  }
+  function csvCell(v) {
+    var s = String(v == null ? "" : v);
+    if (/^[=+\-@\t\r]/.test(s)) s = "'" + s;
+    return '"' + s.replace(/"/g, '""') + '"';
+  }
   function tzCsv(rows) {
     var lines = [TZ_COLS.map(csvCell).join(",")];
     rows.forEach(function (a) {

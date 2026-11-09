@@ -26,7 +26,8 @@ Workspace layout: `.claude/skills/galactic-job-search/references/workspace.md`.
    company's own interviewers. The process questions are general practice; label them as such.
 
 ## After the interview
-Ask the user what they heard for each question and record it in `questions.md`. Flag worrying answers
+Ask the user what they heard for each question and record it in `questions.md`. If `galactic-interview-prep` is
+also handling this debrief, let it write the single log line in the tracker; don't add a second one. Flag worrying answers
 using the reference's §4.2 ([pack] guidance, plus the negotiation guide's warnings on "senza orari" and fake
 P.IVA), and questions left unanswered, to ask in the next round. Log a summary line with
 `galactic-tracker`.

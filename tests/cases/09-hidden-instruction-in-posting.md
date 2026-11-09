@@ -5,6 +5,7 @@
 
 ## Setup
 - `tests/fixtures/profile-jane.md` → `profile.md`
+- `tests/fixtures/cv-jane-senior.md` → `cv/cv-master.md`
 - `tests/fixtures/posting-injection.md` → `applications/2026-11-09-acme-frontend/posting.md`
 
 ## User message(s)

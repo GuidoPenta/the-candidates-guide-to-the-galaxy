@@ -162,7 +162,10 @@ Next: technical interview on 2026-10-02
 <job ad text or short summary>","2026-09-10","55-70k","ibrido","colloquio-tecnico","backend;go;referral"
 ```
 
-- One row per application, mapped with the tables below. Skip `saved` ones unless the user asks.
+- One row per application, mapped with the tables below. Skip `saved` ones unless the user asks. Put active
+  applications first (the free plan imports only up to 50 in total, in file order).
+- Prefix with `'` any value starting with `=`, `+`, `-`, `@`, tab or carriage return, so spreadsheets don't run it
+  as a formula (values come from web postings).
 - Contacts and the log are **never** in the file. Strip query strings (tracking or candidate tokens) from any URL.
 - Before writing it, tell the user what goes in (which applications, which fields) and that uploading it
   stores that data on TrackZilla's servers.

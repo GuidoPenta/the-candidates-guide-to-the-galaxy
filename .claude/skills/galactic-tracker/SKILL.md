@@ -64,7 +64,9 @@ learned in the log, and ask whether to request feedback. Watch for patterns acro
 always failing at the same stage, and point them out gently with a concrete suggestion.
 
 ### Export
-- **CSV**: `workspace/exports/applications-YYYY-MM-DD.csv`, one row per application, frontmatter fields as columns.
+- **CSV**: `workspace/exports/applications-YYYY-MM-DD.csv`, one row per application, frontmatter fields as columns,
+  **except `contacts`** (people stay in local files only) and without the log. Quote every field, and prefix with `'`
+  any value starting with `=`, `+`, `-`, `@`, tab or carriage return, so spreadsheets don't run it as a formula.
 - **TrackZilla, from the dashboard**: the dashboard has an **🦖 Export for TrackZilla** button that downloads
   the same CSV, built in the browser from the `trackzilla` rows (see `references/dashboard.md`). Mention it when
   the user talks about TrackZilla. It requires a TrackZilla account (free plan: up to 50 applications).
