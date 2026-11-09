@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-xtx0O5WOwqh8/Lf+Nyz4JznKhvSu35T556JyKaFnKSc='; style-src 'unsafe-inline'; img-src 'none'; connect-src 'none'; font-src 'none'; form-action 'none'; base-uri 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-3mKCjv1o0uNMOtU1G4WBjktIM7Wl5rsGpJ/2jwRqF7U='; style-src 'unsafe-inline'; img-src 'none'; connect-src 'none'; font-src 'none'; form-action 'none'; base-uri 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Candidate's Guide to the Galaxy</title>
 <!--
@@ -271,7 +271,7 @@ dialog.drawer::backdrop { background: rgba(10, 12, 18, .45); }
       f_status: "Status", f_source: "Source", f_location: "Location", f_mode: "Work mode", f_salary: "Salary",
       f_saved: "Saved on", f_applied: "Applied on", f_referral: "Referral", f_contacts: "Contacts", f_tags: "Tags",
       welcomeH: "Your dashboard is empty", welcomeP: "Open this project in Claude Code and say “update my dashboard”. It will fill this page from your workspace.",
-      close: "Close", fitWord: "fit",
+      close: "Close", fitWord: "fit", other: "Other",
       tzBtn: "Export for TrackZilla",
       tzTitle: "Export for TrackZilla",
       tzIntro: "Prefer to track online? [TrackZilla](https://www.trackzilla.cv/) is a free job-application tracker. This button creates a file with your applications, ready to import there in one go.",
@@ -303,7 +303,7 @@ dialog.drawer::backdrop { background: rgba(10, 12, 18, .45); }
       f_status: "Stato", f_source: "Fonte", f_location: "Sede", f_mode: "Modalità", f_salary: "Stipendio",
       f_saved: "Salvata il", f_applied: "Inviata il", f_referral: "Referral", f_contacts: "Contatti", f_tags: "Tag",
       welcomeH: "La dashboard è vuota", welcomeP: "Apri questo progetto in Claude Code e scrivi “aggiorna la dashboard”: riempirà questa pagina con i dati del tuo workspace.",
-      close: "Chiudi", fitWord: "fit",
+      close: "Chiudi", fitWord: "fit", other: "Altro",
       tzBtn: "Esporta per TrackZilla",
       tzTitle: "Esporta per TrackZilla",
       tzIntro: "Preferisci tracciare online? [TrackZilla](https://www.trackzilla.cv/) è un tracker gratuito delle candidature. Questo bottone crea un file con le tue candidature, pronto da importare lì in un colpo solo.",
@@ -446,13 +446,18 @@ dialog.drawer::backdrop { background: rgba(10, 12, 18, .45); }
 
     // Board
     html.push("<section><h2>" + esc(T.board) + '</h2><div class="board">');
-    PIPELINE.forEach(function (st) {
-      var items = open.filter(function (a) { return a.status === st; })
-        .sort(function (a, b) { return String(a.next_step_date || "9999").localeCompare(String(b.next_step_date || "9999")); });
-      html.push('<div class="col"><h3><span>' + esc(statusLabel(st)) + '</span><span class="cnt">' + items.length + "</span></h3>");
+    var byDate = function (a, b) { return String(a.next_step_date || "9999").localeCompare(String(b.next_step_date || "9999")); };
+    var column = function (label, items) {
+      html.push('<div class="col"><h3><span>' + esc(label) + '</span><span class="cnt">' + items.length + "</span></h3>");
       items.forEach(function (a) { html.push(card(a)); });
       html.push("</div>");
+    };
+    PIPELINE.forEach(function (st) {
+      column(statusLabel(st), open.filter(function (a) { return a.status === st; }).sort(byDate));
     });
+    // Open applications with a status outside the pipeline (e.g. a typo): shown, not hidden.
+    var other = open.filter(function (a) { return PIPELINE.indexOf(a.status) === -1; }).sort(byDate);
+    if (other.length) column(T.other, other);
     html.push("</div></section>");
 
     // Closed
@@ -510,6 +515,7 @@ dialog.drawer::backdrop { background: rgba(10, 12, 18, .45); }
 
   function card(a) {
     var chips = [];
+    if (PIPELINE.indexOf(a.status) === -1) chips.push('<span class="chip late">' + esc(statusLabel(a.status) || "?") + "</span>");
     if (a.fit && typeof a.fit.score === "number") chips.push('<span class="chip ' + fitClass(a.fit.score) + '">' + esc(T.fitWord) + " " + a.fit.score + "</span>");
     if (a.work_mode) chips.push('<span class="chip">' + esc(a.work_mode) + "</span>");
     if (a.salary_range) chips.push('<span class="chip">' + esc(a.salary_range) + "</span>");

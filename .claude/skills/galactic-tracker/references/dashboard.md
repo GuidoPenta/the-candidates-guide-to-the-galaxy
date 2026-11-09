@@ -76,6 +76,8 @@ After regenerating, tell the user the file path and that they can open it (or re
 
 Field sources and rules:
 - `id` is the application's folder name.
+- Open applications whose `status` isn't a pipeline stage (a typo, an unexpected value) appear in an **Other / Altro**
+  column with the raw status shown in red, so nothing is hidden. Fix the status in `application.md` when you see one.
 - `status`, `saved_on`, `applied_on`, `source`, `source_url`, `referral`, `location`, `work_mode`, `salary_range`,
   `contacts`, `next_step`, `next_step_date` and `tags` come from the `application.md` frontmatter as they are.
 - `lang`: `"it"` or `"en"`, whichever matches the language of the conversation. Anything else falls back to English.
