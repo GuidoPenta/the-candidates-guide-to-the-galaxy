@@ -25,6 +25,8 @@
 > - **"Cosa c'è di nuovo"** (09/11): rilanci la ricerca e vedi solo gli annunci usciti dall'ultima volta
 > - **Aziende preferite** (09/11): controlla su richiesta se le aziende che ti piacciono hanno aperto posizioni
 > - **Riferimento agli stipendi** (09/11): rimando a TechCompenso per gli annunci senza RAL
+> - **Revisione di sicurezza** (09/11): controlli anti-truffa anche sugli annunci incollati, protezione degli export
+>   CSV, dati sensibili mai registrati nei report, colonna "Altro" nella dashboard
 
 ## Cosa fa
 

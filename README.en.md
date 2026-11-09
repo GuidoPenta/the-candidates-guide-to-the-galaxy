@@ -25,6 +25,8 @@
 > - **"What's new"** (Nov 9): run the search again and see only postings published since last time
 > - **Favourite companies** (Nov 9): on request, check whether the companies you like have opened roles
 > - **Salary reference** (Nov 9): pointer to TechCompenso for postings without a salary
+> - **Security review** (Nov 9): scam checks on pasted postings too, safer CSV exports, sensitive data never
+>   recorded in reports, "Other" column in the dashboard
 
 ## What it does
 
