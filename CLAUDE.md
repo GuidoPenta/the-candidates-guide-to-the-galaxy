@@ -43,5 +43,8 @@ from CV to signed offer. The person who opened it is a job seeker, not (necessar
 - **Examples in references use fictional data only** (Acme, Jane Doe). Before any commit or PR, check the staged
   diff and the PR text for anything from `workspace/`: names, companies applied to, figures, log lines. Never
   `git add -f` anything under `workspace/`. Keep your own job search in a separate clone from the one you contribute from.
+- **Repeatable checks** live in `tests/` (see `tests/README.md`). Before publishing a significant change to the
+  skills or references, run the affected cases ("esegui i collaudi"). When you fix a bug, add a case that would have
+  caught it. Test runs use `tests/.run/` and never touch the real `workspace/`.
 - The dashboard template (`galactic-tracker/assets/dashboard.html`) has a Content-Security-Policy with the SHA-256
   hash of its main inline script. If you change that script, recompute the hash (see `references/dashboard.md`).

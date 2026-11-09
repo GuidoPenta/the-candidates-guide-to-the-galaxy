@@ -25,3 +25,6 @@ desktop.ini
 
 # Local Claude Code settings (per-user)
 .claude/settings.local.json
+
+# Collaudi: per-run scratch folders and reports
+tests/.run/

@@ -152,6 +152,7 @@ nella lingua in cui gli scrivi.
 Issue e pull request sono benvenute, soprattutto per le risorse di preparazione dei ruoli non ancora coperti
 (`.claude/skills/galactic-interview-prep/references/resources-by-role.md`) e per nuove community.
 Le istruzioni delle skill restano in inglese, fedeli alle guide da cui derivano, e il progetto resta senza dipendenze.
+Prima di proporre una modifica alle skill, fai girare i collaudi in [`tests/`](tests/README.md) (in Claude Code: *"esegui i collaudi"*).
 
 ## Licenza
 

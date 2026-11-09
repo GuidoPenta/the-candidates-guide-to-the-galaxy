@@ -145,6 +145,7 @@ Type **"help"** anytime to see what it can do and where your files and dashboard
 Issues and PRs are welcome, especially practice resources for roles that aren't covered yet
 (`.claude/skills/galactic-interview-prep/references/resources-by-role.md`) and new communities.
 Keep references faithful to their source guides, and keep the pack dependency-free.
+Before proposing a change to the skills, run the checks in [`tests/`](tests/README.md) (in Claude Code: *"run the checks"*).
 
 ## License
 
