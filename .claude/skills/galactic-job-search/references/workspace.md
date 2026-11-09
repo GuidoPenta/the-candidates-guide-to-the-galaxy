@@ -24,6 +24,9 @@ workspace/
 ├── linkedin/
 │   ├── profile-export.*       # the user's pasted text or "Save to PDF" export
 │   └── YYYY-MM-DD-review.md   # reports from galactic-linkedin
+├── leads/
+│   ├── YYYY-MM-DD-search.md   # results of galactic-job-finder (postings, companies, where to look)
+│   └── watchlist.md           # favourite companies to check on request
 ├── applications/
 │   └── YYYY-MM-DD-company-role/   # one folder per application (kebab-case, date = when saved)
 │       ├── application.md     # tracking card: frontmatter + dated log (source of truth)

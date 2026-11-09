@@ -75,6 +75,7 @@ briefly.
 |---|---|
 | review, fix, rewrite or tailor the CV | `galactic-cv` |
 | improve their LinkedIn profile | `galactic-linkedin` |
+| find postings or companies to apply to, "what's new", favourite companies | `galactic-job-finder` |
 | look at a job posting: understand it, research the company, check fit | `galactic-application` |
 | prepare for an interview (technical, behavioural, mock interview) | `galactic-interview-prep` |
 | know what to ask the interviewers | `galactic-reverse-interview` |
@@ -85,7 +86,7 @@ briefly.
 | a weekly summary of progress | this skill, section "Weekly review" |
 
 The skills hand off to each other. A typical loop for one application:
-`galactic-application` → (`galactic-cv` tailoring) → `galactic-tracker` (applied) → `galactic-interview-prep`
+(`galactic-job-finder`) → `galactic-application` → (`galactic-cv` tailoring) → `galactic-tracker` (applied) → `galactic-interview-prep`
 + `galactic-reverse-interview` → `galactic-tracker` (after each round) → `galactic-negotiation` → `galactic-tracker` (accepted).
 
 ## Tone

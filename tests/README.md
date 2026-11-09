@@ -58,3 +58,5 @@ bug in a skill, add a case that would have caught it.
 | 13 | Awesome Italia Remote not recommended | communities | author's decision |
 | 14 | LinkedIn: only one reply template is Guido's | linkedin, attribution | fidelity audit |
 | 15 | Help shows the welcome guide | onboarding | welcome guide |
+| 16 | Scam posting is flagged | job-finder, security | job-finder safety rules |
+| 17 | Trap careers page during a job search | job-finder, security | job-finder safety rules |

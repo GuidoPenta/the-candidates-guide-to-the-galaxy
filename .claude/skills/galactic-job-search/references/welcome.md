@@ -22,6 +22,8 @@ me read is processed by the AI model provider (see the README's privacy section)
 **What I can do** (just ask, in your own words):
 - 📄 **CV**: "Review my CV", "Tailor my CV for this job", "Make the English version of my CV"
 - 💼 **LinkedIn**: "Improve my LinkedIn" (from your profile's *Save to PDF* export)
+- 🧭 **Where to apply**: "Find me jobs that fit my profile", "Which companies could I write to?",
+  "What's new since last time?", "Check my favourite companies"
 - 🔎 **A job posting**: "I'm interested in this job: [paste]". I research the company, check how well you fit,
   and give you a one-page briefing.
 - 🎤 **Interviews**: "I have an interview on Thursday, help me prepare", "Let's do a mock interview",

@@ -11,22 +11,20 @@
 > Incolli un annuncio di lavoro, il sistema studia l'azienda, ti dice come verrà valutato il tuo CV, ti prepara al
 > colloquio, ti suggerisce le domande giuste da fare e ti accompagna nella negoziazione.
 
-> **📣 Changelog — aggiornamento del 04/11/2026**
+> **📣 Changelog — aggiornamenti di novembre 2026**
 >
-> ✅ **Novità di oggi**
+> ✅ **Novità**
 > - **CV in doppia lingua**: versione inglese o italiana riscritta per il mercato, non tradotta parola per parola
 > - **Messaggi dopo il colloquio**: bozze di ringraziamento, sollecito e richiesta di feedback
 > - **Diario delle domande ricevute**: il tuo archivio delle domande fatte ai colloqui, per prepararti ai successivi
 > - **Riepilogo settimanale**: cosa hai fatto, cosa ti aspetta e tre suggerimenti
 > - **Da RAL a netto**: rimando a [QuantoPrendo.io](https://quantoprendo.io) di Nicola De Lillo
->
-> 🔜 **In arrivo la prossima settimana**
-> - **Ricerca di annunci e aziende**: dal tuo CV e profilo, annunci aperti e aziende a cui scrivere, con una prima
->   valutazione del fit e protezioni contro annunci truffa
-> - **"Cosa c'è di nuovo"**: rilanci la ricerca e vedi solo gli annunci usciti dall'ultima volta
-> - **Aziende preferite**: controlla su richiesta se le aziende che ti piacciono hanno aperto posizioni
-> - **Riferimento agli stipendi**: rimando a TechCompenso per gli annunci senza RAL
-> - **Collaudi ripetibili**: casi di prova per verificare che le skill non ricomincino a dare consigli sbagliati
+> - **Collaudi ripetibili** (09/11): casi di prova per verificare che le skill non ricomincino a dare consigli sbagliati
+> - **Ricerca di annunci e aziende** (09/11): dal tuo CV e profilo, annunci aperti e aziende a cui scrivere, con una
+>   prima valutazione del fit e protezioni contro annunci truffa e pagine malevole
+> - **"Cosa c'è di nuovo"** (09/11): rilanci la ricerca e vedi solo gli annunci usciti dall'ultima volta
+> - **Aziende preferite** (09/11): controlla su richiesta se le aziende che ti piacciono hanno aperto posizioni
+> - **Riferimento agli stipendi** (09/11): rimando a TechCompenso per gli annunci senza RAL
 
 ## Cosa fa
 
@@ -35,6 +33,7 @@
 | Per iniziare | `galactic-job-search` | Uno spazio di lavoro privato, il tuo profilo, la risposta a "cosa faccio adesso?" e il riepilogo settimanale |
 | CV | `galactic-cv` | Revisione secondo la [Guida galattica al CV](https://github.com/GuidoPenta/galactic-CV-guide-for-developers), punteggio "come ti vede chi seleziona" su un annuncio (rubrica di [cv-review](https://github.com/matteobaccan/cv-review)), versione in inglese o in italiano |
 | LinkedIn | `galactic-linkedin` | Mappa delle parole chiave, titolo/About/esperienze riscritti e pronti da incollare, risposte tipo per i recruiter ([guida](https://github.com/GuidoPenta/galactic-linkedin-profile-guide-for-developers)) |
+| Dove candidarsi | `galactic-job-finder` | Annunci aperti e aziende a cui scrivere, trovati a partire da CV e profilo, con una prima valutazione del fit, controlli anti-truffa, "cosa c'è di nuovo" e aziende preferite. Rimandi a community, newsletter (Full Remote, TechCompenso) e ricerche pronte per LinkedIn |
 | Candidatura | `galactic-application` | L'annuncio decifrato, ricerca sull'azienda con le fonti, analisi del fit, una scheda di una pagina da leggere prima della call |
 | Colloquio | `galactic-interview-prep` | Piano di preparazione, archivio di storie (metodo STAR), colloqui simulati con feedback, diario delle domande ricevute, messaggi di ringraziamento e sollecito, risorse per ruolo ([guida](https://github.com/GuidoPenta/galactic-tech-interview-guide)) |
 | Le tue domande | `galactic-reverse-interview` | Domande su misura da fare, segnali d'allarme, confronto tra aziende ([guida](https://github.com/GuidoPenta/galactic-reverse-interview-guide-for-developers)) |

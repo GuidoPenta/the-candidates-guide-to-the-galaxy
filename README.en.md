@@ -11,22 +11,20 @@
 > Paste a job posting: the system researches the company, tells you how your CV will be assessed, prepares
 > you for the interview, suggests the right questions to ask and coaches you through the negotiation.
 
-> **📣 Changelog — November 4, 2026 update**
+> **📣 Changelog — November 2026 updates**
 >
-> ✅ **New today**
+> ✅ **New**
 > - **Second-language CV**: an English or Italian version rewritten for the market, not translated word for word
 > - **Messages after the interview**: drafts for thank-you, follow-up and feedback-request notes
 > - **Interview questions journal**: your own archive of the questions you were asked, to prepare for the next ones
 > - **Weekly review**: what you did, what's coming up and three suggestions
 > - **Gross to net (Italy)**: pointer to [QuantoPrendo.io](https://quantoprendo.io) by Nicola De Lillo
->
-> 🔜 **Coming next week**
-> - **Job and company finder**: from your CV and profile, open postings and companies to approach, with a first
->   fit check and protection against scam postings
-> - **"What's new"**: run the search again and see only postings published since last time
-> - **Favourite companies**: on request, check whether the companies you like have opened roles
-> - **Salary reference**: pointer to TechCompenso for postings without a salary
-> - **Repeatable checks**: test cases to make sure the skills don't slip back into wrong advice
+> - **Repeatable checks** (Nov 9): test cases to make sure the skills don't slip back into wrong advice
+> - **Job and company finder** (Nov 9): from your CV and profile, open postings and companies to approach, with a
+>   first fit check and protection against scam postings and malicious pages
+> - **"What's new"** (Nov 9): run the search again and see only postings published since last time
+> - **Favourite companies** (Nov 9): on request, check whether the companies you like have opened roles
+> - **Salary reference** (Nov 9): pointer to TechCompenso for postings without a salary
 
 ## What it does
 
@@ -35,6 +33,7 @@
 | Getting started | `galactic-job-search` | Private workspace, your profile, "what should I do next?" and a weekly review |
 | CV | `galactic-cv` | Review against the [Galactic CV guide](https://github.com/GuidoPenta/galactic-CV-guide-for-developers), screener score against a posting (rubric from [cv-review](https://github.com/matteobaccan/cv-review)), English or Italian version |
 | LinkedIn | `galactic-linkedin` | Keyword map, paste-ready headline/About/experience rewrites, recruiter reply templates ([guide](https://github.com/GuidoPenta/galactic-linkedin-profile-guide-for-developers)) |
+| Where to apply | `galactic-job-finder` | Open postings and companies to approach, found from your CV and profile, with a first fit check, scam checks, "what's new" and favourite companies. Pointers to communities, newsletters (Full Remote, TechCompenso) and ready-made LinkedIn searches |
 | Application | `galactic-application` | The posting decoded, company research with sources, fit analysis, a one-page briefing |
 | Interview | `galactic-interview-prep` | Prep plan, STAR story bank, mock interviews with feedback, a journal of the questions you were asked, thank-you and follow-up messages, practice resources per role ([guide](https://github.com/GuidoPenta/galactic-tech-interview-guide)) |
 | Your questions | `galactic-reverse-interview` | Tailored questions to ask, red flags to watch, company comparison ([guide](https://github.com/GuidoPenta/galactic-reverse-interview-guide-for-developers)) |
